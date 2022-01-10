@@ -8,6 +8,8 @@ El buyer persona o el nicho de mercado objetivo de nuestra empresa son las perso
 
 DESCRIPCIÓN DE LOS INTEGRANTES:
 
+Francisco Pais: Tengo 19 años, soy estudiantes de Administración de Empresas y Contabilidad, y tengo mucho interés en la tecnología, además de que tengo muchos conocimientos osbree el tema debido a mis estudios en el colegio secundario, los cuales fueron orientados y especializados a la materia. 
+
 -----------------------------------------------------------
 
 Listado de sitios de referencia:
