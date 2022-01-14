@@ -19,3 +19,8 @@ Listado de sitios de referencia:
  https://www.cinemarkhoyts.com.ar/ , https://www.cinepolis.com.ar/ , https://www.todoshowcase.com/ : estos sitios son las principales inspiraciones ya que se tratan de paginas web de distintos cines, todas con un diseño bastante similar.
  https://www.todaytix.com/ : esta es una página de venta de entradas de teatro con presencia en varios paises, la cual nos llamó la antención por su diseño simple y similitud con los sitios de los cines.
  https://www.netflix.com/ : aunque sea un servicio de streaming y no de venta de entradas, el home de Netflix nos parece un sitio muy estético 
+
+-----------------------------------------------------------
+
+Tablero de Trabajo:
+https://trello.com/b/q3ZCHEog/sprint-2
