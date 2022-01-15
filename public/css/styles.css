@@ -1,13 +1,13 @@
 body {
     background-color: rgb(231, 231, 231);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 
 /* HEADER */
 
 header {
-    background-color: #2424c7;
+    background-color: #3f146a;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -46,10 +46,12 @@ header {
 
 /*MAIN*/
 
+h2 {
+    margin-left: 55px;
+    color: rgb(90, 90, 90);
+}
+
 .peliculas-container {
-    /*display: flex;
-    align-items: center;
-    justify-content: center;*/
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill,154px);
@@ -57,21 +59,15 @@ header {
     justify-content: space-around;
 }
 
-.peliculas {
-    /*display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 148.05px;*/
+.peliculas-info {
     max-width: 300px;
-    margin: 10px;
+    margin-bottom: 10px;
     width: 100%;
 }
 
-.peliculas img {
-    /*width: 50%;
-    height: 148.05px;*/
-    width: 100%;
+.peliculas-info img {
+    height: 228px;
+    width: 154px;
 }
 
 .peliculas-titulo {
@@ -83,7 +79,7 @@ header {
 /* FOOTER */
 
 footer {
-    background-color: #2424c7;
+    background-color: #3f146a;
 }
 
 .logo-footer {
