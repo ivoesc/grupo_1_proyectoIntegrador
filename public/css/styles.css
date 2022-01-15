@@ -1,0 +1,38 @@
+header {
+    background-color: #2424c7;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.burger-logo {
+    display: flex;
+}
+
+.lupa-iniciar {
+    display: flex;
+}
+
+.logo-header {
+    width: 80px;
+    padding: 10px;
+}
+
+.burger-menu {
+    padding: 10px;
+    font-size: 25px;
+    color: white;
+}
+
+.logo-iniciar-sesion {
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+}
+
+.lupa-header {
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+}
+
