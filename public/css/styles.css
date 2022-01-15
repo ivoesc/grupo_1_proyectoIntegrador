@@ -1,3 +1,11 @@
+body {
+    background-color: rgb(231, 231, 231);
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
 header {
     background-color: #2424c7;
     display: flex;
@@ -14,7 +22,7 @@ header {
 }
 
 .logo-header {
-    width: 80px;
+    width: 150px;
     padding: 10px;
 }
 
@@ -36,19 +44,61 @@ header {
     padding: 10px;
 }
 
+/*MAIN*/
+
+.peliculas-container {
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,154px);
+    grid-gap: 1.5rem;
+    justify-content: space-around;
+}
+
+.peliculas {
+    /*display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 148.05px;*/
+    max-width: 300px;
+    margin: 10px;
+    width: 100%;
+}
+
+.peliculas img {
+    /*width: 50%;
+    height: 148.05px;*/
+    width: 100%;
+}
+
+.peliculas-titulo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* FOOTER */
+
 footer {
     background-color: #2424c7;
+}
+
+.logo-footer {
+    width: 120px;
+    margin-top: 20px;
+    margin-left: 20px;
 }
 
 .footer-list li a {
     color: white;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;
 }
 
 .footer-list-container {
     margin-left: -20px;
-    padding-top: 10px;
 }
 
 .social-media {
