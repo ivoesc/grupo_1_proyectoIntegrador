@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgb(231, 231, 231);
     font-family: 'Montserrat', sans-serif;
@@ -49,11 +53,6 @@ header {
 }
 
 /*MAIN*/
-
-.proximamente {
-    background-color: rgb(128 128 128);
-    margin-bottom: 20px;
-}
 
 .probando {
     width: 100%;
@@ -137,11 +136,24 @@ h2 {
     padding-top: 15px;
 }
 
+.proximamente {
+    background-color: rgb(128 128 128);
+    margin-bottom: 20px;
+}
+
 .proximamente-texto {
     color: black;
 }
 
 .peliculas-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,154px);
+    grid-gap: 1.5rem;
+    justify-content: space-around;
+}
+
+.peliculas-container-proximamente {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill,154px);

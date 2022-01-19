@@ -1,0 +1,16 @@
+@media (min-width: 768px) {
+    .probando {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .peliculas-container-desktop {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .proximamente-texto, .peliculas-container-proximamente {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}    
