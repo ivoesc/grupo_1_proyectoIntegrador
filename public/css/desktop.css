@@ -13,4 +13,8 @@
         padding-left: 20%;
         padding-right: 20%;
     }
+
+    .main-login-div {
+        width: 400px;
+    }
 }    

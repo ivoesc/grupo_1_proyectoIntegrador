@@ -1,31 +1,65 @@
-main form {
-    display: flex;
+.main-login-div {
+    /*display: flex;
     flex-direction: column;
-    margin-top: 90px;
-    margin-bottom: 40px;
-    margin-left: 20%;
-    margin-right: 20%;
-    text-align: left;
-    background-color: #b7b7b7;
-    border-radius: 5px;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    margin: 90px 20% 5px 20%;
+    text-align: center;
+    background-color: #acacac;
+    border-radius: 5px;
+    padding: 5px 25px 50px 25px;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    }
+
+
 /*     LOGIN     */
+
+    .login-logo{
+        width: 50%;
+        border: 5px;
+        margin-top: 15px;
+    }
+
+    .login-text-container {
+        font-size: 25px;
+        border-bottom: 2px solid rgb(85, 85, 85);
+        width: 100%;
+    }
+
+        .login-text-container p {
+            color: rgb(85, 85, 85);
+            font-weight: bold;
+            margin: 15px 0px 10px 0px;
+            padding: 0px;
+        }
+    
+    main form {
+        margin-top: 30px;
+    }
 
     .contenedor-input{
         display: flex;
         justify-content: left;
         background: white;
         border-radius: 10px;
+        border: 4px solid white;
         padding: 10px;
         height: 40px;
-        width: 80%;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        transition: all 200ms ease-out;
+        width: 100%;
+        margin: 20px 0px 20px 0px;
+        transition: all 200ms ease-in;
     }
+
+        .contenedor-input:hover {
+            border: 2px solid rgb(134, 134, 134);
+        }
 
         .campos-texto {
             border: none;
@@ -37,11 +71,11 @@ main form {
     .contenedor-button{
         display: flex;
         justify-content: left;
-        background: rgb(38, 51, 126);
+        background: #3f146a;
         border-radius: 10px;
         padding: 10px;
         height: 40px;
-        width: 80%;
+        width: 100%;
         margin-top: 10px;
         margin-bottom: 10px;
         transition: all 100ms;
@@ -49,7 +83,7 @@ main form {
     }
 
         .contenedor-button:hover {
-            background-color: #0022AA;
+            background-color: #2a0a49;
         }
 
         .login-button {
@@ -61,3 +95,8 @@ main form {
             font-family: 'Roboto', sans-serif;
             cursor: pointer;
         }
+
+    .google-login, .forgot-password {
+        font-size: 13px;
+        margin: 10px 0px 10px 0px
+    }

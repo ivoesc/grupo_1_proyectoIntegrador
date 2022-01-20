@@ -44,21 +44,40 @@
     </header>
 
     <main>
-        <form action="/" method="get">
+        
+        <div class="main-login-div">
+        
+            <!--<img src="\images\BIGSCREENpng.svg" alt="BigScreen" class="login-logo">-->
 
-            <div class="contenedor-input">
-                <input type="text" name="username" id="username" placeholder="Nombre de usuario" class="campos-texto">
-            </div>
+            <div class="login-text-container"> <p>Iniciar sesión</p> </div>
+            
+            <form action="/" method="get">
 
-            <div class="contenedor-input">
-                <input type="password" name="username" id="username" placeholder="Contraseña" class="campos-texto">
-            </div>
+                <div class="contenedor-input">
+                    <input type="text" name="username" id="username" placeholder="Nombre de usuario" class="campos-texto">
+                </div>
 
-            <div class="contenedor-button">
-                <button type="submit" class="login-button"> <strong>Iniciar sesión</strong> </button>
-            </div>
+                <div class="contenedor-input">
+                    <input type="password" name="username" id="username" placeholder="Contraseña" class="campos-texto">
+                </div>
 
-        </form>
+                <div class="contenedor-button">
+                    <button type="submit" class="login-button"> <strong>Iniciar sesión</strong> </button>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="">Olvidé mi contraseña</a>
+                </div>
+                
+                <div class="google-login">
+                    <a href="">Iniciar sesión con Google</a>
+                </div>
+
+            </form>
+        </div>
+
+        <p class="google-login">¿No estás registrado? <a href="">Creá tu cuenta</a></p>
+
     </main>
 
 </body>
