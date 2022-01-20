@@ -27,7 +27,7 @@ header {
 }
 
 .lupa-iniciar {
-    display: flex;
+    display: none;
 }
 
 .logo-header {
@@ -39,19 +39,15 @@ header {
     padding: 10px;
     font-size: 25px;
     color: white;
+    display: flex;
+    align-items: center;
 }
 
-.logo-iniciar-sesion {
+/*.logo-iniciar-sesion {
     font-size: 24px;
-    color: white;
-    padding: 10px;
-}
+    color: white;;
+} */
 
-.lupa-header {
-    font-size: 24px;
-    color: white;
-    padding: 10px;
-}
 
 /*MAIN*/
 
