@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/desktop.css">
+    <link rel="stylesheet" href="/css/login-register.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    
+    <title>Iniciar Sesión</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="burger-logo">
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <img class="logo-header" src="\images\BIGSCREENpng.svg"> 
+        </div>
+
+        <div class="lupa-iniciar">
+            <div class="lupa-header">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="logo-iniciar-sesion">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </header>
+
+<main>
+        
+    <div class="main-login-div">
+    
+        <!--<img src="\images\BIGSCREENpng.svg" alt="BigScreen" class="login-logo">-->
+
+        <div class="login-text-container"> <p>REGISTRARSE</p> </div>
+        
+        <form action="/" method="get">
+
+            <div class="contenedor-input">
+                <input type="text" name="username" id="username" placeholder="Nombre y Apellido" class="campos-texto">
+            </div>
+
+            <div class="contenedor-input">
+                <input type="email" name="username" id="username" placeholder="E-Mail" class="campos-texto">
+            </div>
+
+            <div class="contenedor-input">
+                <input type="number" name="username" id="username" placeholder="Télefono" class="campos-texto">
+            </div>
+
+            <div class="contenedor-input">
+                <select id="complejo" name="complejo">
+                    <option disabled selected>Elegí tu complejo de Preferencia:</option>
+                    <option value="caballito">Complejo Caballito</option>
+                    <option value="recoleta">Complejo Recoleta</option>
+                    <option value="nordelta">Complejo Nordelta</option>
+                </select>
+            </div>
+
+            <div class="contenedor-input">
+                <input type="password" name="username" id="username" placeholder="Crear Contraseña" class="campos-texto">
+            </div>
+
+            <div class="contenedor-input">
+                <input type="password" name="username" id="username" placeholder="Confirmar Contraseña" class="campos-texto">
+            </div>
+
+            <div class="contenedor-button">
+                <button type="submit" class="login-button"><strong>Registrarse</strong></button>
+            </div>
+
+        </form>
+    </div>
+</main>
