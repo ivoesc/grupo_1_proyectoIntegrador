@@ -1,0 +1,59 @@
+main form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: left;
+}
+
+/*     LOGIN     */
+
+    .contenedor-input{
+        display: flex;
+        justify-content: left;
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        height: 40px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: all 200ms ease-out;
+    }
+
+        .campos-texto {
+            border: none;
+            background: none;
+            outline: none;
+            width: 100%;
+        }
+
+    .contenedor-button{
+        display: flex;
+        justify-content: left;
+        background: rgb(38, 51, 126);
+        border-radius: 10px;
+        padding: 10px;
+        height: 40px;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: all 100ms;
+        cursor: pointer;
+    }
+
+        .contenedor-button:hover {
+            background-color: #0022AA;
+        }
+
+        .login-button {
+            border: none;
+            background: none;
+            outline: none;
+            width: 100%;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            cursor: pointer;
+        }
