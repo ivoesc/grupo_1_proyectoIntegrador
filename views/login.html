@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,21 +20,46 @@
     
     <title>Iniciar Sesión</title>
 </head>
+
 <body>
-    <form action="/" method="get">
 
-        <div class="contenedor-input">
-            <input type="text" name="username" id="username" placeholder="Nombre de usuario" class="campos-texto">
+    <header>
+        <div class="burger-logo">
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <img class="logo-header" src="\images\BIGSCREENpng.svg"> 
         </div>
 
-        <div class="contenedor-input">
-            <input type="password" name="username" id="username" placeholder="Contraseña" class="campos-texto">
-        </div>
+        <div class="lupa-iniciar">
+            <div class="lupa-header">
+                <i class="fas fa-search"></i>
+            </div>
 
-        <div class="contenedor-button">
-            <button type="submit" class="login-button"> <strong>Enviar</strong> </button>
+            <div class="logo-iniciar-sesion">
+                <i class="fas fa-user-circle"></i>
+            </div>
         </div>
+    </header>
 
-    </form>
+    <main>
+        <form action="/" method="get">
+
+            <div class="contenedor-input">
+                <input type="text" name="username" id="username" placeholder="Nombre de usuario" class="campos-texto">
+            </div>
+
+            <div class="contenedor-input">
+                <input type="password" name="username" id="username" placeholder="Contraseña" class="campos-texto">
+            </div>
+
+            <div class="contenedor-button">
+                <button type="submit" class="login-button"> <strong>Iniciar sesión</strong> </button>
+            </div>
+
+        </form>
+    </main>
+
 </body>
 </html>

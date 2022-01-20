@@ -1,11 +1,15 @@
 main form {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 90px;
     margin-bottom: 40px;
     margin-left: 20%;
     margin-right: 20%;
     text-align: left;
+    background-color: #b7b7b7;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 /*     LOGIN     */
@@ -17,7 +21,7 @@ main form {
         border-radius: 10px;
         padding: 10px;
         height: 40px;
-        width: 100%;
+        width: 80%;
         margin-top: 10px;
         margin-bottom: 10px;
         transition: all 200ms ease-out;
@@ -37,7 +41,7 @@ main form {
         border-radius: 10px;
         padding: 10px;
         height: 40px;
-        width: 100%;
+        width: 80%;
         margin-top: 10px;
         margin-bottom: 10px;
         transition: all 100ms;
