@@ -18,7 +18,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     
-    <title>Iniciar Sesión</title>
+    <title>Registrarse</title>
 </head>
 
 <body>
@@ -33,13 +33,20 @@
         </div>
 
         <div class="lupa-iniciar">
-            <div class="lupa-header">
-                <i class="fas fa-search"></i>
-            </div>
+            <form class="contenedor-barra-busqueda">
+                <input type="text" placeholder="Buscar películas" name="busqueda" class="barra-busqueda"> 
+                <a href="" class="icono-busqueda">
+                    <i class="fas fa-search"></i>
+                </a>
+            </form>
 
-            <div class="logo-iniciar-sesion">
+            <p class="header-login-button"><a href="/login">Iniciar Sesión</a></p>
+
+            <p class="header-signup-button"><a href="/register">Registrarse</a></p>
+
+            <!--<div class="logo-iniciar-sesion">
                 <i class="fas fa-user-circle"></i>
-            </div>
+            </div>-->
         </div>
     </header>
 
