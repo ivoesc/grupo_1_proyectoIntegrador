@@ -1,8 +1,4 @@
 @media (min-width: 768px) {
-    .probando {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
 
     .peliculas-container-desktop {
         padding-left: 20%;
@@ -81,4 +77,10 @@
             .header-signup-button a {
                 color: white;
             }
+
+    .peliculas-info img:hover{
+        margin: 0px;
+        margin-bottom: 10px;
+        box-shadow: 0px 0px 10px rgb(48, 48, 48);
+    }
 }    

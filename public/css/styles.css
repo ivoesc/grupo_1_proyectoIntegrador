@@ -51,9 +51,9 @@ header {
 
 /*MAIN*/
 
-.probando {
+.slider-container {
     width: 100%;
-    padding-top: 49px;
+    padding-top: 44.4px;
 }
 
 .slidershow{
@@ -167,12 +167,15 @@ h2 {
 .peliculas-info img {
     height: 228px;
     width: 154px;
+    margin: 10px 0px 0px 0px;
+    transition: all 100ms ease-in;
 }
 
 .peliculas-titulo {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: all 100ms ease-in;
 }
 
 /* FOOTER */
