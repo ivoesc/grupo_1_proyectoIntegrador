@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center; */
-    margin: 90px 20% 5px 20%;
+    margin: 20px 20% 5px 20%;
     text-align: center;
     background-color: #acacac;
     border-radius: 5px;
@@ -21,10 +21,9 @@ main {
 
 /*     LOGIN     */
 
-    .login-logo{
-        width: 50%;
-        border: 5px;
-        margin-top: 15px;
+    .login-logo img{
+        width: 200px;
+        margin-top: 100px;
     }
 
     .login-text-container {
