@@ -83,4 +83,17 @@
         margin-bottom: 7px;
         box-shadow: 0px 0px 10px rgb(48, 48, 48);
     }
+
+/*          MOVIE DETAIL            */
+
+    .detail-main-container {
+        flex-direction: row;
+        justify-content: left;
+    }
+
+    .trailer-movie {
+        width: 80%;
+        margin: 0px 20px 20px 0px;
+    }
+
 }    

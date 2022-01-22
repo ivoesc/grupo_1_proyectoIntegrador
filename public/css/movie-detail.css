@@ -7,6 +7,7 @@ main {
 .poster-detail {
     margin: 80px 20px 10px 20px;
     width: 80%;
+    max-width: 300px;
 }
 
 .movie-info {
@@ -15,6 +16,5 @@ main {
 
 .trailer-movie {
     width: 80%;
-    height: 200px;
     margin-bottom: 20px;
 }
