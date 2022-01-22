@@ -74,8 +74,9 @@ header {
    }
 
 .bar{
-    width: 20px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
     border: 2px solid #fff;
     margin: 6px;
     cursor: pointer;
