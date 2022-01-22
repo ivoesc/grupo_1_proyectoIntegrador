@@ -21,3 +21,7 @@ app.get('/login', (req, res) => {
 app.get('/register', (req, res) => {
     res.sendFile(__dirname + '/views/register.html');
 });
+
+app.get('/movie-detail', (req, res) => {
+    res.sendFile(__dirname + '/views/movie-detail.html');
+});
