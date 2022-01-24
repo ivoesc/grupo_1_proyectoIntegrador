@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="carrito.css" />
+    <link rel="stylesheet" href="desktopcarrito.css" />
+    <title>Big Screen</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="images/BIGSCREENpng.svg" alt="Inicio"> 
+      <a class="cta"></a href="/login"><button>Iniciar Sesión</button></a>
+      <nav>
+        <ul class="nav__links">
+          <li><a href="/register"><u>Registrarse</u></a></li>
+        </ul>
+      </nav>
+  </header>
+<main>
+  <form>
+    <div id="flex">
+<div class="contenedor-de-peliculas">
+<input type="date">
+      <select id="pelicula">
+        <option disabled selected>Seleccioná tu película</option>
+        <option value="600">West Side Story (AR$.600)</option>
+        <option value="600">House of Gucci (AR$.600)</option>
+        <option value="600">Spiderman: No Way Home (AR$.600)</option>
+        <option value="600">The French Dispach (AR$.600)</option>
+        <option value="600">King´s Man: El Origen (AR$.600)</option>
+        <option value="600">Scream (AR$.600)</option>
+        <option value="600">Hoy se arregla el mundo (AR$.600)</option>
+        <option value="600">Matrix: Resurrection (AR$.600)</option>
+        <option value="600">Alien: Covenant(AR$.600)</option>
+        <option value="600">Wonder Woman(AR$.600)</option>
+        <option value="600">Martian (AR$.600)</option>
+        <option value="400">Joker (AR$.400)</option>
+        <option value="600">Dune (AR$.600)</option>
+        <option value="400">Parasite (AR$.400)</option>
+        <option value="400">Fight Club (AR$.400)</option>
+        <option value="400">Don´t Look Up (AR$.400)</option>
+      </select>
+
+      <select id="Complejo">
+        <option disabled selected>Seleccioná tu Sala</option>
+        <option value="Caballito">BigScreen Complejo Caballito </option>
+        <option value="Recoleta">BigScreen Complejo Recoleta</option>
+        <option value="Nordelta">BigScreen Complejo Nordelta</option>   
+      </select>
+
+      <select id="Horario">
+        <option disabled selected>Seleccioná el horario</option>
+        <option value="15HS">15:00 hs</option>
+        <option value="18HS">18:00 hs</option>
+        <option value="21HS">21:00 hs</option>
+        <option value="00HS">00:00 hs</option>   
+      </select>
+    </div>
+  </div>
+</form>
+
+    <ul class="showcase">
+      <li>
+        <div class="asiento"></div>
+        <small>Disponible</small>
+      </li>
+      <li>
+        <div class="asiento seleccionado"></div>
+        <small>Seleccionado</small>
+      </li>
+      <li>
+        <div class="asiento ocupado"></div>
+        <small>Ocupado</small>
+      </li>
+    </ul>
+    <div class="contenedor">
+      <div class="pantalla"></div>
+
+      <div class="fila">
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+      </div>
+
+      <div class="fila">
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento ocupado"></div>
+        <div class="asiento ocupado"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+      </div>
+      <div class="fila">
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento ocupado"></div>
+        <div class="asiento ocupado"></div>
+      </div>
+      <div class="fila">
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+      </div>
+      <div class="fila">
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento vendido"></div>
+        <div class="asiento vendido"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+      </div>
+      <div class="fila">
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento"></div>
+        <div class="asiento vendido"></div>
+        <div class="asiento vendido"></div>
+        <div class="asiento vendido"></div>
+        <div class="asiento vendido"></div>
+      </div>
+    </div>
+
+    <p class="texto">
+      Elegiste <span id="conteo"> 0 </span> asientos por el precio de AR$<span
+        id="total"
+        >0</span
+      >
+    </p>
+<input type="submit" value="CONTINUAR" id="botoncontinuar">
+
+    <script src="app.js"></script>
+
+  </main>
+    <footer>
+
+      <img src="\images\BIGSCREENpng.svg" alt="BigScreen" class="logo-footer">
+
+      <div class="footer-list-container">
+          <ul class="footer-list">
+              <li type="none"><a href="">Contacto</a></li>
+              <li type="none"><a href="">Quiénes somos</a></li>
+              <li type="none"><a href="">Recursos humanos</a></li>
+          </ul>
+      </div>
+      <div class="social-media">
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+      </div>
+
+  </footer>
+  </body>
+</html>

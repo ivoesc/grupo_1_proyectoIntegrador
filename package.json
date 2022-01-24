@@ -1,0 +1,23 @@
+{
+  "name": "npm-install",
+  "version": "1.0.0",
+  "description": "Proyecto Integrador Grupo 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivoesc/grupo_1_proyectoIntegrador.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivoesc/grupo_1_proyectoIntegrador/issues"
+  },
+  "homepage": "https://github.com/ivoesc/grupo_1_proyectoIntegrador#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "path": "^0.12.7"
+  }
+}
