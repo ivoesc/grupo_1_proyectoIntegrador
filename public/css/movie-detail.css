@@ -2,6 +2,12 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+.poster-info-container {
+    justify-content: center;
+    align-items: center;
 }
 
 .poster-detail {
@@ -17,4 +23,33 @@ main {
 .trailer-movie {
     width: 80%;
     margin-bottom: 20px;
+}
+
+.contenedor-button-compra {
+    display: flex;
+    justify-content: center;
+    background: #868686;
+    border-radius: 10px;
+    padding: 10px;
+    height: 40px;
+    width: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 100ms;
+    cursor: pointer;
+}
+
+.contenedor-button-compra:hover {
+    background-color: #5a5a5a;
+}
+
+.login-button {
+    text-align: center;
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
 }

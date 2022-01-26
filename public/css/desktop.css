@@ -96,4 +96,12 @@
         margin: 0px 20px 20px 0px;
     }
 
+    .poster-info-container {
+        width: 30%;
+    }
+    
+    .trailer-button-container {
+        width: 70%;
+    }
+
 }    
