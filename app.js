@@ -7,6 +7,8 @@ const path = require('path');
 const indexRouter = require('./src/routes/indexRoutes');
 const loginRouter = require('./src/routes/loginRoutes');
 const registerRouter = require('./src/routes/registerRoutes');
+const carritoRouter = require('./src/routes/carritoRoutes');
+const moviedetailRouter = require('./src/routes/movie-detailRoutes');
 const usersRouter = require('./src/routes/usersRoutes');
 
 const app = express();
@@ -29,6 +31,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/register', registerRouter);
+app.use('/carrito', carritoRouter);
+app.use('/movie-detail', moviedetailRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
