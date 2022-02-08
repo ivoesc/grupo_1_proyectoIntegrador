@@ -53,6 +53,7 @@
         .header-login-button {
             width: 375px;
             text-align: center;
+            color: #3f146a;
             background-color: white;
             display: flex;
             justify-content: center;
