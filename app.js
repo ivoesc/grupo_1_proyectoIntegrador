@@ -25,3 +25,7 @@ app.get('/register', (req, res) => {
 app.get('/movie-detail', (req, res) => {
     res.sendFile(__dirname + '/views/movie-detail.html');
 });
+
+app.get('/carrito', (req, res) => {
+    res.sendFile(__dirname + '/views/carrito.html');
+});
