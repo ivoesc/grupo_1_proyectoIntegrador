@@ -24,30 +24,7 @@
 <body>
 
     <header>
-        <div class="burger-logo">
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-
-            <img class="logo-header" src="\images\BIGSCREENpng.svg"> 
-        </div>
-
-        <div class="lupa-iniciar">
-            <form class="contenedor-barra-busqueda">
-                <input type="text" placeholder="Buscar películas" name="busqueda" class="barra-busqueda"> 
-                <a href="" class="icono-busqueda">
-                    <i class="fas fa-search"></i>
-                </a>
-            </form>
-
-            <p class="header-login-button"><a href="/login">Iniciar Sesión</a></p>
-
-            <p class="header-signup-button"><a href="/register">Registrarse</a></p>
-
-            <!--<div class="logo-iniciar-sesion">
-                <i class="fas fa-user-circle"></i>
-            </div>-->
-        </div>
+        <%- include ./partials/headerPartial.ejs %>
     </header>
 
     <main class="detail-main-container">
@@ -72,7 +49,7 @@
             <iframe src="https://www.youtube.com/embed/A5GJLwWiYSg" frameborder="0" allowfullscreen="allowfullscreen" class="trailer-movie" width="420" height="315"></iframe>
             
             <div class="contenedor-button-compra">
-                <a href="/carrito"><button type="submit" class="login-button"> <strong> Comprá tu entrada </strong> </button></a>
+                <a href="/products/carrito"><button type="submit" class="login-button"> <strong> Comprá tu entrada </strong> </button></a>
             </div>
         </div>
     </main>

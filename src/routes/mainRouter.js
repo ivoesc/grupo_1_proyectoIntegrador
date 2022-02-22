@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const controller = require("../controllers/carritoController.js")
+const mainController = require("../controllers/mainController.js")
 
 /* GET home page. */
-router.get('/', controller.carrito);
+router.get('/', mainController.index);
 
 module.exports = router;
