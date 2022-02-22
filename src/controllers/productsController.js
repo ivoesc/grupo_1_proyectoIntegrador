@@ -7,8 +7,8 @@ const productsController = {
         res.render('carrito');
     },
 
-    edit: {
-
+    edit: (req, res) => {
+        res.render('product-edit-form');
     },
 
     delete: {

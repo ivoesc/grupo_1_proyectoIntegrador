@@ -9,6 +9,6 @@ router.get('/movie-detail', productsController.detail);
 router.get('/carrito', productsController.cart);
 
 /* GET edit page. */
-// router.get('/movie-edit', usersController.edit); 
+router.get('/product-edit-form', productsController.edit); 
 
 module.exports = router;

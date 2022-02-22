@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/desktop.css">
+    <link rel="stylesheet" href="/css/login-register.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    
+    <title>Editar película</title>
+</head>
+
+<body>
+
+    <header>
+        <%- include ./partials/headerPartial.ejs %>
+    </header>
+
+<main>
+        
+    <a href="/" class="login-logo"> <img src="\images\BIGSCREENpng2.svg"> </a>
+    
+    <div class="main-login-div">
+    
+        <!--<img src="\images\BIGSCREENpng.svg" alt="BigScreen" class="login-logo">-->
+
+        <div class="login-text-container"> <p>EDITAR PRODUCTO</p> </div>
+        
+        <form action="/" method="POST">
+
+            <div class="contenedor-input">
+                <input type="text" name="movie-name" id="product-name" placeholder="Nombre de la película" class="campos-texto" value="">
+            </div>
+
+            <div class="contenedor-input">
+                <input type="file" name="movie-poster" id="movie-poster" placeholder="Póster de la película" class="campos-texto" value="">
+            </div>
+
+            <div class="contenedor-input">
+                <input type="url" name="movie-trailer" id="movie-trailer" placeholder="URL del trailer" class="campos-texto" value="">
+            </div>
+
+            <div class="contenedor-input">
+                <select id="movie-category" name="movie-category">
+                    <option disabled selected>Categoría de la película:</option>
+                    <option value="caballito">Principal</option>
+                    <option value="recoleta">Próximos estrenos</option>
+                </select>
+            </div>
+
+            <div class="contenedor-input">
+                <textarea type="text" name="movie-synopsis" id="movie-synopsis" placeholder="Sinopsis de la película" class="campos-texto" value=""></textarea>
+            </div>
+
+            <div class="contenedor-input">
+                <input type="text" name="movie-technical-details" id="movie-technical-details" placeholder="Datos técnicos" class="campos-texto" value="">
+            </div>
+
+            <div class="contenedor-button">
+                <button type="submit" class="login-button"><strong>Guardar Producto</strong></button>
+            </div>
+
+        </form>
+    </div>
+</main>
