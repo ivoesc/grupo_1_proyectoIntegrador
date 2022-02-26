@@ -1,4 +1,5 @@
-[{
+[
+  {
     "id": 1,
     "name": "West Side Story",
     "description": "in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id",
@@ -10,7 +11,8 @@
     "price": 100,
     "image": "error: Unclosed quoted field on line 1.",
     "trailer": "http://newsvine.com/in/hac/habitasse/platea/dictumst/maecenas.png?nulla=habitasse&tellus=platea&in=dictumst&sagittis=aliquam&dui=augue&vel=quam&nisl=sollicitudin&duis=vitae&ac=consectetuer&nibh=eget&fusce=rutrum&lacus=at&purus=lorem&aliquet=integer&at=tincidunt&feugiat=ante&non=vel&pretium=ipsum&quis=praesent&lectus=blandit&suspendisse=lacinia&potenti=erat&in=vestibulum&eleifend=sed&quam=magna&a=at&odio=nunc&in=commodo&hac=placerat&habitasse=praesent&platea=blandit&dictumst=nam&maecenas=nulla&ut=integer&massa=pede&quis=justo&augue=lacinia&luctus=eget&tincidunt=tincidunt&nulla=eget&mollis=tempus&molestie=vel&lorem=pede&quisque=morbi&ut=porttitor&erat=lorem&curabitur=id&gravida=ligula&nisi=suspendisse&at=ornare&nibh=consequat&in=lectus&hac=in&habitasse=est&platea=risus&dictumst=auctor&aliquam=sed&augue=tristique&quam=in&sollicitudin=tempus&vitae=sit&consectetuer=amet&eget=sem&rutrum=fusce&at=consequat&lorem=nulla&integer=nisl&tincidunt=nunc&ante=nisl&vel=duis&ipsum=bibendum&praesent=felis&blandit=sed&lacinia=interdum&erat=venenatis&vestibulum=turpis&sed=enim&magna=blandit&at=mi&nunc=in&commodo=porttitor&placerat=pede&praesent=justo&blandit=eu&nam=massa&nulla=donec&integer=dapibus&pede=duis&justo=at&lacinia=velit&eget=eu&tincidunt=est"
-  }, {
+  },
+  {
     "id": 2,
     "name": "House of Gucci",
     "description": "fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices",
@@ -22,7 +24,8 @@
     "price": 100,
     "image": "error: Unclosed quoted field on line 1.",
     "trailer": "http://yahoo.com/integer/tincidunt/ante/vel/ipsum.xml?convallis=nulla&morbi=dapibus&odio=dolor&odio=vel&elementum=est&eu=donec&interdum=odio&eu=justo&tincidunt=sollicitudin&in=ut&leo=suscipit&maecenas=a&pulvinar=feugiat&lobortis=et&est=eros&phasellus=vestibulum&sit=ac&amet=est&erat=lacinia&nulla=nisi&tempus=venenatis&vivamus=tristique&in=fusce&felis=congue&eu=diam&sapien=id&cursus=ornare&vestibulum=imperdiet&proin=sapien&eu=urna&mi=pretium&nulla=nisl&ac=ut&enim=volutpat&in=sapien&tempor=arcu&turpis=sed&nec=augue&euismod=aliquam&scelerisque=erat&quam=volutpat&turpis=in&adipiscing=congue&lorem=etiam&vitae=justo&mattis=etiam&nibh=pretium&ligula=iaculis&nec=justo&sem=in&duis=hac&aliquam=habitasse&convallis=platea&nunc=dictumst&proin=etiam&at=faucibus&turpis=cursus&a=urna"
-  }, {
+  },
+  {
     "id": 3,
     "name": "Spiderman: No Way Home",
     "description": "laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum",
@@ -34,7 +37,8 @@
     "price": 100,
     "image": "error: Unclosed quoted field on line 1.",
     "trailer": "https://vimeo.com/tincidunt/ante/vel/ipsum/praesent.png?dapibus=proin&duis=eu&at=mi&velit=nulla&eu=ac&est=enim&congue=in&elementum=tempor&in=turpis&hac=nec&habitasse=euismod&platea=scelerisque&dictumst=quam&morbi=turpis&vestibulum=adipiscing&velit=lorem&id=vitae&pretium=mattis&iaculis=nibh&diam=ligula&erat=nec&fermentum=sem&justo=duis&nec=aliquam&condimentum=convallis&neque=nunc&sapien=proin&placerat=at&ante=turpis&nulla=a&justo=pede&aliquam=posuere&quis=nonummy&turpis=integer"
-  }, {
+  },
+  {
     "id": 4,
     "name": "West Side Story",
     "description": "integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida",
@@ -46,5 +50,18 @@
     "price": 100,
     "image": "error: Unclosed quoted field on line 1.",
     "trailer": "https://howstuffworks.com/risus/dapibus/augue/vel/accumsan.json?habitasse=luctus&platea=cum&dictumst=sociis&maecenas=natoque&ut=penatibus&massa=et&quis=magnis&augue=dis&luctus=parturient&tincidunt=montes&nulla=nascetur&mollis=ridiculus&molestie=mus&lorem=vivamus&quisque=vestibulum&ut=sagittis&erat=sapien&curabitur=cum&gravida=sociis&nisi=natoque&at=penatibus&nibh=et&in=magnis&hac=dis&habitasse=parturient&platea=montes&dictumst=nascetur&aliquam=ridiculus&augue=mus&quam=etiam&sollicitudin=vel&vitae=augue&consectetuer=vestibulum&eget=rutrum&rutrum=rutrum&at=neque&lorem=aenean&integer=auctor&tincidunt=gravida&ante=sem&vel=praesent&ipsum=id&praesent=massa&blandit=id&lacinia=nisl&erat=venenatis&vestibulum=lacinia&sed=aenean&magna=sit&at=amet&nunc=justo&commodo=morbi&placerat=ut&praesent=odio&blandit=cras&nam=mi&nulla=pede"
-  }]
-  
+  },
+  {
+    "name": "The Batman",
+    "description": "En su segundo año luchando contra el crimen, Batman explora la corrupción existente en la ciudad de Gotham y el vínculo de esta con su propia familia. Además, entrará en conflicto con un asesino en serie conocido como \"el Acertijo\".",
+    "director": "Matt Reeves",
+    "actors": "Robert Pattinson, Zoe Kravitz, Paul Dano",
+    "genre": "Acción, Superhéroes",
+    "duration": 175,
+    "category": "estrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/watch?v=FUP3P9_mqvA&ab_channel=SensaCineTRAILERS",
+    "image": "poster-TheBatman.jpg",
+    "id": 5
+  }
+]
