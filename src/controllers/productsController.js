@@ -7,6 +7,10 @@ const productsController = {
         res.render('carrito');
     },
 
+    create: (req, res) => {
+        res.render('product-create-form');
+    },
+
     edit: (req, res) => {
         res.render('product-edit-form');
     },
