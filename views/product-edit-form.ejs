@@ -18,7 +18,7 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     
-    <title>Editar película</title>
+    <title>Añadir película</title>
 </head>
 
 <body>
@@ -35,40 +35,56 @@
     
         <!--<img src="\images\BIGSCREENpng.svg" alt="BigScreen" class="login-logo">-->
 
-        <div class="login-text-container"> <p>EDITAR PRODUCTO</p> </div>
+        <div class="login-text-container"> <p>EDITAR PELÍCULA: <br> <%= product.name %>  </p> </div>
         
-        <form action="/products" method="POST" enctype="multipart/form-data">
+        <form action="/movies/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
             <div class="contenedor-input">
-                <input type="text" name="movie-name" id="product-name" placeholder="Nombre de la película" class="campos-texto" value="">
+                <input type="text" name="name" id="name" placeholder="Nombre de la película" class="campos-texto" value="<%= product.name %>">
             </div>
 
             <div class="contenedor-input">
-                <input type="file" name="movie-poster" id="movie-poster" placeholder="Póster de la película" class="campos-texto" value="">
+                <textarea type="text" name="description" id="description" placeholder="Sinopsis de la película" class="campos-texto"><%= product.description %></textarea>
             </div>
 
             <div class="contenedor-input">
-                <input type="url" name="movie-trailer" id="movie-trailer" placeholder="URL del trailer" class="campos-texto" value="">
+                <input type="text" name="director" id="director" placeholder="Director de la película" class="campos-texto" value="<%= product.director %>">
             </div>
 
             <div class="contenedor-input">
-                <select id="movie-category" name="movie-category">
+                <input type="text" name="actors" id="actors" placeholder="Actores de la película" class="campos-texto" value="<%= product.actors %>">
+            </div>
+
+            <div class="contenedor-input">
+                <input type="text" name="genre" id="genre" placeholder="Género de la película" class="campos-texto" value="<%= product.genre %>">
+            </div>
+
+            <div class="contenedor-input">
+                <input type="number" name="duration" id="duration" placeholder="Duración de la película" class="campos-texto" value="<%= product.duration %>">
+            </div>
+
+            <div class="contenedor-input">
+                <select id="category" name="category" value="<%= product.category %>">
                     <option disabled selected>Categoría de la película:</option>
-                    <option value="caballito">Principal</option>
-                    <option value="recoleta">Próximos estrenos</option>
+                    <option value="estrenos">Principal</option>
+                    <option value="próximamente">Próximos estrenos</option>
                 </select>
             </div>
 
             <div class="contenedor-input">
-                <textarea type="text" name="movie-synopsis" id="movie-synopsis" placeholder="Sinopsis de la película" class="campos-texto" value=""></textarea>
+                <input type="number" name="price" id="price" placeholder="Precio de la película" class="campos-texto" value="<%= product.price %>">
             </div>
 
             <div class="contenedor-input">
-                <input type="text" name="movie-technical-details" id="movie-technical-details" placeholder="Datos técnicos" class="campos-texto" value="">
+                <input type="file" name="image" id="image" placeholder="Póster de la película" class="campos-texto" value="<%= product.image %>">
+            </div>
+
+            <div class="contenedor-input">
+                <input type="url" name="trailer" id="trailer" placeholder="URL del trailer" class="campos-texto" value="<%= product.trailer %>">
             </div>
 
             <div class="contenedor-button">
-                <button type="submit" class="login-button"><strong>Guardar Producto</strong></button>
+                <button type="submit" class="login-button"><strong>Guardar Película</strong></button>
             </div>
 
         </form>

@@ -55,7 +55,24 @@ const productsController = {
 	},
 
     edit: (req, res) => {
-        res.render('product-edit-form');
+        const productIdToFind = req.params.id;
+		const product = products.find((p) => p.id == productIdToFind);
+		if (!product) {
+			return res.send('NO EXISTE PELÍCULA CON ID ' + productIdToFind)
+		}
+
+		res.render('product-edit-form', {product, titulo: "Editar película"})
+    },
+
+    update: (req, res) => {
+        const idProducto = req.params.id;
+		const indiceDelProducto = products.findIndex((product) => product.id == idProducto);
+
+		products[indiceDelProducto] = { ...products[indiceDelProducto], ...req.body };
+
+		productsController.guardarProducto()
+
+		return res.send(products)
     },
 
     delete: {
