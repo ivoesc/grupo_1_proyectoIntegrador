@@ -28,7 +28,9 @@ router.get('/product-create-form', productsController.create);
 router.post('/', upload.single('image'), productsController.store);
 
 /* GET edit page. */
-router.get('/product-edit-form/:id', productsController.edit); 
+router.get('/product-edit-form/:id', productsController.edit);
 router.put('/:id', productsController.update);
+
+router.delete('/', productsController.delete)
 
 module.exports = router;

@@ -75,8 +75,15 @@ const productsController = {
 		return res.send(products)
     },
 
-    delete: {
+    delete: (req, res) => {
+		const idProducto = req.params.id;
+		const indiceDelProducto = products.findIndex((product) => product.id == idProducto);
 
+		products.pop(indiceDelProducto)
+
+		productsController.guardarProducto()
+
+		return res.send(products)
     }
 
 };

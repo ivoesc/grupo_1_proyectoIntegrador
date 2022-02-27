@@ -87,11 +87,17 @@
 
 /*          MOVIE DETAIL            */
 
-    .detail-main-container {
+    body {
+        background-image: url('/images/Remini20220227163316232.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+        .detail-main-container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 10px 150px 10px 150px;
     }
 
     .details-container {
@@ -99,11 +105,15 @@
         align-items: center;
         justify-content: center;
         flex-direction: row;
+        background-color: lightgrey;
+        border-radius: 10px;
+        width: 1000px;
+        margin: 85px auto 50px auto;
     }
 
     .trailer-container {
-        width: 710px;
-        height: 415px;
+        width: 440px;
+        margin: auto
     }
     
     .trailer-movie {
@@ -111,16 +121,15 @@
         height: 315px;
         margin: 0px 20px 20px 0px;
     }
-
-    .poster-info-container {
-        width: 30%;
-    }
     
     .trailer-description-container {
-        width: 70%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .poster-detail {
+        box-shadow: 0px 0px 10px rgb(137, 137, 137);
     }
 
 }    
