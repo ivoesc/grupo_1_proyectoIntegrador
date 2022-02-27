@@ -7,8 +7,8 @@
     "genre": "Musical, Drama",
     "duration": 156,
     "category": "estrenos",
-    "price": 100,
-    "image": "error: Unclosed quoted field on line 1.",
+    "price": 1000,
+    "image": "westside-poster.jpg",
     "trailer": "https://www.youtube.com/embed/GiQf6cZT8BQ",
     "id": 1
   },
@@ -20,7 +20,7 @@
     "genre": "Drama",
     "duration": 158,
     "category": "estrenos",
-    "price": 100,
+    "price": 1000,
     "image": "gucci-poster.webp",
     "trailer": "https://www.youtube.com/embed/7p73e4a4q5s",
     "id": 2
@@ -37,5 +37,31 @@
     "trailer": "https://www.youtube.com/embed/FUP3P9_mqvA",
     "image": "poster-TheBatman.jpg",
     "id": 3
+  },
+  {
+    "name": "Spider-Man: No Way Home",
+    "description": "Tras descubrirse la identidad secreta de Peter Parker como Spider-Man, la vida del joven se vuelve una locura. Peter decide pedirle ayuda al Doctor Extraño para recuperar su vida. Pero algo sale mal y provoca una fractura en el multiverso.\r\n",
+    "director": "Jon Watts",
+    "actors": "Tom Holland, Zendaya, Benedict Cumberbatch",
+    "genre": "Acción, Superhéroes",
+    "duration": 148,
+    "category": "estrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/z70zo9gQUKA",
+    "image": "poster-Spider-Man:NoWayHome.jpg",
+    "id": 4
+  },
+  {
+    "name": "Uncharted",
+    "description": "Nathan Drake y su compañero Victor Sullivan se adentran en la peligrosa búsqueda del \"mayor tesoro jamás encontrado\". Al mismo tiempo, rastrean pistas que puedan conducir al hermano perdido de Drake.",
+    "director": "Ruben Fleischer",
+    "actors": "Tom Holland, Mark Wahlberg, Sophia Ali",
+    "genre": "Acción, Aventura",
+    "duration": 116,
+    "category": "estrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/_dB3YoSN_EY",
+    "image": "poster-Uncharted.jpg",
+    "id": 5
   }
 ]
