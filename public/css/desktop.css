@@ -88,12 +88,20 @@
 /*          MOVIE DETAIL            */
 
     .detail-main-container {
-        flex-direction: row;
-        justify-content: left;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 150px 10px 150px;
     }
 
+    .trailer-container {
+        width: 700px;
+        height: 315px;
+    }
+    
     .trailer-movie {
-        width: 80%;
+        width: 420px;
+        height: 315px;
         margin: 0px 20px 20px 0px;
     }
 
@@ -101,8 +109,11 @@
         width: 30%;
     }
     
-    .trailer-button-container {
+    .trailer-description-container {
         width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
 }    
