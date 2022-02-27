@@ -80,86 +80,16 @@
             <h2>PELÍCULAS</h2>
 
             <div class="peliculas-container">
-                <div class="peliculas-info">
-                    <a href="/products/movie-detail"><img src="/images/westside-poster.jpg" alt="amor sin barreras poster"></a>
-                    <div class="peliculas-titulo">West Side Story</div>
-                </div>
+
+                <% estrenos.forEach(product => { %>
 
                 <div class="peliculas-info">
-                    <a href=""><img src="/images/gucci-poster.webp" alt="gucci poster"></a>
-                    <div class="peliculas-titulo">House of Gucci</div>
+                    <a href="/movies/detail/<%= product.id %> "><img src="/images/products/<%= product.image %> " alt="<%= product.name %> poster"></a>
+                    <div class="peliculas-titulo"><%= product.titulo %>  </div>
                 </div>
 
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/spiderman-poster.jpg" alt="spiderman: no way home poster"></a>
-                    <div class="peliculas-titulo">Spiderman: No Way Home</div>
-                </div>
+                <% }) %>
 
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/french-poster.webp" alt="french dispatch poster"></a>
-                    <div class="peliculas-titulo">The French Dispatch</div>
-                </div>
-
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/kingsman-poster.jpg" alt="kingsman poster"></a>
-                    <div class="peliculas-titulo">King's Man: El Origen</div>
-                </div>
-
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/scream-poster.jpg" alt="scream poster"></a>
-                    <div class="peliculas-titulo">Scream</div>
-                </div>
-
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/hoysearregla-poster.jpg" alt="hoysearregla poster"></a>
-                    <div class="peliculas-titulo">Hoy se arregla el mundo</div>
-                </div>
-
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/matrix-poster.jpg" alt="matrix poster"></a>
-                    <div class="peliculas-titulo">Matrix: Resurrections</div>
-                </div>
-
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/alien-poster.jpg" alt="matrix poster"></a>
-                    <div class="peliculas-titulo">Alien: Covenant</div>
-                </div>
-
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/wonderwoman-poster.jpg" alt="matrix poster"></a>
-                    <div class="peliculas-titulo">Wonder Woman</div>
-                </div>
-
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/martian-poster.jpg" alt="matrix poster"></a>
-                    <div class="peliculas-titulo">Martian</div>
-                </div>
-
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/joker-poster.jpg" alt="matrix poster"></a>
-                    <div class="peliculas-titulo">Joker</div>
-                </div>
-
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/dune-poster.jpg" alt="matrix poster"></a>
-                    <div class="peliculas-titulo">Dune</div>
-                </div>
-
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/parasite-poster.jpg" alt="matrix poster"></a>
-                    <div class="peliculas-titulo">Parasite</div>
-                </div>
-
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/fightclub-poster.jpg" alt="matrix poster"></a>
-                    <div class="peliculas-titulo">Fight Club</div>
-                </div>
-
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/dontlookup-poster.jpg" alt="matrix poster"></a>
-                    <div class="peliculas-titulo">Dont Look Up</div>
-                </div>
-                
             </div>
 
         </section>    

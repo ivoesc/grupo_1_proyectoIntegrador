@@ -11,11 +11,11 @@ const mainController = {
 		
 		const estrenos = products.filter((product) => 
 			product.category === 'estrenos'
-		)
+		);
 
 		const proximamente = products.filter((product) => 
 			product.category === 'próximamente'
-		)
+		);
 
 		return res.render( 'home', {estrenos, proximamente} )
 	},

@@ -28,7 +28,7 @@ const productsRouter = require('./src/routes/productsRouter');
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
-app.use('/products', productsRouter);
+app.use('/movies', productsRouter);
 
 
 // catch 404 and forward to error handler

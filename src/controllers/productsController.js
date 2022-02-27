@@ -7,8 +7,15 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
+    index: (req, res) => {
+
+    },
+    
     detail: (req, res) => {
-        res.render('movie-detail');
+        const productIdToFind = req.params.id;
+		const product = products.find( (p) => p.id == productIdToFind );
+
+		return res.render('movie-detail', {product});
     },
 
     cart: (req, res) => {

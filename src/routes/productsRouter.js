@@ -14,8 +14,11 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+/*** GET ALL PRODUCTS ***/ 
+router.get('/', productsController.index); 
+
 /* GET movie-detail page. */
-router.get('/movie-detail', productsController.detail);
+router.get('/detail/:id', productsController.detail);
 
 /* GET cart page. */
 router.get('/carrito', productsController.cart);
