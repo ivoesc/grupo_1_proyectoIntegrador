@@ -87,7 +87,7 @@
 
 /*          MOVIE DETAIL            */
 
-    body {
+    .detail-body {
         background-image: url('/images/Remini20220227163316232.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
