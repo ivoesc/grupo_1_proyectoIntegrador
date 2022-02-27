@@ -1,0 +1,25 @@
+[{
+    "first_name": "Manuel",
+    "last_name": "Yeregui",
+    "email": "manuelyeregui@gmail.com",
+    "phone_number": 1168005580,
+    "complex": "Caballito",
+    "password": "test1",
+    "id": 1
+  }, {
+    "first_name": "Ivo",
+    "last_name": "Escoli",
+    "email": "ivoescoli@gmail.com",
+    "phone_number": 1122943219,
+    "complex": "Recoleta",
+    "password": "test2",
+    "id": 2
+  }, {
+    "first_name": "Francisco",
+    "last_name": "Pais",
+    "email": "juanfranpais02@gmail.com",
+    "phone_number": 1126459707,
+    "complex": "Nordelta",
+    "password": "test3",
+    "id": 3
+  }]

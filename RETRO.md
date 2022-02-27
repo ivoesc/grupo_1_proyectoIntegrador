@@ -15,3 +15,23 @@ RETROSPECTIVA SPRINT 2:
 3. Continuar haciendo: continuar cumpliendo con las fechas de entrega de los spints. 
 4. Hacer menos: trabajar sin hacer breaks en el medio.
 5. Dejar de hacer: trabajar apurados tan cerca de la de fecha límite de entrega.
+
+-----------------------
+
+RETROSPECTIVA SPRINT 3:
+
+1. Comenzar a hacer: 
+2. Hacer más: 
+3. Continuar haciendo: 
+4. Hacer menos: 
+5. Dejar de hacer: 
+
+-----------------------
+
+RETROSPECTIVA SPRINT 4:
+
+1. Comenzar a hacer: 
+2. Hacer más: 
+3. Continuar haciendo: 
+4. Hacer menos: 
+5. Dejar de hacer: 
