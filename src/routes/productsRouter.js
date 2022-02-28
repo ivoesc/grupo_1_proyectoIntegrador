@@ -4,29 +4,27 @@ const productsController = require("../controllers/productsController.js")
 const multer = require('multer');
 const path = require('path');
 
-// multer para subir el poster
+// multer para subir el poster y el background
 
-const posterStorage = multer.diskStorage({
-    posterDestination: function (req, file, cb) {
-         cb(null, path.resolve('public/images/products'))
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+          if (req.files[file.fieldname] == req.files.image) {
+               cb(null, path.resolve('public/images/products'))
+          } else {
+               cb(null, path.resolve('public/images/backgrounds'))
+          }
     },
+
     filename: function (req, file, cb) {
-         cb(null, 'poster' + '-' + req.body.name.split(' ').join('') + path.extname(file.originalname))
-    }})
+          if (req.files[file.fieldname] == req.files.image ) {
+               cb(null, 'poster' + '-' + req.body.name.split(' ').join('') + path.extname(file.originalname))
+          } else {
+               cb(null, 'background' + '-' + req.body.name.split(' ').join('') + path.extname(file.originalname))
+          }
+    },
+})
 
-const posterUpload = multer({ storage: posterStorage });
-
-// multer para subir la imagen del background
-
-const backgroundStorage = multer.diskStorage({
-     backgroundDestination: function (req, backgroundFile, cb) {
-          cb(null, path.resolve('public/images/detail-backgrounds'))
-     },
-     backgroundFilename: function (req, backgroundFile, cb) {
-          cb(null, 'background' + '-' + req.body.name.split(' ').join('') + path.extname(backgroundFile.originalname))
-     }})
- 
- const backgroundUpload = multer({ storage: backgroundStorage });
+const upload = multer({ storage: storage });
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 
@@ -39,7 +37,7 @@ router.get('/carrito', productsController.cart);
 
 /* GET create page. */
 router.get('/product-create-form', productsController.create); 
-router.post('/', posterUpload.single('image'), backgroundUpload.single('background'), productsController.store);
+router.post('/', upload.fields([{name: 'image'}, {name: 'background'}]), productsController.store);
 
 /* GET edit page. */
 router.get('/product-edit-form/:id', productsController.edit);

@@ -63,5 +63,19 @@
     "trailer": "https://www.youtube.com/embed/_dB3YoSN_EY",
     "image": "poster-Uncharted.jpg",
     "id": 5
+  },
+  {
+    "name": "Joker",
+    "description": "La pasión de Arthur Fleck, un hombre ignorado por la sociedad, es hacer reír a la gente. Sin embargo, una serie de trágicos sucesos harán que su visión del mundo se distorsione considerablemente convirtiéndolo en un brillante criminal.",
+    "director": "Todd Philipps",
+    "actors": "Joaquin Phoenix, Robert De Niro, Zazie Beetz",
+    "genre": "Drama, Thriller",
+    "duration": 122,
+    "category": "estrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/8ZZ1l7QCVGE",
+    "image": "poster-Joker.jpg",
+    "background": "background-Joker.jpg",
+    "id": 6
   }
 ]

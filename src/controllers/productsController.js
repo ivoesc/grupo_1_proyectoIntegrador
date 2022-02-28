@@ -34,8 +34,12 @@ const productsController = {
 		productToCreate.price = Number(req.body.price);
         productToCreate.duration = Number(req.body.duration);
 		
-		productToCreate.image = req.file.filename;
-		productToCreate.background = req.backgroundFile.backgroundFilename;
+		
+		productToCreate.image = req.files.image[0].filename;
+		productToCreate.background = req.files.background[0].filename;
+
+		console.log(req.files);
+		console.log(req.files.background[0].backgroundFilename);
 		//asignar id
 		productToCreate.id = productsController.asignarIdProducto(productToCreate);
 		const ultimoElementoDeArray = products [products.length - 1];
