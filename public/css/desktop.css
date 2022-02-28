@@ -136,6 +136,11 @@
 
     .poster-detail {
         box-shadow: 0px 0px 10px rgb(137, 137, 137);
+        max-height: 605px;
+    }
+
+    .poster-info-container {
+        width: 1010px;
     }
 
 }    

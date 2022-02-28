@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="detail-body">
+<body class="detail-body"> 
 
     <header>
         <%- include ./partials/headerPartial.ejs %>
@@ -33,24 +33,24 @@
 
             <div class="poster-info-container">
 
-                <img src="https://cinembrollos.files.wordpress.com/2021/09/west_side_story_ver3_xlg.jpg" alt="westside-poster" class="poster-detail">
+                <img src="/images/products/<%= product.image %>" alt="movie-poster" class="poster-detail">
 
             </div>
 
             <div class="trailer-description-container">
 
                 <div class="movie-info">
-                    <h3>West Side Story</h3>
-                    <p> <strong>Director:</strong> Steven Spielberg <br>
-                        <strong>Actores:</strong> Ansel Elgort, Rachel Zegler, Rita Moreno, Ariana DeBose, David Alvarez, Corey Stoll, Brian d'Arcy James, Josh Andrés Rivera, Mike Faist, Ana Isabelle <br>
-                        <strong>Género:</strong> Música, Romance <br>
-                        <strong>Duración:</strong> 156 min.
+                    <h3><%= product.name %> </h3>
+                    <p> <strong>Director:</strong> <%= product.director %>  <br>
+                        <strong>Actores:</strong> <%= product.actors %> <br>
+                        <strong>Género:</strong> <%= product.genre %> <br>
+                        <strong>Duración:</strong> <%= product.duration %> min.
                     </p>
-                    <span>Dos adolescentes de diferentes raíces étnicas se enamoran en la ciudad de Nueva York de los años 50. Nueva versión del legendario musical West Side Story sobre el enfrentamiento entre dos bandas callejeras de Nueva York, adaptación de una famosa obra de teatro de Broadway.</span>
+                    <span><%= product.description %></span>
                 </div>
                 
                 <div class="trailer-container">
-                    <iframe src="https://www.youtube.com/embed/A5GJLwWiYSg" frameborder="0" allowfullscreen="allowfullscreen" class="trailer-movie" width="420" height="315"></iframe>
+                    <iframe src="<%= product.trailer %>" frameborder="0" allowfullscreen="allowfullscreen" class="trailer-movie" width="420" height="315"></iframe>
                 </div>
                 
                 <div class="contenedor-button-compra">
