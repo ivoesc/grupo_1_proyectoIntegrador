@@ -20,11 +20,11 @@ RETROSPECTIVA SPRINT 2:
 
 RETROSPECTIVA SPRINT 3:
 
-1. Comenzar a hacer: 
-2. Hacer más: 
-3. Continuar haciendo: 
-4. Hacer menos: 
-5. Dejar de hacer: 
+1. Comenzar a hacer: compartir con nuestros compañeros los cambios realizados.
+2. Hacer más: reuniones para charlas sobre los avances.
+3. Continuar haciendo: terminar los trabajos con antelación.
+4. Hacer menos: trabajar sin preguntar a los demás sobre alguna duda.
+5. Dejar de hacer: trabajar sin avisar y/o sin dividir tareas.
 
 -----------------------
 
