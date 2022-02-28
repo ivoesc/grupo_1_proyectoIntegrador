@@ -23,6 +23,7 @@
     "category": "estrenos",
     "price": 1000,
     "image": "poster-HouseofGucci.jpg",
+    "background": "background-HouseofGucci.jpg",
     "trailer": "https://www.youtube.com/embed/7p73e4a4q5s",
     "id": 2
   },
@@ -37,6 +38,7 @@
     "price": 1000,
     "trailer": "https://www.youtube.com/embed/FUP3P9_mqvA",
     "image": "poster-TheBatman.jpg",
+    "background": "background-TheBatman.jpg",
     "id": 3
   },
   {
@@ -50,6 +52,7 @@
     "price": 1000,
     "trailer": "https://www.youtube.com/embed/z70zo9gQUKA",
     "image": "poster-Spider-Man-NoWayHome.jpg",
+    "background": "background-Spider-ManNoWayHome.jpg",
     "id": 4
   },
   {
