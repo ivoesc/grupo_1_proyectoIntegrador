@@ -18,6 +18,7 @@
 .poster-detail {
     margin: auto;
     width: 90%;
+    border-radius: 5px
 }
 
 .movie-info {

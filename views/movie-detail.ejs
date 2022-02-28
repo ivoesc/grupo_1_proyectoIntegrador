@@ -21,7 +21,15 @@
 
 </head>
 
-<body class="detail-body" style= "background-image: url('/images/backgrounds/<%= product.background %>')"> 
+<body class="detail-body backgroundimage">
+
+    <style>
+        @media (min-width: 768px) {
+            .backgroundimage {
+                background-image: url('/images/backgrounds/<%= product.background %>');
+            }
+        }
+    </style>
 
     <header>
         <%- include ./partials/headerPartial.ejs %>

@@ -138,6 +138,7 @@
     .poster-detail {
         box-shadow: 0px 0px 10px rgb(137, 137, 137);
         max-height: 605px;
+        border-radius: 0px;
     }
 
     .poster-info-container {
