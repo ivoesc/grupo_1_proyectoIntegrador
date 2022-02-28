@@ -9,6 +9,7 @@
     "category": "estrenos",
     "price": "1000",
     "image": "poster-WestSideStory.jpg",
+    "background": "background-WestSideStory.jpg",
     "trailer": "https://www.youtube.com/embed/GiQf6cZT8BQ",
     "id": 1
   },
@@ -77,5 +78,19 @@
     "image": "poster-Joker.jpg",
     "background": "background-Joker.jpg",
     "id": 6
+  },
+  {
+    "name": "Licorice Pizza",
+    "description": "Alana Kane y Gary Valentine inician sus primeros pasos vacilantes en el amor en el Valle de San Fernando, California, en 1973.",
+    "director": "Paul Thomas Anderson",
+    "actors": "Cooper Hoffman, Alana Haim, Bradley Cooper",
+    "genre": "Comedia, Romance",
+    "duration": "133",
+    "category": "estrenos",
+    "price": "1000",
+    "trailer": "https://www.youtube.com/embed/GikKSs-7Pwk",
+    "image": "poster-LicoricePizza.jpg",
+    "background": "background-LicoricePizza.jpg",
+    "id": 7
   }
 ]

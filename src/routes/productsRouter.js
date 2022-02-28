@@ -36,12 +36,12 @@ router.get('/detail/:id', productsController.detail);
 router.get('/carrito', productsController.cart);
 
 /* GET create page. */
-router.get('/product-create-form', productsController.create); 
+router.get('/create', productsController.create); 
 router.post('/', upload.fields([{name: 'image'}, {name: 'background'}]), productsController.store);
 
 /* GET edit page. */
-router.get('/product-edit-form/:id', productsController.edit);
-router.put('/:id', productsController.update);
+router.get('/edit/:id', productsController.edit);
+router.put('/:id', upload.fields([{name: 'image'}, {name: 'background'}]), productsController.update);
 
 router.delete('/', productsController.delete)
 
