@@ -67,9 +67,9 @@ const productsController = {
 
     update: (req, res) => {
         const idProducto = req.params.id;
-		const indiceDelProducto = products.findIndex((product) => product.id == idProducto);
+		const indiceDelProducto = products.findIndex((p) => p.id == idProducto);
 
-		products[indiceDelProducto] = { ...products[indiceDelProducto], ...req.body };
+		products[indiceDelProducto] = {...products[indiceDelProducto], ...req.body};
 
 		productsController.guardarProducto()
 

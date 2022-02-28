@@ -76,7 +76,6 @@ main {
         width: 100%;
         margin: 20px 0px 20px 0px;
         transition: all 200ms ease-in;
-        resize: none;
     }
 
     .contenedor-textarea:hover {
@@ -89,6 +88,7 @@ main {
             outline: none;
             width: 100%;
             font-family: 'Roboto', sans-serif;
+            resize: none;
         }
 
     .contenedor-button{
