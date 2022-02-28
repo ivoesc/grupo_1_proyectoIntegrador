@@ -99,20 +99,15 @@
             <h2 class="proximamente-texto">PRÓXIMAMENTE</h2>
             
             <div class="peliculas-container-proximamente">
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/batman-poster.jpg" alt="batman poster"></a>
-                    <div class="peliculas-titulo">Batman</div>
-                </div>
 
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/ecos-poster.jpg" alt="ecos de un crimen poster"></a>
-                    <div class="peliculas-titulo">Ecos de un crimen</div>
-                </div>
+                <% proximamente.forEach(product => { %>
 
-                <div class="peliculas-info">
-                    <a href=""><img src="/images/uncharted-poster.jpg" alt="uncharted poster"></a>
-                    <div class="peliculas-titulo">Uncharted: fuera del mapa</div>
-                </div>
+                    <div class="peliculas-info">
+                        <a href="/movies/detail/<%= product.id %> "><img src="/images/products/<%= product.image %> " alt="<%= product.name %> poster"></a>
+                        <div class="peliculas-titulo"><%= product.name%>  </div>
+                    </div>
+
+                    <% }) %>
 
             </div>
 
