@@ -1,13 +1,18 @@
 .main-login-div {
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     margin: 20px 20% 5px 20%;
     text-align: center;
     background-color: #acacac;
     border-radius: 5px;
     padding: 5px 25px 50px 25px;
+}
+
+.main-form-div {
+    margin: 20px 20% 5px 20%;
+    text-align: center;
+    background-color: #acacac;
+    border-radius: 5px;
+    padding: 5px 25px 50px 25px;
+    margin-top: 120px;
 }
 
 main {
@@ -60,11 +65,30 @@ main {
             border: 2px solid rgb(134, 134, 134);
         }
 
+    .contenedor-textarea {
+        display: flex;
+        justify-content: left;
+        background: white;
+        border-radius: 10px;
+        border: 2px solid white;
+        padding: 8px;
+        height: 100px;
+        width: 100%;
+        margin: 20px 0px 20px 0px;
+        transition: all 200ms ease-in;
+        resize: none;
+    }
+
+    .contenedor-textarea:hover {
+        border: 2px solid rgb(134, 134, 134);
+    }
+        
         .campos-texto {
             border: none;
             background: none;
             outline: none;
             width: 100%;
+            font-family: 'Roboto', sans-serif;
         }
 
     .contenedor-button{
