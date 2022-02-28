@@ -5,9 +5,9 @@
     "director": "Steven Spielberg",
     "actors": "Ansel Elgort, Rachel Zegler, Maddie Ziegler",
     "genre": "Musical, Drama",
-    "duration": 156,
+    "duration": "156",
     "category": "estrenos",
-    "price": 1000,
+    "price": "1000",
     "image": "westside-poster.jpg",
     "trailer": "https://www.youtube.com/embed/GiQf6cZT8BQ",
     "id": 1

@@ -6,6 +6,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+
+
 const productsController = {
     index: (req, res) => {
 
@@ -47,9 +49,7 @@ const productsController = {
 		return res.send(products);
     },
 
-    guardarProducto() {
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
-	},
+    
     
 	asignarIdProducto(productToCreate) {
 		return products[products.length - 1].id +1;
@@ -75,6 +75,10 @@ const productsController = {
 
 		return res.send(products)
     },
+	
+	guardarProducto() {
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2))
+	},
 
     delete: (req, res) => {
 		const idProducto = req.params.id;
@@ -85,8 +89,8 @@ const productsController = {
 		productsController.guardarProducto()
 
 		return res.send(products)
-    }
-
+    },
+	
 };
 
 module.exports = productsController;
