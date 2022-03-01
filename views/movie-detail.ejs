@@ -69,9 +69,12 @@
 
         </div>
 
-        <!--<div class="contenedor-button-compra">
-            <button type="submit" class="login-button"> <strong> Eliminar película </strong> </button>
-        </div>-->
+        <form action="/movies/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+            <div class="contenedor-button-compra">
+                <button type="submit" class="login-button"> <strong> Eliminar película </strong> </button>
+            </div>
+        </form>
+
     </main>
 
     <footer>

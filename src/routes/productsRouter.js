@@ -43,6 +43,6 @@ router.post('/', upload.fields([{name: 'image'}, {name: 'background'}]), product
 router.get('/detail/:id/edit', productsController.edit);
 router.put('/:id', upload.fields([{name: 'image'}, {name: 'background'}]), productsController.update);
 
-router.delete('/', productsController.delete);
+router.delete('/:id', productsController.delete);
 
 module.exports = router;

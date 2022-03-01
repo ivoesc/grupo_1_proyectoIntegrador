@@ -91,7 +91,8 @@ const productsController = {
 		const idProducto = req.params.id;
 		const indiceDelProducto = products.findIndex((product) => product.id == idProducto);
 
-		products.pop(products[indiceDelProducto])
+		products.splice(indiceDelProducto, 1)
+		//products.pop(products[indiceDelProducto])
 
 		productsController.guardarProducto()
 
