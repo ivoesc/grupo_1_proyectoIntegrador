@@ -73,6 +73,11 @@ const productsController = {
         const idProducto = req.params.id;
 		const indiceDelProducto = products.findIndex((p) => p.id == idProducto);
 
+		const productToEdit = (req.body);
+
+		productToEdit.price = Number(req.body.price);
+        productToEdit.duration = Number(req.body.duration);
+
 		products[indiceDelProducto] = {...products[indiceDelProducto], ...req.body};
 
 		productsController.guardarProducto()
@@ -88,7 +93,7 @@ const productsController = {
 		const idProducto = req.params.id;
 		const indiceDelProducto = products.findIndex((product) => product.id == idProducto);
 
-		products.pop(indiceDelProducto)
+		products.pop(products[indiceDelProducto])
 
 		productsController.guardarProducto()
 
