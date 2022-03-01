@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 
@@ -29,7 +30,7 @@
 
     <main>
 
-            <section class="slider-container">
+        <section class="slider-container">
             <div class="slidershow middle">
                 <div class="slides">
                 
@@ -75,9 +76,9 @@
 
         </section>
 
-            <section class="peliculas-container-desktop">
+        <section class="peliculas-container-desktop">
 
-            <h2>PELÍCULAS</h2>
+            <h2 class="titulo-section">Películas</h2>
 
             <div class="peliculas-container">
 
@@ -85,7 +86,7 @@
 
                 <div class="peliculas-info">
                     <a href="/movies/detail/<%= product.id %> "><img src="/images/products/<%= product.image %> " alt="<%= product.name %> poster"></a>
-                    <div class="peliculas-titulo"><%= product.name%>  </div>
+                    <p class="peliculas-titulo"><%= product.name%>  </p>
                 </div>
 
                 <% }) %>
@@ -94,11 +95,11 @@
 
         </section>    
 
-        <section class="proximamente">
+        <section class="peliculas-container-desktop">
             
-            <h2 class="proximamente-texto">PRÓXIMAMENTE</h2>
+            <h2 class="titulo-section">Próximamente</h2>
             
-            <div class="peliculas-container-proximamente">
+            <div class="peliculas-container">
 
                 <% proximamente.forEach(product => { %>
 

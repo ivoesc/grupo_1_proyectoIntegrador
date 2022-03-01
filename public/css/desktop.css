@@ -5,10 +5,10 @@
         padding-right: 20%;
     }
 
-    .proximamente-texto, .peliculas-container-proximamente {
+    /*.proximamente-texto, .peliculas-container-proximamente {
         padding-left: 20%;
         padding-right: 20%;
-    }
+    }*/
 
     .main-login-div {
         width: 400px;
@@ -90,10 +90,22 @@
                 text-decoration: none;
             }
 
+/*          hOME         */
+    
     .peliculas-info img:hover{
         margin: 0px;
         margin-bottom: 7px;
         box-shadow: 0px 0px 10px rgb(48, 48, 48);
+    }
+
+    .titulo-section {
+        text-align: left;
+    }
+
+    .peliculas-container {
+        justify-content: space-between;
+        padding-bottom: 40px;
+        border-bottom: 1px solid darkgray;
     }
 
 /*          MOVIE DETAIL            */
@@ -143,12 +155,15 @@
 
     .poster-detail {
         box-shadow: 0px 0px 10px rgb(137, 137, 137);
-        max-height: 605px;
+        max-height: 655px;
         border-radius: 0px;
     }
-
+    
     .poster-info-container {
         width: 1010px;
     }
 
-}    
+    .edit-delete-container {
+        display: flex;
+    }
+}
