@@ -69,9 +69,20 @@
 
         </div>
 
+        <script type="text/javascript">
+            function ConfirmDelete(){
+                var respuesta = confirm("Eliminar película");
+                if (respuesta == true) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+         </script>
+        
         <form action="/movies/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
             <div class="contenedor-button-compra">
-                <button type="submit" class="login-button"> <strong> Eliminar película </strong> </button>
+                <button type="submit" class="login-button" onclick="return ConfirmDelete()"> <strong> Eliminar película </strong> </button>
             </div>
         </form>
 
