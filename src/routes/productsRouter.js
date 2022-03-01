@@ -40,7 +40,7 @@ router.get('/create', productsController.create);
 router.post('/', upload.fields([{name: 'image'}, {name: 'background'}]), productsController.store);
 
 /* GET edit page. */
-router.get('/edit/:id', productsController.edit);
+router.get('/detail/:id/edit', productsController.edit);
 router.put('/:id', upload.fields([{name: 'image'}, {name: 'background'}]), productsController.update);
 
 router.delete('/', productsController.delete);
