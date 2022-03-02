@@ -18,15 +18,22 @@
         width: 400px;
     }
 
+/*        HEADER        */
+
+    .burger-menu {
+        display: none;
+    }
 
     .logo-header {
         padding: 0px;
+        margin-left: 10px;
     }
 
     .lupa-iniciar {
         display: flex;
         width: 45%;
         align-items: center;
+        justify-content: right;
     }
     
         .contenedor-logo-busqueda {
@@ -90,7 +97,7 @@
                 text-decoration: none;
             }
 
-/*          hOME         */
+/*          HOME        */
     
     .peliculas-info img:hover{
         margin: 0px;

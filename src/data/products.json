@@ -82,5 +82,19 @@
     "image": "poster-Joker.jpg",
     "background": "background-Joker.jpg",
     "id": 6
+  },
+  {
+    "name": "The King's Man",
+    "description": "Un grupo formado por los tiranos y las mentes criminales más malvadas de la historia se une para desencadenar una guerra que matará a millones de personas. Un hombre tendrá que luchar contra el mal y contra el tiempo para detenerlos.\r\n",
+    "director": "Matthew Vaughn",
+    "actors": "Gemma Arterton, Ralph Fiennes, Harris Dickinson",
+    "genre": "Acción, Ciencia ficción",
+    "duration": 131,
+    "category": "estrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/5zdBG-iGfes",
+    "image": "poster-TheKing'sMan.jpg",
+    "background": "background-TheKingsMan.jpg",
+    "id": 7
   }
 ]
