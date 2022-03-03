@@ -121,8 +121,8 @@
     "category": "reestrenos",
     "price": 1000,
     "trailer": "https://www.youtube.com/embed/xr3hPFJAHO4",
-    "image": "poster-StarWarsV:ElImperioContraataca.jpg",
-    "background": "background-StarWarsV:ElImperioContraataca.jpg",
+    "image": "poster-StarWarsVElImperioContraataca.jpg",
+    "background": "background-StarWarsVElImperioContraataca.jpg",
     "id": 9
   },
   {
@@ -149,8 +149,8 @@
     "category": "próximamente",
     "price": 1000,
     "trailer": "https://www.youtube.com/embed/sT7Pcn1lFh8",
-    "image": "poster-Animalesfantásticos:LossecretosdeDumbledore.jpg",
-    "background": "background-Animalesfantásticos:LossecretosdeDumbledore.jpg",
+    "image": "poster-AnimalesfantásticosLossecretosdeDumbledore.jpg",
+    "background": "background-AnimalesfantásticosLossecretosdeDumbledore.jpg",
     "id": 11
   },
   {
@@ -191,8 +191,8 @@
     "category": "próximamente",
     "price": 1000,
     "trailer": "https://www.youtube.com/embed/ZWNJmnREyoM",
-    "image": "poster-Spider-Man:AcrosstheSpider-Verse(parteuno).jpg",
-    "background": "background-Spider-Man:AcrosstheSpider-Verse(parteuno).webp",
+    "image": "poster-Spider-ManAcrosstheSpider-Verse(parteuno).jpg",
+    "background": "background-Spider-ManAcrosstheSpider-Verse(parteuno).webp",
     "id": 14
   },
   {
@@ -261,8 +261,8 @@
     "category": "próximamente",
     "price": 1000,
     "trailer": "https://www.youtube.com/embed/56pvThSsoSE",
-    "image": "poster-JohnWick:Capítulo4.jpg",
-    "background": "background-JohnWick:Capítulo4.jpg",
+    "image": "poster-JohnWickCapítulo4.jpg",
+    "background": "background-JohnWickCapítulo4.jpg",
     "id": 19
   },
   {
