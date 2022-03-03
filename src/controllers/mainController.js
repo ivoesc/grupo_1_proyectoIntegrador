@@ -17,7 +17,11 @@ const mainController = {
 			product.category === 'próximamente'
 		);
 
-		return res.render( 'home', {estrenos, proximamente} )
+		const reestrenos = products.filter((product) => 
+			product.category === 'reestrenos'
+		);
+
+		return res.render( 'home', {estrenos, proximamente, reestrenos} )
 	},
 	search: (req, res) => {
 		// Do the magic

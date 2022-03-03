@@ -115,6 +115,25 @@
 
         </section>
 
+        <section class="peliculas-container-desktop">
+            
+            <h2 class="titulo-section">Re-Estrenos</h2>
+            
+            <div class="peliculas-container">
+
+                <% reestrenos.forEach(product => { %>
+
+                    <div class="peliculas-info">
+                        <a href="/movies/detail/<%= product.id %> "><img src="/images/products/<%= product.image %> " alt="<%= product.name %> poster"></a>
+                        <div class="peliculas-titulo"><%= product.name%>  </div>
+                    </div>
+
+                    <% }) %>
+
+            </div>
+
+        </section>
+
     </main>
 
     <footer>

@@ -96,5 +96,33 @@
     "image": "poster-TheKing'sMan.jpg",
     "background": "background-TheKingsMan.jpg",
     "id": 7
+  },
+  {
+    "name": "El Padrino",
+    "description": "Don Vito Corleone es el respetado y temido jefe de una de las cinco familias de la mafia de Nueva York en los años 40. El hombre tiene cuatro hijos: Connie, Sonny, Fredo y Michael, que no quiere saber nada de los negocios sucios de su padre.",
+    "director": "Francis Ford Coppola",
+    "actors": "Marlon Brando, Al Pacino, James Caan",
+    "genre": "Drama, Crimen",
+    "duration": 175,
+    "category": "reestrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/JIF73hXyLJg",
+    "image": "poster-ElPadrino.jpg",
+    "background": "background-ElPadrino.jpg",
+    "id": 8
+  },
+  {
+    "name": "Star Wars V: El Imperio Contraataca",
+    "description": "En una fuga de la temida Flota Imperial, un grupo de guerreros rebeldes liderado por Luke Skywalker ha establecido una nueva base secreta en la remota tierra congelada de Hoth. Darth Vader, Señor del mal, Obsesionado con encontrar al joven Skywalker, ha despachado al lejano espacio miles de sondas a control remoto....",
+    "director": "George Lucas",
+    "actors": "Mark Hamill, Harrison Ford, Carrie Fisher",
+    "genre": "Ciencia Ficción",
+    "duration": 124,
+    "category": "reestrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/xr3hPFJAHO4",
+    "image": "poster-StarWarsV:ElImperioContraataca.jpg",
+    "background": "background-StarWarsV:ElImperioContraataca.jpg",
+    "id": 9
   }
 ]
