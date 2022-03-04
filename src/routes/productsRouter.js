@@ -3,28 +3,7 @@ const router = express.Router();
 const productsController = require("../controllers/productsController.js")
 const multer = require('multer');
 const path = require('path');
-
-// multer para subir el poster y el background
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-          if (req.files[file.fieldname] == req.files.image) {
-               cb(null, path.resolve('public/images/products'))
-          } else {
-               cb(null, path.resolve('public/images/backgrounds'))
-          }
-    },
-
-    filename: function (req, file, cb) {
-          if (req.files[file.fieldname] == req.files.image ) {
-               cb(null, 'poster' + '-' + req.body.name.split(' ').join('') + path.extname(file.originalname))
-          } else {
-               cb(null, 'background' + '-' + req.body.name.split(' ').join('') + path.extname(file.originalname))
-          }
-    },
-})
-
-const upload = multer({ storage: storage });
+const upload = require('../middlewares/productsMulter')
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 

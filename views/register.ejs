@@ -57,39 +57,45 @@
 
         <div class="login-text-container"> <p>REGISTRARSE</p> </div>
         
-        <form action="/" method="get">
-
+        <form action="/users/register" method="POST" enctype="multipart/form-data">
+            
             <div class="contenedor-input">
-                <input type="text" name="username" id="username" placeholder="Nombre" class="campos-texto">
+                <input type="text" name="name" id="name" placeholder="Nombre" class="campos-texto">
             </div>
 
             <div class="contenedor-input">
-                <input type="text" name="username" id="username" placeholder="Apellido" class="campos-texto">
+                <input type="text" name="surname" id="surname" placeholder="Apellido" class="campos-texto">
             </div>
 
             <div class="contenedor-input">
-                <input type="email" name="username" id="username" placeholder="E-Mail" class="campos-texto">
+                <input type="email" name="email" id="email" placeholder="E-Mail" class="campos-texto">
             </div>
 
             <div class="contenedor-input">
-                <input type="number" name="username" id="username" placeholder="Télefono" class="campos-texto">
+                <input type="number" name="phone" id="phone" placeholder="Télefono" class="campos-texto">
             </div>
 
             <div class="contenedor-input">
                 <select id="complejo" name="complejo">
                     <option disabled selected>Elegí tu complejo de Preferencia:</option>
-                    <option value="caballito">Complejo Caballito</option>
-                    <option value="recoleta">Complejo Recoleta</option>
-                    <option value="nordelta">Complejo Nordelta</option>
+                    <% let complex = ['Caballito', 'Recoleta', 'Nordelta'];%>
+                        <% for (const oneComplex of complex) { %>
+                        <option value="<%= oneComplex %>"> <%= oneComplex %> </option>
+                        <% } %>
                 </select>
             </div>
 
             <div class="contenedor-input">
-                <input type="password" name="username" id="username" placeholder="Crear Contraseña" class="campos-texto">
+                <input type="password" name="password" id="password" placeholder="Crear Contraseña" class="campos-texto">
             </div>
 
             <div class="contenedor-input">
-                <input type="password" name="username" id="username" placeholder="Confirmar Contraseña" class="campos-texto">
+                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmar Contraseña" class="campos-texto">
+            </div>
+
+            <label for="image">Imagen de perfil</label>
+            <div class="contenedor-input">
+                <input type="file" name="profilePic" id="profilePic" class="campos-texto" value="">
             </div>
 
             <div class="contenedor-button">
