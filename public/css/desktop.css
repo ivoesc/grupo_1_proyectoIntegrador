@@ -28,11 +28,11 @@
         padding: 0px;
         margin-left: 10px;
         width: 145px;
-        transition: 0.2s;
+        transition: 1s;
     }
 
         .logo-header:hover {
-            filter: invert(0%) sepia(1%) saturate(7430%) hue-rotate(185deg) brightness(112%) contrast(2000%);
+            filter: contrast(100);
             
         }
 
