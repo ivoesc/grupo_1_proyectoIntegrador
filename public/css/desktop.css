@@ -28,13 +28,12 @@
         padding: 0px;
         margin-left: 10px;
         width: 145px;
-        opacity: 80%;
-        transition: 0.07s;
+        transition: 0.2s;
     }
 
         .logo-header:hover {
-            width: 150px;
-            opacity: 100%;
+            filter: invert(0%) sepia(1%) saturate(7430%) hue-rotate(185deg) brightness(112%) contrast(2000%);
+            
         }
 
     .lupa-iniciar {
@@ -111,11 +110,11 @@
         box-shadow: 0px 0px 10px rgb(137, 137, 137);
     }
 
-    .peliculas-info img:hover{
-        margin: 0px;
-        margin-bottom: 7px;
-        box-shadow: 0px 0px 10px rgb(48, 48, 48);
-    }
+        .peliculas-info img:hover{
+            margin: 0px;
+            margin-bottom: 7px;
+            box-shadow: 0px 0px 10px rgb(48, 48, 48);
+        }
 
     .titulo-section {
         text-align: left;
