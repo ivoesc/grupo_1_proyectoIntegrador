@@ -225,7 +225,7 @@
   },
   {
     "name": "Gladiador",
-    "description": "El general romano Máximo es el soporte más leal del emperador Marco Aurelio, que lo ha conducido de victoria en victoria. Sin embargo, Cómodo, el hijo de Marco Aurelio, está celoso del prestigio de Máximo y aún más del amor que su padre siente por él. Cuando Cómodo llega al poder ordena el arresto del general y su asesinato. Máximo escapa de sus asesinos, pero no puede evitar la muerte de su familia. Entonces se convierte en gladiador para llevar a cabo su venganza.",
+    "description": "El general romano Maximus ha vuelto a regresar victorioso con sus legiones del campo de batalla. Ahora solo quiere volver junto a su esposa e hijo. Pero el emperador Marco Aurelio tiene una nueva misión para él: quiere que sea su sucesor.",
     "director": "Ridley Scott",
     "actors": "Russell Crowe, Connie Nielsen, Joaquin Phoenix, Djimon Hounsou",
     "genre": "Acción, Drama",
@@ -267,7 +267,7 @@
   },
   {
     "name": "Casablanca",
-    "description": "Durante la II Guerra Mundial, Casablanca era una ciudad a la que llegaban huyendo del nazismo gentes de todas partes: llegar era fácil, pero salir era casi imposible, especialmente si el nombre del fugitivo figuraba en las listas de la Gestapo. En esta ocasión, el objetivo es Victor Laszlo, cuya única esperanza es Rick Blaine, propietario del 'Rick's Café' y antiguo amante de su mujer.",
+    "description": "Durante la II GM, Casablanca era una ciudad a la que llegaban huyendo del nazismo gentes de todas partes: llegar era fácil, pero salir era casi imposible, y mas si el nombre del fugitivo figuraba en las listas de la Gestapo. En esta ocasión, el objetivo es Victor Laszlo, cuya única esperanza es Rick Blaine, propietario del 'Rick's Café' y antiguo amante de su mujer.",
     "director": "Michael Curtiz",
     "actors": "Humphrey Bogart, Ingrid Bergman, Claude Rains, Paul Henreid",
     "genre": "Drama, Romance",
@@ -407,7 +407,7 @@
   },
   {
     "name": "Titanic",
-    "description": "Jack es un joven artista que gana un pasaje para viajar a América en el Titanic, el transatlántico más grande y seguro jamás construido. A bordo del buque conoce a Rose, una chica de clase alta que viaja con su madre y su prometido Cal, un millonario engreído a quien solo interesa el prestigio de la familia de su prometida. Jack y Rose se enamoran a pesar de las trabas que ponen la madre de ella y Cal en su relación. Mientras, el lujoso transatlántico se acerca a un inmenso iceberg.",
+    "description": "Jack es un joven artista que gana un pasaje para viajar a América en el Titanic, el transatlántico más grande y seguro jamás construido. A bordo del buque conoce a Rose, una chica de clase alta que viaja con su madre y su prometido Cal, millonario e ingreído. Mientras el lujoso transatlántico se acerca a un inmenso iceberg, Jack y Rose se enamoran.",
     "director": "James Cameron",
     "actors": "Kate Winslet, Leonardo DiCaprio",
     "genre": "Romance, Drama",
