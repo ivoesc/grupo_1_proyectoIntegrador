@@ -1,5 +1,5 @@
 .main-login-div {
-    margin: 20px 20% 5px 20%;
+    margin: 20px 10% 5px 10%;
     text-align: center;
     background-color: #acacac;
     border-radius: 5px;
@@ -138,4 +138,17 @@ select {
 
 select option {
     color: black;
+}
+
+.text-danger {
+    color: red;
+    text-align: left;
+    margin: -15px 0px -7px 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
+.register-label {
+    text-align: left;
+    margin: 17px 0px -15px 6px;
 }
