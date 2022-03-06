@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: rgb(231, 231, 231);
+    background-color: #171717;
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
     margin: 0;
@@ -12,8 +12,14 @@ body {
 
 /* HEADER */
 
+        .main-header-container {
+            display: flex;
+            justify-content: space-between;
+            width: 950px;
+            margin: 0px auto;
+        }
+
         .search-box {
-            background: #3f146a;
             height: 40px;
             border-radius: 5px;
             padding-left: 5px;
@@ -26,7 +32,7 @@ body {
         }
 
         .search-box:hover > .search-btn {
-            color: #3f146a
+            color: #171717
         }
 
         .search-box:hover > .logo-header-container {
@@ -71,10 +77,8 @@ body {
 
 
 header {
-    background-color: #3f146a;
-    display: flex;
+    background-color: #171717;
     width: 100%;
-    justify-content: space-between;
     position: fixed;
     z-index: 10;
     top: 0px;
@@ -195,7 +199,7 @@ input[name="r"]{
 .titulo-section {
     /*margin-left: 55px;*/
     text-align: center;
-    color: rgb(90, 90, 90);
+    color: #e3e3e3;
     font-weight: 600;
     margin-top: 8px;
     font-family: 'Montserrat', sans-serif;;
@@ -245,18 +249,29 @@ input[name="r"]{
     text-overflow: ellipsis;
     transition: all 100ms ease-in;
     margin: 0px;
+    color: #e3e3e3;
 }
 
 /* FOOTER */
 
 footer {
-    background-color: #3f146a;
+    background-color: #171717;
+}
+
+.main-footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo-footer {
     width: 120px;
     margin-top: 20px;
-    margin-left: 20px;
+}
+
+.footer-list {
+    padding: 0px;
+    text-align: center;
 }
 
 .footer-list li a {
@@ -265,16 +280,15 @@ footer {
 }
 
 .footer-list-container {
-    margin-left: -20px;
+
 }
 
 .social-media {
     display: flex;
-    margin-left: 15px;
+    justify-content: center;
 }
 
 .social-media a i {
-    margin-left: 5px;
     margin-right: 5px;
     color: white;
     padding-bottom: 10px;

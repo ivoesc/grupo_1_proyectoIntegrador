@@ -1,3 +1,9 @@
+body {
+    background-image: url(https://images7.alphacoders.com/341/thumb-1920-341191.jpg);
+    background-blend-mode: overlay;
+    background-size: cover;
+}
+
 .main-login-div {
     margin: 20px 10% 5px 10%;
     text-align: center;
@@ -121,7 +127,8 @@ main {
 
     .google-login, .forgot-password {
         font-size: 13px;
-        margin: 10px 0px 10px 0px
+        margin: 10px 0px 10px 0px;
+        color: #e3e3e3;
     }
 
 

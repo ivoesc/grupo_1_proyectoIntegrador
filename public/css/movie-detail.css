@@ -23,6 +23,7 @@
 
 .movie-info {
     margin: 0px 20px 10px 20px ;
+    color: #e3e3e3;
 }
 
 .trailer-description-container {
@@ -38,7 +39,7 @@
 .contenedor-button-compra {
     display: flex;
     justify-content: center;
-    background: #3f146a;
+    background: #e3e3e3;
     border-radius: 10px;
     padding: 10px;
     height: 40px;
@@ -57,7 +58,7 @@
     background: none;
     outline: none;
     width: 100%;
-    color: white;
+    color: #171717;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
 }
