@@ -82,7 +82,7 @@
             justify-content: center;
             align-items: center;
             margin: 10px 5px 10px 5px;
-            border-radius: 10px;
+            border-radius: 5px;
             padding: 10px;
             height: 40px;
             cursor: pointer;
@@ -126,7 +126,7 @@
     .peliculas-container {
         justify-content: space-between;
         padding-bottom: 40px;
-        border-bottom: 1px solid darkgray;
+        border-bottom: 1px solid #e3e3e3;
     }
 
 /*          MOVIE DETAIL            */
