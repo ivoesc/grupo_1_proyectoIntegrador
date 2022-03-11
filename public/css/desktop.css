@@ -76,8 +76,7 @@
             width: 375px;
             max-width: 130px;
             text-align: center;
-            color: #3f146a;
-            background-color: white;
+            background-color: #e3e3e3;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -86,7 +85,12 @@
             padding: 10px;
             height: 40px;
             cursor: pointer;
+            transition: 0.1s;
         }
+
+            .header-login-button:hover {
+                background-color: #adadad;
+            }
 
             .header-login-button a {
                 text-decoration: none;
@@ -101,7 +105,13 @@
         }
 
             .header-signup-button a {
-                color: white;
+                color: #e3e3e3;
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+            .header-signup-button a:hover {
+                color: #adadad;
                 font-weight: 600;
                 text-decoration: none;
             }
