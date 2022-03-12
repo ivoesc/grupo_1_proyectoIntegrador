@@ -9,6 +9,6 @@ router.get('/login', usersController.login);
 
 /* GET register page. */
 router.get('/register', usersController.register);
-router.post('/register', upload.single('profilePic'), validations, usersController.processRegister);
+router.post('/register', upload.single('profilePic'), validations, usersController.registerProcess);
 
 module.exports = router;
