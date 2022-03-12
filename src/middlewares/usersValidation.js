@@ -2,7 +2,7 @@ const path = require('path')
 
 const { check } = require('express-validator');
 
-const validation = [
+module.exports = [
     check('name').notEmpty().withMessage('El nombre no puede estar vacío').bail().isAlpha().withMessage("Ingresa un nombre válido").bail(),
     check('surname').notEmpty().withMessage('El apellido no puede estar vacío'),
     check('email').notEmpty().withMessage('El email no puede estar vacío').bail().isEmail().withMessage("Debes ingresar un email válido").bail(),
@@ -25,5 +25,3 @@ const validation = [
         return true;
     })
 ]
-
-module.exports = validation;
