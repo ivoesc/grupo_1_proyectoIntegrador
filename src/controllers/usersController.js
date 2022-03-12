@@ -48,9 +48,13 @@ const usersController = {
 		}
 
         let userToCreate = {
-            id:usersController.asignarIdUsuario(),
-            ...req.body,
+            id: usersController.asignarIdUsuario(),
+            name: req.body.name,
+			surname: req.body.surname,
+			email: req.body.email,
             phone: Number(req.body.phone),
+			complex: req.body.complex,
+			password: req.body.password,
             profilePic: req.file.filename
         }
 
@@ -70,8 +74,5 @@ const usersController = {
 	},
     
 };
-
-console.log(usersController.delete(3));
-
 
 module.exports = usersController;
