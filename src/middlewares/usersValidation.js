@@ -12,9 +12,7 @@ module.exports = [
     check('confirmPassword').notEmpty().withMessage('La contraseña no puede estar vacía').bail().
         
         custom( (value, { req }) => {
-        let password = req.body.password;
-        let confirmPassword = req.body.confirmPassword;
-        if (password !== confirmPassword) {
+        if (req.body.password !== value) {
             throw new Error ('Las contraseñas deben coincidir');
             }
              return true;

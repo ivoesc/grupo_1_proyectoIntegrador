@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const bcryptjs = require('bcryptjs')
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -47,6 +48,19 @@ const usersController = {
 			});
 		}
 
+    let usuarioYaExistente = usersController.encontrarUserPorCampo('email', req.body.email);
+
+    if (usuarioYaExistente) {
+        return res.render('register', {
+            errors: {
+                email: {
+                    msg: 'Ya existe un usuario con este email'
+                }
+            },
+            oldData: req.body
+        })
+    }
+
         let userToCreate = {
             id: usersController.asignarIdUsuario(),
             name: req.body.name,
@@ -54,7 +68,7 @@ const usersController = {
 			email: req.body.email,
             phone: Number(req.body.phone),
 			complex: req.body.complex,
-			password: req.body.password,
+			password: bcryptjs.hashSync(req.body.password, 10),
             profilePic: req.file.filename
         }
 
