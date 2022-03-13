@@ -6,6 +6,7 @@ const validations = require('../middlewares/usersValidation');
 
 /* GET login page. */
 router.get('/login', usersController.login);
+router.post('/login', usersController.loginProcess);
 
 /* GET register page. */
 router.get('/register', usersController.register);

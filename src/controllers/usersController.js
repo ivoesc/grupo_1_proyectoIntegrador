@@ -80,6 +80,33 @@ const usersController = {
         //return res.redirect('login');
     },
 
+    loginProcess: (req, res) => {
+        let userToLogin = usersController.encontrarUserPorCampo('email', req.body.email);
+        
+        if (userToLogin) {
+            let passwordConfirmation = bcryptjs.compareSync(req.body.password, userToLogin.password);
+            if(passwordConfirmation) {
+                return res.send(userToLogin)
+            }
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'Los datos son incorrectos'
+                    }
+                },
+                oldData: req.body
+            })
+        }
+            return res.render('login', {
+            errors: {
+                email: {
+                    msg: 'Este email no está registrado'
+                }
+            },
+            oldData: req.body
+        })
+    },
+
     delete: function (id) {
 		let finalUsers = users.filter(oneUser => oneUser.id !== id);
 

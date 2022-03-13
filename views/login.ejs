@@ -57,14 +57,19 @@
 
             <div class="login-text-container"> <p>INICIAR SESIÓN</p> </div>
             
-            <form action="/" method="get">
+            <form action="/users/login" method="POST">
 
                 <div class="contenedor-input">
-                    <input type="text" name="username" id="username" placeholder="Nombre de usuario" class="campos-texto">
+                    <input type="email" name="email" id="email" placeholder="E-Mail" class="campos-texto" value="<%= locals.oldData ? oldData.email : null %>">
                 </div>
+                 <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %>
+                    </div>
+                 <% } %>
 
                 <div class="contenedor-input">
-                    <input type="password" name="username" id="username" placeholder="Contraseña" class="campos-texto">
+                    <input type="password" name="password" id="password" placeholder="Contraseña" class="campos-texto">
                 </div>
 
                 <div class="contenedor-button">

@@ -26,5 +26,15 @@
     "complex": "Recoleta",
     "password": "holaaa",
     "profilePic": "user-1647116217533.jpg"
+  },
+  {
+    "id": 4,
+    "name": "fran",
+    "surname": "pais",
+    "email": "juanfranxeneize89@gmail.com",
+    "phone": 1126459707,
+    "complex": "Recoleta",
+    "password": "$2a$10$gE4yU0bG7ucxA9.i4Ps/4.qp0rUeYK4MaT3WIjQnZsW0P5XmRix4a",
+    "profilePic": "user-1647206527539.jpg"
   }
 ]
