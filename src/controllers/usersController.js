@@ -123,6 +123,11 @@ const usersController = {
 		usersController.guardarUsuario(finalUsers);
 		return true;
 	},
+
+    logout: (req, res) => {
+        req.session.destroy();
+        res.redirect('/')
+    }
     
 };
 

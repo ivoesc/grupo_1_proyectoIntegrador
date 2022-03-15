@@ -26,3 +26,37 @@ main {
     margin: 0px 0px 10px 0px;
     color: #efefef;
 }
+
+.logout-btn-container {
+    display: flex;
+    justify-content: left;
+    background: #a72a2a;
+    border-radius: 5px;
+    padding: 10px;
+    height: 40px;
+    width: 140px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 100ms;
+    cursor: pointer;
+}
+
+    .logout-btn-container:hover {
+        background-color: #641a1a;
+    }
+
+.login-btn {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+.logout-link {
+    border: none;
+    background: none;
+    outline: none;
+}
