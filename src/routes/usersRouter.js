@@ -13,11 +13,11 @@ router.get('/profile', authMiddleware, usersController.profile);
 router.get('/login', guestMiddleware, usersController.login);
 router.post('/login', usersController.loginProcess);
 
-/* GET logout page. */
-router.get('/logout', usersController.logout);
-
 /* GET register page. */
 router.get('/register', guestMiddleware, usersController.register);
 router.post('/register', upload.single('profilePic'), validations, usersController.registerProcess);
+
+/* GET logout page. */
+router.get('/logout/', usersController.logout);
 
 module.exports = router;

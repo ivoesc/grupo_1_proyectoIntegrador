@@ -37,7 +37,7 @@
                 <i class="fa fa-shopping-cart"></i>
             </a>
 
-            <% if (!user) { %>
+            <% if (!locals.isLogged) { %>
                 <p class="header-login-button"><a href="/users/login">Iniciar Sesión</a></p>
 
                 <p class="header-signup-button"><a href="/users/register">Registrarse</a></p>

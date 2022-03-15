@@ -51,8 +51,7 @@ const usersController = {
 		if (resultValidation.errors.length > 0) {
 			return res.render('register', {
 				errors: resultValidation.mapped(),
-				oldData: req.body, 
-                user: req.session.userLogged
+				oldData: req.body,
 			});
 		}
 
@@ -126,7 +125,7 @@ const usersController = {
 
     logout: (req, res) => {
         req.session.destroy();
-        res.redirect('/')
+        res.redirect('/');
     }
     
 };
