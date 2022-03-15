@@ -21,7 +21,7 @@ const mainController = {
 			product.category === 'reestrenos'
 		);
 
-		return res.render( 'home', {estrenos, proximamente, reestrenos} )
+		return res.render( 'home', {estrenos, proximamente, reestrenos, user: req.session.userLogged} )
 	},
 	search: (req, res) => {
 		// Do the magic

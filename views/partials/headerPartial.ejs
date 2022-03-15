@@ -37,14 +37,17 @@
                 <i class="fa fa-shopping-cart"></i>
             </a>
 
-            <p class="header-login-button"><a href="/users/login">Iniciar Sesión</a></p>
+            <% if (!user) { %>
+                <p class="header-login-button"><a href="/users/login">Iniciar Sesión</a></p>
 
-            <p class="header-signup-button"><a href="/users/register">Registrarse</a></p>
+                <p class="header-signup-button"><a href="/users/register">Registrarse</a></p>
+            <% } else { %>
 
             <a href="/users/profile"><div class="user-btn"> 
                 <i class="fas fa-user-circle"></i>
-            </div>
-        </div></a>
+            </div></a>
+            <% } %>
+        </div>
     </div>
 
 </body>

@@ -17,15 +17,15 @@ const productsController = {
         const productIdToFind = req.params.id;
 		const product = products.find( (p) => p.id == productIdToFind );
 
-		return res.render('movie-detail', {product});
+		return res.render('movie-detail', {product, user: req.session.userLogged});
     },
 
     cart: (req, res) => {
-        res.render('carrito');
+        res.render('carrito', {user: req.session.userLogged});
     },
 
     create: (req, res) => {
-        res.render('product-create-form');
+        res.render('product-create-form', {user: req.session.userLogged});
     },
 
     store: (req, res) => {
@@ -61,7 +61,7 @@ const productsController = {
 			return res.send('NO EXISTE PELÍCULA CON ID ' + productIdToFind)
 		}
 
-		res.render('product-edit-form', {product, titulo: "Editar película"})
+		res.render('product-edit-form', {product, titulo: "Editar película", user: req.session.userLogged})
     },
 
     update: (req, res) => {
