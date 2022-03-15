@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/desktop.css">
+    <link rel="stylesheet" href="/css/profile.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <title>Perfil</title>
+</head>
+<body>
+    <header>
+        <%- include ./partials/headerPartial.ejs %>
+    </header>
+
+    <main>
+        <div class="profile-pic-container">
+            <img src="/images/backgrounds/background-Belfast.webp" alt="profile pic" class="profile-pic-img">
+        </div>
+        <div class="user-info-container">
+            <p class="user-info">Nombre Apellido</p>
+            <p class="user-info">Email</p>
+            <p class="user-info">Teléfono: 'telefono'</p>
+            <p class="user-info">Complejo de preferencia: 'complejo'</p>
+        </div>
+    </main>
+
+    <footer>
+        <%- include ./partials/footerPartial.ejs %>
+    </footer>
+</body>
+</html>

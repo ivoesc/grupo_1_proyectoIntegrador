@@ -20,6 +20,10 @@ const usersController = {
         res.render('register');
     },
 
+    profile: (req, res) => {
+        res.render('profile');
+    },
+
     encontrarUserPorID: function (id) {
 		let userToFind = users.find(oneUser => oneUser.id === id);
 		return userToFind;
