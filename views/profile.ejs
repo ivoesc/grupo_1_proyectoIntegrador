@@ -28,13 +28,13 @@
 
     <main>
         <div class="profile-pic-container">
-            <img src="/images/backgrounds/background-Belfast.webp" alt="profile pic" class="profile-pic-img">
+            <img src="/images/users/<%= user.profilePic %> " alt="profile pic" class="profile-pic-img">
         </div>
         <div class="user-info-container">
-            <p class="user-info">Nombre Apellido</p>
-            <p class="user-info">Email</p>
-            <p class="user-info">Teléfono: 'telefono'</p>
-            <p class="user-info">Complejo de preferencia: 'complejo'</p>
+            <p class="user-info"><%= user.name %> <%= user.surname %></p>
+            <p class="user-info"><%= user.email %></p>
+            <p class="user-info">Teléfono: <%= user.phone %></p>
+            <p class="user-info">Complejo de preferencia: <%= user.complex %></p>
         </div>
     </main>
 

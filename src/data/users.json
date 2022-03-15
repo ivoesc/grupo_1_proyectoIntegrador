@@ -29,12 +29,21 @@
   },
   {
     "id": 4,
-    "name": "fran",
-    "surname": "pais",
+    "name": "Fran",
+    "surname": "Pais",
     "email": "juanfranxeneize89@gmail.com",
     "phone": 1126459707,
     "complex": "Recoleta",
-    "password": "$2a$10$gE4yU0bG7ucxA9.i4Ps/4.qp0rUeYK4MaT3WIjQnZsW0P5XmRix4a",
     "profilePic": "user-1647206527539.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Ivo",
+    "surname": "Escoli",
+    "email": "escoliivo.02@gmail.com",
+    "phone": 1122943219,
+    "complex": "Caballito",
+    "password": "$2a$10$FYtWuX8qHbz6YPGNHBa2z.Cy/1x.CnSi/9GR.ot6RnEfM.D9cERa.",
+    "profilePic": "user-1647371624872.jpg"
   }
 ]

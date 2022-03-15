@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const bcryptjs = require('bcryptjs')
+const bcryptjs = require('bcryptjs');
+const session = require('express-session');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -21,7 +22,9 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        res.render('profile');
+        res.render('profile', {
+            user: req.session.userLogged
+        });
     },
 
     encontrarUserPorID: function (id) {
@@ -90,7 +93,9 @@ const usersController = {
         if (userToLogin) {
             let passwordConfirmation = bcryptjs.compareSync(req.body.password, userToLogin.password);
             if(passwordConfirmation) {
-                return res.send(userToLogin)
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin; 
+                return res.redirect('/users/profile');
             }
             return res.render('login', {
                 errors: {

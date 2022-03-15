@@ -73,7 +73,12 @@ body {
             margin-right: 15px;
         }
 
-
+        .user-btn {
+            color: white;
+            margin-right: 15px;
+            font-size: 30px;
+            cursor: pointer;
+        }
 
 
 header {
