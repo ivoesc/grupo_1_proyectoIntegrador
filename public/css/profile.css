@@ -22,8 +22,21 @@ main {
 }
 
 .user-info {
-    margin: 0px 0px 10px 0px;
+    margin: 5px 0px 10px 35px;
     color: #efefef;
+    border: 1px solid #a9a9a9;
+    padding: 10px 10px 10px 10px;
+    border-radius: 8px;
+    background-color: transparent;
+}
+
+.user-title {
+    color: #efefef;
+    font-weight: bold;
+}
+
+.user-box {
+    display: flex;
 }
 
 .logout-btn-container {
