@@ -22,6 +22,7 @@
     <title>Perfil</title>
 </head>
 <body>
+
     <header>
         <%- include ./partials/headerPartial.ejs %>
     </header>
@@ -36,9 +37,9 @@
             <p class="user-info">Teléfono: <%= user.phone %></p>
             <p class="user-info">Complejo de preferencia: <%= user.complex %></p>
         </div>
-        <a href="/users/logout" class="logout-link"><div class="logout-btn-container">
+        <form action="/users/logout" class="logout-btn-container">
             <button type="submit" class="login-btn"><strong>Cerrar sesión</strong></button>
-        </div></a>
+        </form>
     </main>
 
     <footer>

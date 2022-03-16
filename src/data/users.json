@@ -2,7 +2,7 @@
   {
     "first_name": "Manuel",
     "last_name": "Yeregui",
-    "email": "manuelyeregui@gmail.com",
+    "email": "manu@gmail.com",
     "phone_number": 1168005580,
     "complex": "Caballito",
     "password": "test1",
@@ -45,5 +45,15 @@
     "complex": "Caballito",
     "password": "$2a$10$FYtWuX8qHbz6YPGNHBa2z.Cy/1x.CnSi/9GR.ot6RnEfM.D9cERa.",
     "profilePic": "user-1647371624872.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Manuel",
+    "surname": "Yeregui",
+    "email": "manuelyeregui@gmail.com",
+    "phone": 1168005580,
+    "complex": "Recoleta",
+    "password": "$2a$10$S2eTbAx/z/I/aTE.ELsk2.SXHMa23Tqxx3nUQliDyT5qMwbmNpn5K",
+    "profilePic": "user-1647398205427.jpg"
   }
 ]

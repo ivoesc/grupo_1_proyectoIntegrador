@@ -58,7 +58,7 @@ main {
         display: flex;
         justify-content: left;
         background: white;
-        border-radius: 10px;
+        border-radius: 5px;
         border: 2px solid white;
         padding: 8px;
         height: 40px;
@@ -101,7 +101,7 @@ main {
         display: flex;
         justify-content: left;
         background: #3f146a;
-        border-radius: 10px;
+        border-radius: 5px;
         padding: 10px;
         height: 40px;
         width: 100%;
