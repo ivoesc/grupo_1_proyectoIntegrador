@@ -71,13 +71,23 @@ body {
         .cart-btn {
             color: white;
             margin-right: 15px;
+            transition: 0.1s;
         }
+
+            .cart-btn:hover {
+                color: rgb(182, 182, 182);
+            }
 
         .user-btn {
             color: white;
             font-size: 30px;
             cursor: pointer;
+            transition: 0.1s;
         }
+
+            .user-btn:hover {
+                color: rgb(182, 182, 182);
+            }
 
 
 header {

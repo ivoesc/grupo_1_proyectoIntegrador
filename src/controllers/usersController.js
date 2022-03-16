@@ -92,9 +92,18 @@ const usersController = {
         
         if (userToLogin) {
             let passwordConfirmation = bcryptjs.compareSync(req.body.password, userToLogin.password);
+
             if(passwordConfirmation) {
-                delete userToLogin.password;
-                req.session.userLogged = userToLogin; 
+                //delete userToLogin.password;
+                req.session.userLogged = {
+                    name: userToLogin.name,
+                    surname: userToLogin.surname,
+                    email: userToLogin.email,
+                    phone: userToLogin.phone,
+                    complex: userToLogin.complex,
+                    profilePic: userToLogin.profilePic
+                };
+                console.log(req.session)
                 return res.redirect('/users/profile');
             }
             return res.render('login', {
