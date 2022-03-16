@@ -116,6 +116,19 @@
                 text-decoration: none;
             }
 
+            .profile-pic-header {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                border: 2px solid white;
+                cursor: pointer;
+                transition: 0.1s;
+            }
+
+            .profile-pic-header:hover {
+                opacity: 80%;
+            }
+
 /*          HOME        */
     
     .peliculas-info img {

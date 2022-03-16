@@ -1,43 +1,6 @@
 [
   {
-    "first_name": "Manuel",
-    "last_name": "Yeregui",
-    "email": "manu@gmail.com",
-    "phone_number": 1168005580,
-    "complex": "Caballito",
-    "password": "test1",
-    "id": 1
-  },
-  {
-    "first_name": "Ivo",
-    "last_name": "Escoli",
-    "email": "ivoescoli@gmail.com",
-    "phone_number": 1122943219,
-    "complex": "Caballito",
-    "password": "test1",
-    "id": 2
-  },
-  {
-    "id": 3,
-    "name": "dasdsd",
-    "surname": "ads",
-    "email": "ivoxeneize.02@gmail.com",
-    "phone": 1122943219,
-    "complex": "Recoleta",
-    "password": "holaaa",
-    "profilePic": "user-1647116217533.jpg"
-  },
-  {
-    "id": 4,
-    "name": "Fran",
-    "surname": "Pais",
-    "email": "juanfranxeneize89@gmail.com",
-    "phone": 1126459707,
-    "complex": "Recoleta",
-    "profilePic": "user-1647206527539.jpg"
-  },
-  {
-    "id": 5,
+    "id": 1,
     "name": "Ivo",
     "surname": "Escoli",
     "email": "escoliivo.02@gmail.com",
@@ -47,7 +10,7 @@
     "profilePic": "user-1647371624872.jpg"
   },
   {
-    "id": 6,
+    "id": 2,
     "name": "Manuel",
     "surname": "Yeregui",
     "email": "manuelyeregui@gmail.com",
@@ -55,5 +18,15 @@
     "complex": "Recoleta",
     "password": "$2a$10$S2eTbAx/z/I/aTE.ELsk2.SXHMa23Tqxx3nUQliDyT5qMwbmNpn5K",
     "profilePic": "user-1647398205427.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Francisco",
+    "surname": "Pais",
+    "email": "juanfranxeneize89@gmail.com",
+    "phone": 1126459707,
+    "complex": "Recoleta",
+    "password": "$2a$10$gt6mIPgTSgcC9ktnkoItROqzr69.dFoRMVNPVyLohXzMf74QnzFXu",
+    "profilePic": "user-1647455202562.jpg"
   }
 ]

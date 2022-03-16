@@ -43,11 +43,17 @@
                 <p class="header-signup-button"><a href="/users/register">Registrarse</a></p>
             <% } else { %>
 
-            <a href="/users/profile"><div class="user-btn"> 
+            <!--<a href="/users/profile"><div class="user-btn"> 
                 <i class="fas fa-user-circle"></i>
-            </div></a>
+            </div></a>-->
+
+            <div>
+                <a href="/users/profile"><img src="/images/users/<%= locals.userLogged.profilePic %>" alt="profile-pic" class="profile-pic-header"></a>
+            </div>
             <% } %>
+
         </div>
+
     </div>
 
 </body>
