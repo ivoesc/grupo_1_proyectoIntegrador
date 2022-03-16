@@ -28,18 +28,20 @@
     </header>
 
     <main>
-        <div class="profile-pic-container">
-            <img src="/images/users/<%= user.profilePic %> " alt="profile pic" class="profile-pic-img">
+        <div class="main-container">
+            <div class="profile-pic-container">
+                <img src="/images/users/<%= user.profilePic %> " alt="profile pic" class="profile-pic-img">
+            </div>
+            <div class="user-info-container">
+                <p class="user-info"><%= user.name %> <%= user.surname %></p>
+                <p class="user-info"><%= user.email %></p>
+                <p class="user-info">Teléfono: <%= user.phone %></p>
+                <p class="user-info">Complejo de preferencia: <%= user.complex %></p>
+            </div>
         </div>
-        <div class="user-info-container">
-            <p class="user-info"><%= user.name %> <%= user.surname %></p>
-            <p class="user-info"><%= user.email %></p>
-            <p class="user-info">Teléfono: <%= user.phone %></p>
-            <p class="user-info">Complejo de preferencia: <%= user.complex %></p>
-        </div>
-        <form action="/users/logout" class="logout-btn-container">
-            <button type="submit" class="login-btn"><strong>Cerrar sesión</strong></button>
-        </form>
+            <form action="/users/logout" class="logout-btn-container">
+                <button type="submit" class="login-btn"><strong>Cerrar sesión</strong></button>
+            </form>
     </main>
 
     <footer>
