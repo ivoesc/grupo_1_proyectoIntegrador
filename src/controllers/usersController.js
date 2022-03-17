@@ -103,7 +103,11 @@ const usersController = {
                     complex: userToLogin.complex,
                     profilePic: userToLogin.profilePic
                 };
-                console.log(req.session)
+                
+                if(req.body.remember) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 * 24 })
+				}
+
                 return res.redirect('/users/profile');
             }
             return res.render('login', {
@@ -133,6 +137,7 @@ const usersController = {
 	},
 
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
         res.redirect('/');
     }
