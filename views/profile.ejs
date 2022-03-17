@@ -34,16 +34,33 @@
             </div>
             <div class="user-info-container">
                 <div class="user-box">
-                    <p class="user-title">NOMBRE DE USUARIO</p><p class="user-info"><%= user.name %> <%= user.surname %></p>
+                    <p class="user-title">NOMBRE Y APELLIDO</p>
+                    <div style="display: flex;">    
+                        <form action="" class="user-edit-form">
+                            <input type="text" name="name" id="name" placeholder="Nombre" value="<%= user.name %>" class="campos-texto-edit">
+                        </form>
+                        <form action="" class="user-edit-form">
+                            <input type="text" name="surname" id="surname" value="<%= user.surname %>" class="campos-texto-edit">
+                        </form>
+                    </div>
                 </div>
                 <div class="user-box">
-                    <p class="user-title">EMAIL</p><p class="user-info"><%= user.email %></p>
+                    <p class="user-title">EMAIL</p>
+                    <form action="" class="user-edit-form">
+                        <input type="email" name="email" id="email" value="<%= user.email %>" class="campos-texto-edit">
+                    </form>
                 </div>
                 <div class="user-box">
-                        <p class="user-title">TELÉFONO</p><p class="user-info"><%= user.phone %></p>
+                    <p class="user-title">TELÉFONO</p>
+                    <form action="" class="user-edit-form">
+                        <input type="number" name="phone" id="phone" value="<%= user.phone %>" class="campos-texto-edit">
+                    </form>
                 </div>
                 <div class="user-box">
-                        <p class="user-title">COMPLEJO DE PREFERENCIA</p><p class="user-info"><%= user.complex %></p>
+                        <p class="user-title">COMPLEJO</p>
+                        <form action="" class="user-edit-form">
+                            <input type="text" name="complex" id="complex" value="<%= user.complex %>" class="campos-texto-edit">
+                        </form>
                 </div>
             </div>
         </div>

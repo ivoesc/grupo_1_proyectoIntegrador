@@ -6,8 +6,7 @@ main {
 }
 
 .profile-pic-container {
-    width: 300px;
-    height: 300px;
+    width: 30%;
     border: 2px solid #efefef;
     border-radius: 2px
 }
@@ -19,6 +18,9 @@ main {
 
 .user-info-container {
     margin-left: 10px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
 }
 
 .user-info {
@@ -37,6 +39,7 @@ main {
 
 .user-box {
     display: flex;
+    justify-content: space-between;
 }
 
 .logout-btn-container {
@@ -75,4 +78,18 @@ main {
 
 .main-container {
     display: flex;
+}
+
+.user-edit-form {
+    margin: auto 0;
+    border: 2px solid grey
+}
+
+.campos-texto-edit {
+    border: none;
+    background: none;
+    outline: none;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    resize: none;
 }
