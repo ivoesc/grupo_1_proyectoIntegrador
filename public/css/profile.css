@@ -40,6 +40,7 @@ main {
 .user-box {
     display: flex;
     justify-content: space-between;
+    width: 60%;
 }
 
 .logout-btn-container {
@@ -81,8 +82,10 @@ main {
 }
 
 .user-edit-form {
-    margin: auto 0;
-    border: 2px solid grey
+    margin: auto 10px;
+    border: 2px solid grey;
+    border-radius: 8px;
+    width: 60%;
 }
 
 .campos-texto-edit {
@@ -92,4 +95,29 @@ main {
     width: 100%;
     font-family: 'Roboto', sans-serif;
     resize: none;
+    color: white;
+    font-size: 16px;
+    margin: 5px;
 }
+
+.btn-container {
+    display: flex;
+}
+
+.edit-btn-container {
+    display: flex;
+    justify-content: left;
+    background: #a72a2a;
+    border-radius: 5px;
+    padding: 10px;
+    height: 40px;
+    width: 140px;
+    transition: all 100ms;
+    cursor: pointer;
+    align-items: center;
+    margin: 30px auto;
+}
+
+    .edit-btn-container:hover {
+        background-color: #641a1a;
+    }

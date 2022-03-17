@@ -34,15 +34,16 @@
             </div>
             <div class="user-info-container">
                 <div class="user-box">
-                    <p class="user-title">NOMBRE Y APELLIDO</p>
-                    <div style="display: flex;">    
+                    <p class="user-title">NOMBRE</p>
                         <form action="" class="user-edit-form">
                             <input type="text" name="name" id="name" placeholder="Nombre" value="<%= user.name %>" class="campos-texto-edit">
                         </form>
+                </div>
+                <div class="user-box">
+                    <p class="user-title">APELLIDO</p>
                         <form action="" class="user-edit-form">
                             <input type="text" name="surname" id="surname" value="<%= user.surname %>" class="campos-texto-edit">
                         </form>
-                    </div>
                 </div>
                 <div class="user-box">
                     <p class="user-title">EMAIL</p>
@@ -64,9 +65,14 @@
                 </div>
             </div>
         </div>
+        <div class="btn-container">
             <form action="/users/logout" class="logout-btn-container">
-                <button type="submit" class="login-btn"><strong>Cerrar sesión</strong></button>
+                <button type="submit" class="login-btn"><strong>Cerrar Sesión</strong></button>
             </form>
+            <form action="/users/logout" class="edit-btn-container">
+                <button type="submit" class="login-btn"><strong>Guardar Cambios</strong></button>
+            </form>
+        </div>
     </main>
 
     <footer>
