@@ -140,8 +140,40 @@ main {
             margin: auto 0;
             font-size: 14px;
             font-family: 'Montserrat', sans-serif;
+            color: #4c4c4c;
+            font-weight: 600;
         }
 
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        height: 15px;
+        width: 15px;
+        background-color: #efefef;
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.1s;
+        outline: none;
+    }
+
+        input[type="checkbox"]:after {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 14px;
+            color: #3f146a;
+            content: "\f00c";
+            display: none;
+        }
+
+        input[type="checkbox"]:hover {
+            background-color: #d1d1d1;
+        }
+
+        input[type="checkbox"]:checked:after{
+            display: block;
+        }
 
 
 /*     REGISTER     */
