@@ -83,7 +83,7 @@ const usersController = {
 
         usersController.guardarUsuario(users);
 
-        return res.send(users)
+        return res.redirect('/users/login')
         //return res.redirect('login');
     },
 

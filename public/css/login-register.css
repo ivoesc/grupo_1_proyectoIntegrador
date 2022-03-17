@@ -193,13 +193,14 @@ select option {
 .text-danger {
     color: red;
     text-align: left;
-    margin: -15px 0px -7px 5px;
+    margin: -15px 0px 15px 5px;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
 }
 
 .register-label {
     text-align: left;
+    cursor: pointer;
 }
 
 label{

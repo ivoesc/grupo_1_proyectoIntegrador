@@ -133,7 +133,9 @@
             <label for="profilePic" class="register-label">Imagen de perfil <i class="fas fa-image"></i></label>
             <div class="contenedor-input-hidden">
                 <input type="file" name="profilePic" id="profilePic" class="campos-texto-hidden" value="">
+                
             </div>
+
             <% if (locals.errors && errors.profilePic) { %>
                 <div class="text-danger">
                     <%= errors.profilePic.msg %>
