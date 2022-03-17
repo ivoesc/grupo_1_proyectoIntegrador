@@ -200,5 +200,36 @@ select option {
 
 .register-label {
     text-align: left;
-    margin: 17px 0px -15px 6px;
+}
+
+label{
+    height: 40px;
+    width: 100%;
+    margin: auto;
+    font-size: 14px;
+    align-items: center;
+    font-family: "Montserrat",sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.image-icon {
+    font-family: "Font Awesome 6 Free";
+    content: "\f03e";
+}
+
+.fa-image {
+    color: #3f146a;
+}
+
+.campos-texto-hidden {
+    display: none;
+}
+
+.contenedor-input-hidden {
+    display: none;
 }

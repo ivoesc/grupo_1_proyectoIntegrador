@@ -28,5 +28,15 @@
     "complex": "Recoleta",
     "password": "$2a$10$gt6mIPgTSgcC9ktnkoItROqzr69.dFoRMVNPVyLohXzMf74QnzFXu",
     "profilePic": "user-1647455202562.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Juan",
+    "surname": "Gaga",
+    "email": "juapais@uade.edu.ar",
+    "phone": 1126459706,
+    "complex": "Recoleta",
+    "password": "$2a$10$Idm5CQBOtmIaIlYpjatjSOYHjJBY0dgahyYJdIeQNNvYAo1A.DG.S",
+    "profilePic": "user-1647548302458.jpg"
   }
 ]

@@ -16,9 +16,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     
     <title>Registrarse</title>
 </head>
@@ -130,9 +130,9 @@
                 </div>
              <% } %>
 
-            <div class="register-label">Imagen de perfil</div>
-            <div class="contenedor-input">
-                <input type="file" name="profilePic" id="profilePic" class="campos-texto" value="">
+            <label for="profilePic" class="register-label">Imagen de perfil <i class="fas fa-image"></i></label>
+            <div class="contenedor-input-hidden">
+                <input type="file" name="profilePic" id="profilePic" class="campos-texto-hidden" value="">
             </div>
             <% if (locals.errors && errors.profilePic) { %>
                 <div class="text-danger">
