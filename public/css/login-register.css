@@ -125,15 +125,51 @@ main {
             cursor: pointer;
         }
 
-    .google-login, .forgot-password {
+    .google-login, .forgot-password-div {
         font-size: 13px;
         margin: 10px 0px 10px 0px;
         color: #e3e3e3;
     }
 
+    .forgot-password {
+        text-decoration: none;
+    }
+
+    .google-link {
+        text-decoration: none;
+    }
+    
+    .google-login {
+        background-color: white;
+        margin: auto;
+        height: 35px;
+        width: 210px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 4px;
+        padding: 8px;
+        color: #555555;
+        box-shadow: 0px 5px 10px rgb(137 137 137);
+        font-family: 'Montserrat', sans-serif;
+        border: 1px solid #8b8be9;
+    }
+
+    .google-icon {
+        width: 25px;
+    }
+
     .remember-checkbox {
         display: flex;
         font-family: 'Montserrat', sans-serif;
+    }
+
+    .not-registered {
+        color: #efefef;
+    }
+
+    .create-account {
+        color: #efefef;
     }
 
         .remember-checkbox p {
@@ -233,4 +269,8 @@ label{
 
 .contenedor-input-hidden {
     display: none;
+}
+
+.pic-icon {
+    color: #686868
 }
