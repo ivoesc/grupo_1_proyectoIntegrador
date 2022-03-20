@@ -5,7 +5,6 @@ const session = require('express-session');
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-//const User = require(path.resolve('src/models/User'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -25,6 +24,12 @@ const usersController = {
         res.render('profile', {
             user: req.session.userLogged
         });
+    },
+
+    emailDelUsuario: (req, res) => {
+        let userToLogin = usersController.encontrarUserPorCampo('email', req.body.email);
+
+        return userToLogin.email;
     },
 
     encontrarUserPorID: function (id) {
@@ -107,6 +112,7 @@ const usersController = {
                 if(req.body.remember) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 * 24 })
 				}
+
 
                 return res.redirect('/users/profile');
             }

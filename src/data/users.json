@@ -38,5 +38,15 @@
     "complex": "Recoleta",
     "password": "$2a$10$Idm5CQBOtmIaIlYpjatjSOYHjJBY0dgahyYJdIeQNNvYAo1A.DG.S",
     "profilePic": "user-1647548302458.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Manuel",
+    "surname": "Yeregui",
+    "email": "hola@gmail.com",
+    "phone": 1168005580,
+    "complex": "Recoleta",
+    "password": "$2a$10$HEqcaZP4ERtd2LUKGafwOePoTKV70APR6YdXMpU6lvGaGMUmHHMji",
+    "profilePic": "user-1647750424431.jpg"
   }
 ]

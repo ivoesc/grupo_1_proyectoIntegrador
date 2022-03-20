@@ -3,7 +3,8 @@ const router = express.Router();
 const productsController = require("../controllers/productsController.js")
 const multer = require('multer');
 const path = require('path');
-const upload = require('../middlewares/productsMulter')
+const upload = require('../middlewares/productsMulter');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 

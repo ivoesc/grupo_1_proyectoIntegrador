@@ -81,18 +81,22 @@
             }
          </script>
         
-        <div class="edit-delete-container">
-            <form action="/movies/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
-                <div class="contenedor-button-compra">
-                    <button type="submit" class="login-button" onclick="return ConfirmDelete()"> <strong> Eliminar película </strong> </button>
-                </div>
-            </form>
-            <form action="/movies/detail/<%= product.id %>/edit" method="GET">
-                <div class="contenedor-button-compra">
-                    <button type="submit" class="login-button"> <strong> Editar película </strong> </button>
-                </div>
-            </form>
-        </div>
+        <% if (locals.isAdmin) { %>
+        
+            <div class="edit-delete-container">
+                <form action="/movies/<%= product.id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                    <div class="contenedor-button-compra">
+                        <button type="submit" class="login-button" onclick="return ConfirmDelete()"> <strong> Eliminar película </strong> </button>
+                    </div>
+                </form>
+                <form action="/movies/detail/<%= product.id %>/edit" method="GET">
+                    <div class="contenedor-button-compra">
+                        <button type="submit" class="login-button"> <strong> Editar película </strong> </button>
+                    </div>
+                </form>
+            </div>
+
+        <% } %>
 
     </main>
 
