@@ -5,6 +5,7 @@ const multer = require('multer');
 const path = require('path');
 const upload = require('../middlewares/productsMulter');
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 
@@ -16,11 +17,11 @@ router.get('/detail/:id', productsController.detail);
 router.get('/carrito', productsController.cart);
 
 /* GET create page. */
-router.get('/create', productsController.create); 
+router.get('/create', adminMiddleware, productsController.create); 
 router.post('/', upload.fields([{name: 'image'}, {name: 'background'}]), productsController.store);
 
 /* GET edit page. */
-router.get('/detail/:id/edit', productsController.edit);
+router.get('/detail/:id/edit', adminMiddleware, productsController.edit);
 router.put('/:id', upload.fields([{name: 'image'}, {name: 'background'}]), productsController.update);
 
 router.delete('/:id', productsController.delete);
