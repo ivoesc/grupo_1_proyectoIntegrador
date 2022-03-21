@@ -418,5 +418,19 @@
     "image": "poster-Titanic.jpg",
     "background": "background-Titanic.webp",
     "id": 30
+  },
+  {
+    "name": "MANUPLUS",
+    "description": "ManuPlus, un gran hombre que se encuentra con una gran aventura, ¿podrá conseguir laburo?",
+    "director": "Manuel Yeregui",
+    "actors": "Manuel Yeregui",
+    "genre": "Drama, Crimen",
+    "duration": 10510000,
+    "category": "estrenos",
+    "price": 10,
+    "trailer": "https://www.youtube.com/embed/RqFUtjo-Bb8",
+    "image": "poster-MANUPLUS.JPG",
+    "background": "background-MANUPLUS.jpeg",
+    "id": 31
   }
 ]
