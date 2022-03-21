@@ -404,33 +404,5 @@
     "image": "poster-ForrestGump.jpg",
     "background": "background-ForrestGump.webp",
     "id": 29
-  },
-  {
-    "name": "Titanic",
-    "description": "Jack es un joven artista que gana un pasaje para viajar a América en el Titanic, el transatlántico más grande y seguro jamás construido. A bordo del buque conoce a Rose, una chica de clase alta que viaja con su madre y su prometido Cal, millonario e ingreído. Mientras el lujoso transatlántico se acerca a un inmenso iceberg, Jack y Rose se enamoran.",
-    "director": "James Cameron",
-    "actors": "Kate Winslet, Leonardo DiCaprio",
-    "genre": "Romance, Drama",
-    "duration": 194,
-    "category": "reestrenos",
-    "price": 1000,
-    "trailer": "https://www.youtube.com/embed/kVrqfYjkTdQ",
-    "image": "poster-Titanic.jpg",
-    "background": "background-Titanic.webp",
-    "id": 30
-  },
-  {
-    "name": "MANUPLUS",
-    "description": "ManuPlus, un gran hombre que se encuentra con una gran aventura, ¿podrá conseguir laburo?",
-    "director": "Manuel Yeregui",
-    "actors": "Manuel Yeregui",
-    "genre": "Drama, Crimen",
-    "duration": 10510000,
-    "category": "estrenos",
-    "price": 10,
-    "trailer": "https://www.youtube.com/embed/RqFUtjo-Bb8",
-    "image": "poster-MANUPLUS.JPG",
-    "background": "background-MANUPLUS.jpeg",
-    "id": 31
   }
 ]
