@@ -418,5 +418,19 @@
     "image": "poster-Titanic.jpg",
     "background": "background-Titanic.webp",
     "id": 30
+  },
+  {
+    "name": "Ambulance",
+    "description": "El veterano condecorado Will Sharp, desesperado por conseguir dinero para pagar las facturas médicas de su esposa, pide ayuda a la única persona que sabe que no debería: su hermano adoptivo Danny, que le ofrece dar un gran golpe: el mayor atraco a un banco en la historia de Los Ángeles: 32 millones de dólares.",
+    "director": "Michael Bay",
+    "actors": "Jake Gyllenhaal, Eiza González,  Yahya Abdul-Mateen II",
+    "genre": "Thriller",
+    "duration": 136,
+    "category": "estrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/uapEsDKAZik",
+    "image": "poster-Ambulance.jpg",
+    "background": "background-Ambulance.webp",
+    "id": 31
   }
 ]
