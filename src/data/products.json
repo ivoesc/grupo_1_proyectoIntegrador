@@ -404,5 +404,50 @@
     "image": "poster-ForrestGump.jpg",
     "background": "background-ForrestGump.webp",
     "id": 29
+<<<<<<< HEAD
+=======
+  },
+  {
+    "name": "Titanic",
+    "description": "Jack es un joven artista que gana un pasaje para viajar a América en el Titanic, el transatlántico más grande y seguro jamás construido. A bordo del buque conoce a Rose, una chica de clase alta que viaja con su madre y su prometido Cal, millonario e ingreído. Mientras el lujoso transatlántico se acerca a un inmenso iceberg, Jack y Rose se enamoran.",
+    "director": "James Cameron",
+    "actors": "Kate Winslet, Leonardo DiCaprio",
+    "genre": "Romance, Drama",
+    "duration": 194,
+    "category": "reestrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/kVrqfYjkTdQ",
+    "image": "poster-Titanic.jpg",
+    "background": "background-Titanic.webp",
+    "id": 30
+  },
+  {
+    "name": "Ambulance",
+    "description": "El veterano condecorado Will Sharp, desesperado por conseguir dinero para pagar las facturas médicas de su esposa, pide ayuda a la única persona que sabe que no debería: su hermano adoptivo Danny, que le ofrece dar un gran golpe: el mayor atraco a un banco en la historia de Los Ángeles: 32 millones de dólares.",
+    "director": "Michael Bay",
+    "actors": "Jake Gyllenhaal, Eiza González,  Yahya Abdul-Mateen II",
+    "genre": "Thriller",
+    "duration": 136,
+    "category": "estrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/uapEsDKAZik",
+    "image": "poster-Ambulance.jpg",
+    "background": "background-Ambulance.webp",
+    "id": 31
+  },
+  {
+    "name": "CODA",
+    "description": "Ruby es el único miembro con audición de una familia de sordos. Cada mañana, antes de ir a clases, trabaja con sus padres y su hermano tratando de mantener a flote su negocio. En el coro del instituto, Ruby descubre su pasión por la música.",
+    "director": "Sian Heder",
+    "actors": "Emilia Jones, Marlee Matlin, Troy Kotsur",
+    "genre": "Drama",
+    "duration": 119,
+    "category": "estrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/iy910WCy5R0",
+    "image": "poster-CODA.jpg",
+    "background": "background-CODA.jpeg",
+    "id": 32
+>>>>>>> 5d6a63b45e61d1db33bc96857d4fb9d573f73942
   }
 ]
