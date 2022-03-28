@@ -420,17 +420,31 @@
     "id": 30
   },
   {
-    "name": "MANUPLUS",
-    "description": "ManuPlus, un gran hombre que se encuentra con una gran aventura, ¿podrá conseguir laburo?",
-    "director": "Manuel Yeregui",
-    "actors": "Manuel Yeregui",
-    "genre": "Drama, Crimen",
-    "duration": 10510000,
+    "name": "Ambulance",
+    "description": "El veterano condecorado Will Sharp, desesperado por conseguir dinero para pagar las facturas médicas de su esposa, pide ayuda a la única persona que sabe que no debería: su hermano adoptivo Danny, que le ofrece dar un gran golpe: el mayor atraco a un banco en la historia de Los Ángeles: 32 millones de dólares.",
+    "director": "Michael Bay",
+    "actors": "Jake Gyllenhaal, Eiza González,  Yahya Abdul-Mateen II",
+    "genre": "Thriller",
+    "duration": 136,
     "category": "estrenos",
-    "price": 10,
-    "trailer": "https://www.youtube.com/embed/RqFUtjo-Bb8",
-    "image": "poster-MANUPLUS.JPG",
-    "background": "background-MANUPLUS.jpeg",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/uapEsDKAZik",
+    "image": "poster-Ambulance.jpg",
+    "background": "background-Ambulance.webp",
     "id": 31
+  },
+  {
+    "name": "CODA",
+    "description": "Ruby es el único miembro con audición de una familia de sordos. Cada mañana, antes de ir a clases, trabaja con sus padres y su hermano tratando de mantener a flote su negocio. En el coro del instituto, Ruby descubre su pasión por la música.",
+    "director": "Sian Heder",
+    "actors": "Emilia Jones, Marlee Matlin, Troy Kotsur",
+    "genre": "Drama",
+    "duration": 119,
+    "category": "estrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/iy910WCy5R0",
+    "image": "poster-CODA.jpg",
+    "background": "background-CODA.jpeg",
+    "id": 32
   }
 ]
