@@ -446,5 +446,19 @@
     "image": "poster-CODA.jpg",
     "background": "background-CODA.jpeg",
     "id": 32
+  },
+  {
+    "name": "Encanto",
+    "description": "Una joven colombiana puede ser la última esperanza para su familia, cuando descubre que la magia que rodea a Encanto, un lugar encantado que bendice a los niños con dones únicos, se encuentra en serio peligro.",
+    "director": "Byron Howard, Jared Bush",
+    "actors": "Stephanie Beatriz, John Leguizamo, Maluma",
+    "genre": "Animación, Fantasía",
+    "duration": 99,
+    "category": "estrenos",
+    "price": 1000,
+    "trailer": "https://www.youtube.com/embed/E4dCY_DvT-4",
+    "image": "poster-Encanto.webp",
+    "background": "background-Encanto.jpg",
+    "id": 33
   }
 ]
