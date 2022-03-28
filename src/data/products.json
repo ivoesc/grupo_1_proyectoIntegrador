@@ -404,8 +404,6 @@
     "image": "poster-ForrestGump.jpg",
     "background": "background-ForrestGump.webp",
     "id": 29
-<<<<<<< HEAD
-=======
   },
   {
     "name": "Titanic",
@@ -448,6 +446,5 @@
     "image": "poster-CODA.jpg",
     "background": "background-CODA.jpeg",
     "id": 32
->>>>>>> 5d6a63b45e61d1db33bc96857d4fb9d573f73942
   }
 ]
