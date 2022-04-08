@@ -5,17 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/carrito.css" />
-    <link rel="stylesheet" href="/css/desktopcarrito.css" />
     <link rel="stylesheet" href="/css/styles.css"> 
     <link rel="stylesheet" href="/css/desktop.css">
-    <link rel="stylesheet" href="/css/movie-detail.css">
     <link rel="icon" type="image/png" href="../images/logos/favicon.png">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link href="/css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/desktop.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +27,9 @@
       <%- include ./partials/headerPartial.ejs %>
     </header>
 
-<main>
+<main class="detail-main-container">
+
+  <div class="asientos-container details-container">
 
       <body class="detail-body backgroundimage">
 
@@ -44,9 +41,11 @@
             }
         </style>
 
+    <div class="movie-title">Elegí tus asientos: <br> <strong><%= product.name %></strong> </div>
+
     <form>
       <div id="flex">
-        <div class="contenedor-de-peliculas">
+        <div class="contenedor-de-opciones">
         <select id="Fecha">
           <option disabled selected>Seleccioná el día</option>
           <option value="Caballito">Lunes 01/01</option>
@@ -104,15 +103,7 @@
           <% } %>
         </div>
 
-        <p class="texto">
-          Elegiste <span id="conteo"> 0 </span> asientos por el precio de AR$<span
-            id="total"
-            >0</span
-          >
-        </p>
-    <input type="submit" value="CONTINUAR" id="botoncontinuar">
-
-        <script src="app.js"></script>
+  </div>
 
 </main>
 
