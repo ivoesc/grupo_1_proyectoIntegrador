@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/desktopcarrito.css" />
     <link rel="stylesheet" href="/css/styles.css"> 
     <link rel="stylesheet" href="/css/desktop.css">
+    <link rel="stylesheet" href="/css/movie-detail.css">
     <link rel="icon" type="image/png" href="../images/logos/favicon.png">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
@@ -25,85 +26,99 @@
     
     <title>Big Screen</title>
   </head>
-  <body>
+
+<body class="detail-body backgroundimage">
     <header>
       <%- include ./partials/headerPartial.ejs %>
     </header>
 
 <main>
-  <form>
-    <div id="flex">
-<div class="contenedor-de-peliculas">
-    <select id="Fecha">
-      <option disabled selected>Seleccioná el día</option>
-      <option value="Caballito">Lunes 01/01</option>
-      <option value="Recoleta">Martes 02/01</option>
-      <option value="Viernes">Miércoles 03/01</option>
-      <option value="Jueves">Jueves 04/01</option>
-      <option value="Nordelta">Viernes 05/01</option>   
-    </select>
 
-      <select id="Complejo">
-        <option disabled selected>Seleccioná tu Sala</option>
-        <option value="Caballito">BigScreen Complejo Caballito</option>
-        <option value="Recoleta">BigScreen Complejo Recoleta</option>
-        <option value="Nordelta">BigScreen Complejo Nordelta</option>   
-      </select>
+      <body class="detail-body backgroundimage">
 
-      <select id="Horario">
-        <option disabled selected>Seleccioná el horario</option>
-        <option value="15HS">15:00 hs</option>
-        <option value="18HS">18:00 hs</option>
-        <option value="21HS">21:00 hs</option>
-        <option value="00HS">00:00 hs</option>   
-      </select>
-    </div>
-  </div>
-</form>
+        <style>
+            @media (min-width: 768px) {
+                .backgroundimage {
+                    background-image: url('/images/backgrounds/<%= product.background %>');
+                }
+            }
+        </style>
 
-    <ul class="showcase">
-      <li>
-        <div class="asiento"></div>
-        <small>Disponible</small>
-      </li>
-      <li>
-        <div class="asiento seleccionado"></div>
-        <small>Seleccionado</small>
-      </li>
-      <li>
-        <div class="asiento ocupado"></div>
-        <small>Ocupado</small>
-      </li>
-    </ul>
-    <div class="contenedor">
-      <div class="pantalla"></div>
-      <% for( let i = 0; i <= 5; i++) { %>
-      <div class="fila">
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
+    <form>
+      <div id="flex">
+        <div class="contenedor-de-peliculas">
+        <select id="Fecha">
+          <option disabled selected>Seleccioná el día</option>
+          <option value="Caballito">Lunes 01/01</option>
+          <option value="Recoleta">Martes 02/01</option>
+          <option value="Viernes">Miércoles 03/01</option>
+          <option value="Jueves">Jueves 04/01</option>
+          <option value="Nordelta">Viernes 05/01</option>   
+        </select>
+
+          <select id="Complejo">
+            <option disabled selected>Seleccioná tu Sala</option>
+            <option value="Caballito">BigScreen Complejo Caballito</option>
+            <option value="Recoleta">BigScreen Complejo Recoleta</option>
+            <option value="Nordelta">BigScreen Complejo Nordelta</option>   
+          </select>
+
+          <select id="Horario">
+            <option disabled selected>Seleccioná el horario</option>
+            <option value="15HS">15:00 hs</option>
+            <option value="18HS">18:00 hs</option>
+            <option value="21HS">21:00 hs</option>
+            <option value="00HS">00:00 hs</option>   
+          </select>
+        </div>
       </div>
-      <% } %>
-    </div>
+    </form>
 
-    <p class="texto">
-      Elegiste <span id="conteo"> 0 </span> asientos por el precio de AR$<span
-        id="total"
-        >0</span
-      >
-    </p>
-<input type="submit" value="CONTINUAR" id="botoncontinuar">
+        <ul class="showcase">
+          <li>
+            <div class="asiento"></div>
+            <small>Disponible</small>
+          </li>
+          <li>
+            <div class="asiento seleccionado"></div>
+            <small>Seleccionado</small>
+          </li>
+          <li>
+            <div class="asiento ocupado"></div>
+            <small>Ocupado</small>
+          </li>
+        </ul>
+        <div class="contenedor">
+          <div class="pantalla"></div>
+          <% for( let i = 0; i <= 5; i++) { %>
+          <div class="fila">
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+            <div class="asiento"></div>
+          </div>
+          <% } %>
+        </div>
 
-    <script src="app.js"></script>
+        <p class="texto">
+          Elegiste <span id="conteo"> 0 </span> asientos por el precio de AR$<span
+            id="total"
+            >0</span
+          >
+        </p>
+    <input type="submit" value="CONTINUAR" id="botoncontinuar">
 
-  </main>
-    <footer>
+        <script src="app.js"></script>
+
+</main>
+
+  <footer>
       <%- include ./partials/footerPartial.ejs %>
   </footer>
-  </body>
+
+</body>
 </html>

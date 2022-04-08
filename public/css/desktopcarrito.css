@@ -7,57 +7,7 @@
 }
 
 @media(min-width:769px){
-    /*HEADER*/
-li, a, button{
-    font-weight: 500;
-    font-size: 16px;
-    color: #ecf0f1;
-    text-decoration: none;
-  }
-
-  header {
-    background-color: #3f146a;
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
-    position: fixed;
-  }
-
-  .logo{
-    cursor: pointer;
-    margin-right: auto;
-  }
-  .nav__links{
-    list-style: none;
-  }
-  .nav__links li{
-    display: inline-block
-  }
-  .nav__links li a{
-    transition: all 0.3s;
-  }
-  .nav__links li a:hover {
-    color: rgb(215, 177, 250);
-  }
-  button{
-    margin-right: 20px;
-    padding: 9px 25px;
-    background-color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s;
-    color: black
-  }
-  button:hover{
-    background-color: rgb(215, 177, 250);
-  }
-
-  /*FIN DEL HEADER*/
   main{  
-    background-color: rgb(231, 231, 231);
     color: black;
     display: flex;
     flex-direction: column;

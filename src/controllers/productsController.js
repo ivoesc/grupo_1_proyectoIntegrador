@@ -21,7 +21,10 @@ const productsController = {
     },
 
     asientos: (req, res) => {
-        res.render('carrito');
+		const productIdToFind = req.params.id;
+		const product = products.find( (p) => p.id == productIdToFind );
+		
+        res.render('carrito', {product});
     },
 
     create: (req, res) => {
