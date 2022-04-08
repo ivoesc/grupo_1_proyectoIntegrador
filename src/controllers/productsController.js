@@ -20,7 +20,7 @@ const productsController = {
 		return res.render('movie-detail', {product});
     },
 
-    cart: (req, res) => {
+    asientos: (req, res) => {
         res.render('carrito');
     },
 

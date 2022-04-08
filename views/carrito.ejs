@@ -28,59 +28,24 @@
   <body>
     <header>
       <%- include ./partials/headerPartial.ejs %>
-        <!--<div class="burger-logo">
-            <div class="burger-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-
-            <img class="logo-header" src="\images\BIGSCREENpng.svg"> 
-        </div>
-
-        <div class="lupa-iniciar">
-            <form class="contenedor-barra-busqueda">
-                <input type="text" placeholder="Buscar películas" name="busqueda" class="barra-busqueda"> 
-                <a href="" class="icono-busqueda">
-                    <i class="fas fa-search"></i>
-                </a>
-            </form>
-
-            <p class="header-login-button"><a href="/login">Iniciar Sesión</a></p>
-
-            <p class="header-signup-button"><a href="/register">Registrarse</a></p>
-
-            <div class="logo-iniciar-sesion">
-                <i class="fas fa-user-circle"></i>
-            </div>
-        </div>-->
     </header>
+
 <main>
   <form>
     <div id="flex">
 <div class="contenedor-de-peliculas">
-<input type="date">
-      <select id="pelicula">
-        <option disabled selected>Seleccioná tu película</option>
-        <option value="600">West Side Story (AR$.600)</option>
-        <option value="600">House of Gucci (AR$.600)</option>
-        <option value="600">Spiderman: No Way Home (AR$.600)</option>
-        <option value="600">The French Dispach (AR$.600)</option>
-        <option value="600">King´s Man: El Origen (AR$.600)</option>
-        <option value="600">Scream (AR$.600)</option>
-        <option value="600">Hoy se arregla el mundo (AR$.600)</option>
-        <option value="600">Matrix: Resurrection (AR$.600)</option>
-        <option value="600">Alien: Covenant(AR$.600)</option>
-        <option value="600">Wonder Woman(AR$.600)</option>
-        <option value="600">Martian (AR$.600)</option>
-        <option value="400">Joker (AR$.400)</option>
-        <option value="600">Dune (AR$.600)</option>
-        <option value="400">Parasite (AR$.400)</option>
-        <option value="400">Fight Club (AR$.400)</option>
-        <option value="400">Don´t Look Up (AR$.400)</option>
-      </select>
+    <select id="Fecha">
+      <option disabled selected>Seleccioná el día</option>
+      <option value="Caballito">Lunes 01/01</option>
+      <option value="Recoleta">Martes 02/01</option>
+      <option value="Viernes">Miércoles 03/01</option>
+      <option value="Jueves">Jueves 04/01</option>
+      <option value="Nordelta">Viernes 05/01</option>   
+    </select>
 
       <select id="Complejo">
         <option disabled selected>Seleccioná tu Sala</option>
-        <option value="Caballito">BigScreen Complejo Caballito </option>
+        <option value="Caballito">BigScreen Complejo Caballito</option>
         <option value="Recoleta">BigScreen Complejo Recoleta</option>
         <option value="Nordelta">BigScreen Complejo Nordelta</option>   
       </select>
@@ -112,7 +77,7 @@
     </ul>
     <div class="contenedor">
       <div class="pantalla"></div>
-
+      <% for( let i = 0; i <= 5; i++) { %>
       <div class="fila">
         <div class="asiento"></div>
         <div class="asiento"></div>
@@ -123,57 +88,7 @@
         <div class="asiento"></div>
         <div class="asiento"></div>
       </div>
-
-      <div class="fila">
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento ocupado"></div>
-        <div class="asiento ocupado"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-      </div>
-      <div class="fila">
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento ocupado"></div>
-        <div class="asiento ocupado"></div>
-      </div>
-      <div class="fila">
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-      </div>
-      <div class="fila">
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento vendido"></div>
-        <div class="asiento vendido"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-      </div>
-      <div class="fila">
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento"></div>
-        <div class="asiento vendido"></div>
-        <div class="asiento vendido"></div>
-        <div class="asiento vendido"></div>
-        <div class="asiento vendido"></div>
-      </div>
+      <% } %>
     </div>
 
     <p class="texto">
