@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'User';
     let cols = {
         id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
         },
 
         complex_id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         
@@ -62,5 +62,7 @@ module.exports = (sequelize, dataTypes) => {
         });
 
     }
+
+    return User
 
 }

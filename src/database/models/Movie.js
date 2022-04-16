@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
     let alias = 'Movie';
     let cols = {
         id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.INTEGER,
             primaryKey: true,
             allowNull: false,
             autoIncrement: true
@@ -19,27 +19,27 @@ module.exports = (sequelize, dataTypes) => {
         },
 
         director_id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         
         genre_id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
 
         duration: {
-            type: dataTypes.INT(11),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         
         category_id: {
-            type: dataTypes.INT(11),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
 
         price: {
-            type: dataTypes.INT(11),
+            type: dataTypes.INTEGER,
             allowNull: false
         },
         
