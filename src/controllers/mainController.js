@@ -9,7 +9,32 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+const Movies = db.Movie;
+const Genres = db.Genre;
+const Actors = db.Actor;
+
 const mainController = {
+	index: async (req, res) => {
+		const estrenos = await Movies.findAll({
+			where: {category_id: 1}
+		});
+
+		const proximamente = await Movies.findAll({
+			where: {category_id: 2}
+		});
+
+		const reestrenos = await Movies.findAll({
+			where: {category_id: 3}
+		})
+
+		return res.render( 'home', {estrenos, proximamente, reestrenos})
+	}
+
+
+}
+
+// old controller (JSON)
+/*const mainController = {
 	index: (req, res) => {
 		
 		const estrenos = products.filter((product) => 
@@ -30,5 +55,6 @@ const mainController = {
 		// Do the magic
 	},
 };
+*/
 
 module.exports = mainController;
