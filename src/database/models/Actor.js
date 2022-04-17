@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
 
     let config = {
         tableName: 'actors',
-        timestamps: true,
+        timestamps: false,
         deletedAt: false
     }
 

@@ -1,5 +1,12 @@
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op, Association } = require("sequelize");
+const Movies = db.Movie;
+const Genres = db.Genre;
+const Actors = db.Actor;
+const Director = db.Director;
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -7,6 +14,42 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
+	index: (req, res) => {
+
+	},
+
+	detail: async (req, res) => {
+		const product = await Movies.findByPk(req.params.id, {include: ['director', 'genre', {association: 'actors'}]});
+		
+		return res.render('movie-detail', {product});
+	}, 
+
+	asientos: (req, res) => {
+
+	},
+
+	create: (req, res) => {
+        res.render('product-create-form');
+    },
+
+	store: (req, res) => {
+	
+	},
+
+	edit: (req, res) => {
+
+	},
+
+	update: (req, res) => {
+
+	},
+
+	delete: (req, res) => {
+
+	}
+}
+
+/*const productsController = {
     index: (req, res) => {
 
     },
@@ -100,6 +143,8 @@ const productsController = {
 		return res.send(products)
     },
 	
-};
+};*/
+
+
 
 module.exports = productsController;

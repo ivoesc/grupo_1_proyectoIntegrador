@@ -42,7 +42,7 @@
 
             <div class="poster-info-container">
 
-                <img src="/images/products/<%= product.image %>" alt="movie-poster" class="poster-detail">
+                <img src="/images/products/<%= product.poster %>" alt="movie-poster" class="poster-detail">
 
             </div>
 
@@ -50,9 +50,12 @@
 
                 <div class="movie-info">
                     <h3><%= product.name %> </h3>
-                    <p> <strong>Director:</strong> <%= product.director %>  <br>
-                        <strong>Actores:</strong> <%= product.actors %> <br>
-                        <strong>Género:</strong> <%= product.genre %> <br>
+                    <p> <strong>Director:</strong> <%= product.director.name %> <%= product.director.surname %> <br>
+                        <strong>Actores:</strong> <% product.actors.forEach(a => { %> 
+                        <%= a.name %>
+                        <%= a.surname %>
+                        <% }) %><br>
+                        <strong>Género:</strong> <%= product.genre.name %> <br>
                         <strong>Duración:</strong> <%= product.duration %> min.
                     </p>
                     <span><%= product.description %></span>

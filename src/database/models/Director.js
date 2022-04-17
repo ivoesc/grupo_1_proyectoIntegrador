@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
 
     let config = {
         tableName: 'directors',
-        timestamps: true,
+        timestamps: false,
         deletedAt: false
     }
 
