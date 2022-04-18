@@ -51,10 +51,10 @@
                 <div class="movie-info">
                     <h3><%= product.name %> </h3>
                     <p> <strong>Director:</strong> <%= product.director.name %> <%= product.director.surname %> <br>
-                        <strong>Actores:</strong> <% product.actors.forEach(a => { %> 
-                        <%= a.name %>
-                        <%= a.surname %>
-                        <% }) %><br>
+                        <strong>Actores:</strong> <% for( let i = 0; i < product.actors.length; i++ ) { %>
+                            <%= product.actors[i].name %>
+                            <%= product.actors[i].surname %><% if (i < (product.actors.length - 1)) { %>,<% } else { %>.<% } %>
+                        <% } %><br>
                         <strong>Género:</strong> <%= product.genre.name %> <br>
                         <strong>Duración:</strong> <%= product.duration %> min.
                     </p>
