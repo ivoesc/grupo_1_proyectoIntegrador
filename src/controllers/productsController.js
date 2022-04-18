@@ -62,11 +62,40 @@ const productsController = {
 	},
 
 	edit: (req, res) => {
+		const promMovies = Movies.findByPk(req.params.id, {include: ['director', 'genre', 'category', {association: 'actors'}]})
+
+		const promGenres = Genres.findAll();
+		const promDirectors = Director.findAll();
+		const promCategories = Categories.findAll();
+
+		Promise
+			.all([promMovies, promGenres, promDirectors, promCategories])
+			.then(function([product, genre, director, category]) {
+				res.render('product-edit-form', {product, genre, director, category})
+			})
 
 	},
 
-	update: (req, res) => {
+	update: async (req, res) => {
+		
+		await Movies.update({
+			name: req.body.name,
+			description: req.body.description,
+			director_id: req.body.director,
+			genre_id: req.body.genre,
+			duration: req.body.duration,
+			category_id: req.body.category,
+			price: req.body.price,
+			trailer: req.body.trailer,
+			poster: req.files.poster[0].filename,
+			background: req.files.background[0].filename
+	}, {
+		where: {
+			id: req.params.id
+		}
+	}) 
 
+		res.redirect('/movies/detail/' + req.params.id)
 	},
 
 	delete: (req, res) => {

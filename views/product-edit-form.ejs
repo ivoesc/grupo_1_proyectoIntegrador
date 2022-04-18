@@ -46,15 +46,41 @@
             </div>
 
             <div class="contenedor-input">
-                <input type="text" name="director" id="director" placeholder="Director de la película" class="campos-texto" value="<%= product.director %>">
+                <select id="director" name="director">
+                    <option disabled>Director de la película:</option>
+                    <% for( let i = 0; i < director.length; i++ ) { %>
+                        <% if (director[i].id == product.director_id) { %>
+                            <option value="<%= director[i].id %>" selected>
+                                <%= director[i].name %> <%= director[i].surname %> 
+                            </option>
+                        <% } else { %>
+                            <option value="<%= director[i].id %>">
+                                <%= director[i].name %> <%= director[i].surname %> 
+                            </option>
+                        <% } %>
+                    <% } %>
+                </select>
             </div>
 
-            <div class="contenedor-input">
-                <input type="text" name="actors" id="actors" placeholder="Actores de la película" class="campos-texto" value="<%= product.actors %>">
-            </div>
+            <!-- <div class="contenedor-input">
+                <input type="text" name="actors" id="actors" placeholder="Actores de la película" class="campos-texto" value="">
+            </div> -->
 
             <div class="contenedor-input">
-                <input type="text" name="genre" id="genre" placeholder="Género de la película" class="campos-texto" value="<%= product.genre %>">
+                <select id="genre" name="genre">
+                    <option disabled>Genero de la película:</option>
+                    <% for( let i = 0; i < genre.length; i++ ) { %>
+                        <% if (genre[i].id == product.genre_id) { %>
+                            <option value="<%= genre[i].id %>" selected>
+                                <%= genre[i].name %> 
+                            </option>
+                        <% } else { %>
+                            <option value="<%= genre[i].id %>">
+                                <%= genre[i].name %> 
+                            </option>
+                        <% } %>
+                    <% } %>
+                </select>
             </div>
 
             <div class="contenedor-input">
@@ -62,10 +88,19 @@
             </div>
 
             <div class="contenedor-input">
-                <select id="category" name="category" value="<%= product.category %>">
+                <select id="category" name="category">
                     <option disabled selected>Categoría de la película:</option>
-                    <option value="estrenos">Principal</option>
-                    <option value="próximamente">Próximos estrenos</option>
+                    <% for( let i = 0; i < category.length; i++ ) { %>
+                        <% if (category[i].id == product.category_id) { %>
+                            <option value="<%= category[i].id %>" selected>
+                                <%= category[i].name %> 
+                            </option>
+                        <% } else { %>
+                            <option value="<%= category[i].id %>">
+                                <%= category[i].name %> 
+                            </option>
+                        <% } %>
+                    <% } %>
                 </select>
             </div>
 
@@ -73,12 +108,12 @@
                 <input type="number" name="price" id="price" placeholder="Precio de la película" class="campos-texto" value="<%= product.price %>">
             </div>
 
-            <label for="image">Poster de la película</label>
+            <div>Poster de la película</div>
             <div class="contenedor-input">
-                <input type="file" name="image" id="image" placeholder="Póster de la película" class="campos-texto" value="<%= product.image %>">
+                <input type="file" name="poster" id="poster" placeholder="Póster de la película" class="campos-texto" value="<%= product.image %>">
             </div>
 
-            <label for="background">Imagen de fondo del detalle</label>
+            <div>Imagen de fondo del detalle</div>
             <div class="contenedor-input">
                 <input type="file" name="background" id="background" placeholder="Imagen de fondo" class="campos-texto" value="">
             </div>
