@@ -59,6 +59,8 @@ const productsController = {
                 poster: req.files.poster[0].filename,
                 background: req.files.background[0].filename
 		}) 
+
+		res.redirect('/')
 	},
 
 	edit: (req, res) => {
@@ -99,7 +101,13 @@ const productsController = {
 	},
 
 	delete: (req, res) => {
+		Movies.destroy({
+			where: {
+				id: req.params.id
+			}
+		})
 
+		res.redirect('/')
 	}
 }
 
