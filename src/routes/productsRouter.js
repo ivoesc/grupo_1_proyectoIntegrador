@@ -18,11 +18,11 @@ router.get('/:id/asientos', productsController.asientos);
 
 /* GET create page. */
 router.get('/create', adminMiddleware, productsController.create); 
-router.post('/', upload.fields([{name: 'image'}, {name: 'background'}]), productsController.store);
+router.post('/', upload.fields([{name: 'poster'}, {name: 'background'}]), productsController.store);
 
 /* GET edit page. */
 router.get('/detail/:id/edit', adminMiddleware, productsController.edit);
-router.put('/:id', upload.fields([{name: 'image'}, {name: 'background'}]), productsController.update);
+router.put('/:id', upload.fields([{name: 'poster'}, {name: 'background'}]), productsController.update);
 
 router.delete('/:id', productsController.delete);
 

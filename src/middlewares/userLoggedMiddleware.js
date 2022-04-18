@@ -6,7 +6,7 @@ function userLoggedMiddleware(req, res, next) {
 	res.locals.isAdmin = false;
 
 	if (req.session.userLogged) {
-		console.log(req.session.userLogged.email);
+		console.log("Usuario logueado: " + req.session.userLogged.email);
 	}
 
 	let emailInCookie = req.cookies.userEmail;

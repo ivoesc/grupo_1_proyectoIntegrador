@@ -46,15 +46,25 @@
             </div>
 
             <div class="contenedor-input">
-                <input type="text" name="director" id="director" placeholder="Director de la película" class="campos-texto" value="">
+                <select id="director" name="director">
+                    <option disabled selected>Director de la película:</option>
+                    <% allDirectors.forEach(director => { %>
+                        <option value="<%= director.id %>"><%= director.name %> <%= director.surname %></option>
+                    <% }) %>
+                </select>
             </div>
 
-            <div class="contenedor-input">
+            <!-- <div class="contenedor-input">
                 <input type="text" name="actors" id="actors" placeholder="Actores de la película" class="campos-texto" value="">
-            </div>
+            </div> -->
 
             <div class="contenedor-input">
-                <input type="text" name="genre" id="genre" placeholder="Género de la película" class="campos-texto" value="">
+                <select id="genre" name="genre">
+                    <option disabled selected>Genero de la película:</option>
+                    <% allGenres.forEach(genre => { %>
+                        <option value="<%= genre.id %>"><%= genre.name %> </option>
+                    <% }) %>
+                </select>
             </div>
 
             <div class="contenedor-input">
@@ -64,9 +74,9 @@
             <div class="contenedor-input">
                 <select id="category" name="category">
                     <option disabled selected>Categoría de la película:</option>
-                    <option value="estrenos">Estrenos</option>
-                    <option value="próximamente">Próximamente</option>
-                    <option value="reestrenos">Re-Estrenos</option>
+                    <% allCategories.forEach(category => { %>
+                        <option value="<%= category.id %>"><%= category.name %> </option>
+                    <% }) %>
                 </select>
             </div>
 
@@ -74,12 +84,12 @@
                 <input type="number" name="price" id="price" placeholder="Precio de la película" class="campos-texto" value="">
             </div>
 
-            <label for="image">Poster de la película</label>
+            <div>Poster de la película</div>
             <div class="contenedor-input">
-                <input type="file" name="image" id="image" placeholder="Póster de la película" class="campos-texto" value="">
+                <input type="file" name="poster" id="poster" placeholder="Póster de la película" class="campos-texto" value="">
             </div>
 
-            <label for="background">Imagen de fondo del detalle</label>
+            <div>Imagen de fondo del detalle</div>
             <div class="contenedor-input">
                 <input type="file" name="background" id="background" placeholder="Imagen de fondo" class="campos-texto" value="">
             </div>

@@ -7,6 +7,7 @@ const Movies = db.Movie;
 const Genres = db.Genre;
 const Actors = db.Actor;
 const Director = db.Director;
+const Categories = db.Category
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -28,12 +29,36 @@ const productsController = {
 
 	},
 
-	create: (req, res) => {
-        res.render('product-create-form');
+	create: async (req, res) => {
+        const promGenres = Genres.findAll();
+		const promActors = Actors.findAll();
+		const promDirectors = Director.findAll();
+		const promCategories = Categories.findAll()
+		
+		Promise
+        .all([promGenres, promActors, promDirectors, promCategories])
+        .then(([allGenres, allActors, allDirectors, allCategories]) => {
+            return res.render('product-create-form', {allGenres, allActors, allDirectors, allCategories})
+		})
+        .catch(error => res.send(error))
+		
+		//res.render('product-create-form');
     },
 
-	store: (req, res) => {
-	
+	store: async (req, res) => {
+		
+		await Movies.create({
+				name: req.body.name,
+                description: req.body.description,
+                director_id: req.body.director,
+                genre_id: req.body.genre,
+                duration: req.body.duration,
+                category_id: req.body.category,
+				price: req.body.price,
+                trailer: req.body.trailer,
+                poster: req.files.poster[0].filename,
+                background: req.files.background[0].filename
+		}) 
 	},
 
 	edit: (req, res) => {

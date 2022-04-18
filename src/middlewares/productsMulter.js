@@ -4,7 +4,7 @@ const path = require('path');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-          if (req.files[file.fieldname] == req.files.image) {
+          if (req.files[file.fieldname] == req.files.poster) {
                cb(null, path.resolve('public/images/products'))
           } else {
                cb(null, path.resolve('public/images/backgrounds'))
@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
     },
 
     filename: function (req, file, cb) {
-          if (req.files[file.fieldname] == req.files.image ) {
+          if (req.files[file.fieldname] == req.files.poster ) {
                cb(null, 'poster' + '-' + req.body.name.split(' ').join('') + path.extname(file.originalname))
           } else {
                cb(null, 'background' + '-' + req.body.name.split(' ').join('') + path.extname(file.originalname))
