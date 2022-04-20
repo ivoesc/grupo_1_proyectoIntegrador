@@ -99,11 +99,10 @@
 
             <div class="contenedor-input">
                 <select id="complex" name="complex">
-                    <option selected disabled>Elegí tu complejo de Preferencia:</option>
-                    <% let complex = ['Caballito', 'Recoleta', 'Nordelta'];%>
-                        <% for (const oneComplex of complex) { %>
-                        <option value="<%= oneComplex %>"> <%= oneComplex %> </option>
-                        <% } %>
+                    <option disabled selected>Elegí tu complejo de preferencia:</option>
+                    <% allComplex.forEach(complex => { %>
+                        <option value="<%= complex.id %>"><%= complex.name %> </option>
+                    <% }) %>
                 </select>
             </div>
             <% if (locals.errors && errors.complejo) { %>

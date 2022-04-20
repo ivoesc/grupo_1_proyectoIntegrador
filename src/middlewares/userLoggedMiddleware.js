@@ -1,7 +1,11 @@
 const path = require('path');
 const usersController = require(path.resolve('src/controllers/usersController'));
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op, Association } = require("sequelize");
+const User = db.User;
 
-function userLoggedMiddleware(req, res, next) {
+async function userLoggedMiddleware(req, res, next) {
 	res.locals.isLogged = false;
 	res.locals.isAdmin = false;
 
@@ -10,7 +14,10 @@ function userLoggedMiddleware(req, res, next) {
 	}
 
 	let emailInCookie = req.cookies.userEmail;
-	let userFromCookie = usersController.encontrarUserPorCampo('email', emailInCookie);
+	let userFromCookie = await User.findAll({
+		where: {
+			email: emailInCookie
+	}})
 
 	if (userFromCookie) {
 		req.session.userLogged = userFromCookie;
