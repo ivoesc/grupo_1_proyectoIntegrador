@@ -30,7 +30,7 @@
     <main>
         <div class="main-container">
             <div class="profile-pic-container">
-                <img src="/images/users/<%= user.profilePic %> " alt="profile pic" class="profile-pic-img">
+                <img src="/images/users/<%= user.profile_pic %> " alt="profile pic" class="profile-pic-img">
             </div>
             <div class="user-info-container">
                 <div class="user-box">
@@ -60,7 +60,7 @@
                 <div class="user-box">
                         <p class="user-title">COMPLEJO</p>
                         <form action="" class="user-edit-form">
-                            <input type="text" name="complex" id="complex" value="<%= user.complex %>" class="campos-texto-edit">
+                            <input type="text" name="complex" id="complex" value="<%= user.complex.name %>" class="campos-texto-edit">
                         </form>
                 </div>
             </div>

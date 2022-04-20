@@ -17,7 +17,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");*/
 
 const { validationResult } = require('express-validator');
-const req = require('express/lib/request');
+//const req = require('express/lib/request');
 
 const usersController = {
     login: (req, res) => {
@@ -25,11 +25,9 @@ const usersController = {
     },
 
     register: (req, res) => {
-        const promComplex = Complex.findAll();
+        Complex.findAll()
 
-        Promise
-        .all([promComplex])
-        .then(([allComplex]) => {
+        .then((allComplex) => {
             return res.render('register', {allComplex})
 		})
         .catch(error => res.send(error))
@@ -46,17 +44,17 @@ const usersController = {
         const resultValidation = validationResult(req);
 
 		if (resultValidation.errors.length > 0) {
-            const promComplex = Complex.findAll();
+            
 
-            Promise
-            .all([promComplex])
-            .then(([allComplex]) => {
-
-			return res.render('register', {
+            const allComplex = await Complex.findAll()
+            return res.render('register', {
                 allComplex,
 				errors: resultValidation.mapped(),
 				oldData: req.body,
-            })});
+            });
+            
+
+			
 		}
 
         let existingUser = await User.findOne({
@@ -68,11 +66,9 @@ const usersController = {
         console.log(existingUser);
 
         if (existingUser != null) {
-            const promComplex = Complex.findAll();
+            Complex.findAll()
 
-            Promise
-            .all([promComplex])
-            .then(([allComplex]) => {
+            .then((allComplex) => {
                 return res.render('register', {
                     allComplex,
                     errors: {
@@ -84,29 +80,34 @@ const usersController = {
                 })
             })
             .catch(error => res.send(error))
-        } else {
-            await User.create({
-                name: req.body.name,
-                surname: req.body.surname,
-                email: req.body.email,
-                phone: Number(req.body.phone),
-                complex_id: req.body.complex,
-                password: bcryptjs.hashSync(req.body.password, 10),
-                profile_pic: req.file.filename
+        }
+
+        await User.create({
+            name: req.body.name,
+            surname: req.body.surname,
+            email: req.body.email,
+            phone: Number(req.body.phone),
+            complex_id: req.body.complex,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            profile_pic: req.file.filename
         })
+
+        console.log(req.file);
         return res.render('login');
-    }
+    
     
     },
     
     loginProcess: async (req, res) => {
-        let userToLogin = await User.findAll({
+        let userToLogin = await User.findOne({
             where: {
                 email: req.body.email
             },
             include: ['complex']
         })
         
+        console.log(userToLogin);
+
         if (userToLogin) {
             let passwordConfirmation = bcryptjs.compareSync(req.body.password, userToLogin.password);
 
@@ -117,7 +118,7 @@ const usersController = {
                     surname: userToLogin.surname,
                     email: userToLogin.email,
                     phone: userToLogin.phone,
-                    complex_id: userToLogin.complex,
+                    complex_name: userToLogin.complex.dataValues.name,
                     profile_pic: userToLogin.profilePic
                 };
                 

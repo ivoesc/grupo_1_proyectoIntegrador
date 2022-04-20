@@ -15,7 +15,7 @@ router.post('/login', usersController.loginProcess);
 
 /* GET register page. */
 router.get('/register', guestMiddleware, usersController.register);
-router.post('/register', upload.single('profilePic'), validations, usersController.registerProcess);
+router.post('/register', upload.single('profile_pic'), validations, usersController.registerProcess);
 
 /* GET logout page. */
 router.get('/logout/', usersController.logout);

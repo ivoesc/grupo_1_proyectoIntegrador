@@ -14,14 +14,19 @@ async function userLoggedMiddleware(req, res, next) {
 	}
 
 	let emailInCookie = req.cookies.userEmail;
-	let userFromCookie = await User.findAll({
+	
+	if(emailInCookie) {
+		let userFromCookie = await User.findOne({
 		where: {
 			email: emailInCookie
-	}})
+	}, 
+		include: ['complex']
+	})
 
 	if (userFromCookie) {
 		req.session.userLogged = userFromCookie;
 	}
+}
 
 	if (req.session.userLogged) {
 		res.locals.isLogged = true;
