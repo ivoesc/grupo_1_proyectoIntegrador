@@ -14,7 +14,7 @@ router.get('/', productsController.index);
 router.get('/detail/:id', productsController.detail);
 
 /* GET cart page. */
-router.get('/:id/asientos', productsController.asientos);
+router.get('/:id/asientos', productsController.seats);
 
 /* GET create page. */
 router.get('/create', adminMiddleware, productsController.create); 
