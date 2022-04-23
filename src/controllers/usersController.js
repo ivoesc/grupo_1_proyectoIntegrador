@@ -63,7 +63,6 @@ const usersController = {
 
         }});
         
-        console.log(existingUser);
 
         if (existingUser != null) {
             Complex.findAll()
@@ -92,7 +91,6 @@ const usersController = {
             profile_pic: req.file.filename
         })
 
-        console.log(req.file);
         return res.render('login');
     
     
@@ -105,8 +103,7 @@ const usersController = {
             },
             include: ['complex']
         })
-        
-        console.log(userToLogin);
+
 
         if (userToLogin) {
             let passwordConfirmation = bcryptjs.compareSync(req.body.password, userToLogin.password);
@@ -118,8 +115,8 @@ const usersController = {
                     surname: userToLogin.surname,
                     email: userToLogin.email,
                     phone: userToLogin.phone,
-                    complex_name: userToLogin.complex.dataValues.name,
-                    profile_pic: userToLogin.profilePic
+                    complex: userToLogin.complex.dataValues,
+                    profile_pic: userToLogin.profile_pic
                 };
                 
                 if(req.body.remember) {
