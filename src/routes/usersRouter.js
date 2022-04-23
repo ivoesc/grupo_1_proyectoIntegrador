@@ -8,6 +8,7 @@ const validations = require('../middlewares/usersValidation');
 
 /* GET profile page. */
 router.get('/profile', authMiddleware, usersController.profile);
+router.put('/update', usersController.update);
 
 /* GET login page. */
 router.get('/login', guestMiddleware, usersController.login);

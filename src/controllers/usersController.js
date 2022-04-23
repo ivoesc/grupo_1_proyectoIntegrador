@@ -35,9 +35,16 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        res.render('profile', {
-            user: req.session.userLogged
-        });
+        Complex.findAll()
+
+        .then((allComplex) => {
+            return res.render('profile', {allComplex, user: req.session.userLogged})
+		})
+        .catch(error => res.send(error))
+
+        //res.render('profile', {
+        //    user: req.session.userLogged
+        //});
     },
 
     registerProcess: async (req, res) => {
@@ -148,6 +155,22 @@ const usersController = {
         res.clearCookie('userEmail');
         req.session.destroy();
         res.redirect('/');
+    }, 
+
+    update: async (req, res) => {
+		
+		await User.update({
+			name: req.body.name,
+			surname: req.body.surname,
+            email: req.body.email,
+            phone: req.body.phone,
+            complex_id: req.body.complex
+    }, {
+		where: {
+			email: req.body.email
+		}
+	})
+        res.redirect('/users/profile')
     }
 }
 /* const usersController = {

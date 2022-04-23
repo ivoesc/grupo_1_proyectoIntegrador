@@ -32,47 +32,54 @@
             <div class="profile-pic-container">
                 <img src="/images/users/<%= user.profile_pic %> " alt="profile pic" class="profile-pic-img">
             </div>
-            <div class="user-info-container">
-                <div class="user-box">
-                    <p class="user-title">NOMBRE</p>
-                        <form action="" class="user-edit-form">
-                            <input type="text" name="name" id="name" placeholder="Nombre" value="<%= user.name %>" class="campos-texto-edit">
-                        </form>
+            <form action="/users/update?_method=PUT" method="POST">
+                <div class="user-info-container">
+                    <div class="user-box">
+                        <p class="user-title">NOMBRE</p>
+                                <input type="text" name="name" id="name" placeholder="Nombre" value="<%= user.name %>" class="campos-texto-edit">
+                    </div>
+                    <div class="user-box">
+                        <p class="user-title">APELLIDO</p>
+                                <input type="text" name="surname" id="surname" value="<%= user.surname %>" class="campos-texto-edit">
+                    </div>
+                    <div class="user-box">
+                        <p class="user-title">EMAIL</p>
+                            <input type="email" name="email" id="email" value="<%= user.email %>" class="campos-texto-edit">
+                    </div>
+                    <div class="user-box">
+                        <p class="user-title">TELÉFONO</p>
+                            <input type="number" name="phone" id="phone" value="<%= user.phone %>" class="campos-texto-edit">
+                    </div>
+                    <div class="user-box">
+                            <p class="user-title">COMPLEJO</p>
+                                <select id="complex" name="complex">
+                                    <% for( let i = 0; i < allComplex.length; i++ ) { %>
+                                        <% if (allComplex[i].id == user.complex_id) { %>
+                                            <option value="<%= allComplex[i].id %>" selected>
+                                                <%= allComplex[i].name %> 
+                                            </option>
+                                        <% } else { %>
+                                            <option value="<%= allComplex[i].id %>">
+                                                <%= allComplex[i].name %> 
+                                            </option>
+                                        <% } %>
+                                    <% } %>
+                                </select>
+                    </div>
                 </div>
-                <div class="user-box">
-                    <p class="user-title">APELLIDO</p>
-                        <form action="" class="user-edit-form">
-                            <input type="text" name="surname" id="surname" value="<%= user.surname %>" class="campos-texto-edit">
-                        </form>
+            
                 </div>
-                <div class="user-box">
-                    <p class="user-title">EMAIL</p>
-                    <form action="" class="user-edit-form">
-                        <input type="email" name="email" id="email" value="<%= user.email %>" class="campos-texto-edit">
+
+                <div class="btn-container">
+                    <div class="logout-btn-container">
+                        <a href="/users/logout" class="login-btn"><strong>Cerrar Sesión</strong></a>
+                    </div>
+                    <form action="/users/update" class="edit-btn-container">
+                        <button type="submit" class="login-btn"><strong>Guardar Cambios</strong></button>
                     </form>
                 </div>
-                <div class="user-box">
-                    <p class="user-title">TELÉFONO</p>
-                    <form action="" class="user-edit-form">
-                        <input type="number" name="phone" id="phone" value="<%= user.phone %>" class="campos-texto-edit">
-                    </form>
-                </div>
-                <div class="user-box">
-                        <p class="user-title">COMPLEJO</p>
-                        <form action="" class="user-edit-form">
-                            <input type="text" name="complex" id="complex" value="<%= user.complex.name %>" class="campos-texto-edit">
-                        </form>
-                </div>
-            </div>
-        </div>
-        <div class="btn-container">
-            <form action="/users/logout" class="logout-btn-container">
-                <button type="submit" class="login-btn"><strong>Cerrar Sesión</strong></button>
+
             </form>
-            <form action="/users/logout" class="edit-btn-container">
-                <button type="submit" class="login-btn"><strong>Guardar Cambios</strong></button>
-            </form>
-        </div>
     </main>
 
     <footer>
