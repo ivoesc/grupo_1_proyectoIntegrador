@@ -6,6 +6,7 @@ const { Op, Association } = require("sequelize");
 const Movies = db.Movie;
 const Genres = db.Genre;
 const Actors = db.Actor;
+const ActorMovie = db.ActorMovie;
 const Director = db.Director;
 const Categories = db.Category
 
@@ -49,7 +50,7 @@ const productsController = {
 
 	store: async (req, res) => {
 		
-		await Movies.create({
+		const movie = await Movies.create({
 				name: req.body.name,
                 description: req.body.description,
                 director_id: req.body.director,
@@ -60,7 +61,14 @@ const productsController = {
                 trailer: req.body.trailer,
                 poster: req.files.poster[0].filename,
                 background: req.files.background[0].filename
-		}) 
+		})
+
+		for(let actor_id of req.body.actors) {
+			await ActorMovie.create({
+				actor_id,
+				movie_id: movie.id
+			})
+		}
 
 		res.redirect('/')
 	},

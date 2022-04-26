@@ -96,6 +96,7 @@ module.exports = (sequelize, dataTypes) => {
             as: "category",
             foreignKey: "category_id"
         });
+
     }
 
     return Movie

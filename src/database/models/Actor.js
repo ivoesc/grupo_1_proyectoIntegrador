@@ -38,6 +38,7 @@ module.exports = (sequelize, dataTypes) => {
             otherKey: "movie_id",
             timestamps: false
         })
+
     }
  
     return Actor

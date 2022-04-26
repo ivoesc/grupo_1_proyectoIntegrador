@@ -17,7 +17,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <title>Añadir película</title>
 </head>
 
@@ -27,81 +32,87 @@
         <%- include ./partials/headerPartial.ejs %>
     </header>
 
-<main>
-    
-    <div class="main-form-div">
-    
-        <!--<img src="\images\BIGSCREENpng.svg" alt="BigScreen" class="login-logo">-->
-
-        <div class="login-text-container"> <p>AÑADIR PELÍCULA</p> </div>
+    <main>
         
-        <form action="/movies" method="POST" enctype="multipart/form-data">
+        <div class="main-form-div">
+        
+            <!--<img src="\images\BIGSCREENpng.svg" alt="BigScreen" class="login-logo">-->
 
-            <div class="contenedor-input">
-                <input type="text" name="name" id="name" placeholder="Nombre de la película" class="campos-texto" value="">
-            </div>
+            <div class="login-text-container"> <p>AÑADIR PELÍCULA</p> </div>
+            
+            <form action="/movies" method="POST" enctype="multipart/form-data">
 
-            <div class="contenedor-textarea">
-                <textarea type="text" name="description" id="description" placeholder="Sinopsis de la película" class="campos-texto" value=""></textarea>
-            </div>
+                <div class="contenedor-input">
+                    <input type="text" name="name" id="name" placeholder="Nombre de la película" class="campos-texto" value="">
+                </div>
 
-            <div class="contenedor-input">
-                <select id="director" name="director">
-                    <option disabled selected>Director de la película:</option>
-                    <% allDirectors.forEach(director => { %>
-                        <option value="<%= director.id %>"><%= director.name %> <%= director.surname %></option>
-                    <% }) %>
-                </select>
-            </div>
+                <div class="contenedor-textarea">
+                    <textarea type="text" name="description" id="description" placeholder="Sinopsis de la película" class="campos-texto" value=""></textarea>
+                </div>
 
-            <!-- <div class="contenedor-input">
-                <input type="text" name="actors" id="actors" placeholder="Actores de la película" class="campos-texto" value="">
-            </div> -->
+                <div class="contenedor-input">
+                    <select id="director" name="director">
+                        <option disabled selected>Director de la película:</option>
+                        <% allDirectors.forEach(director => { %>
+                            <option value="<%= director.id %>"><%= director.name %> <%= director.surname %></option>
+                        <% }) %>
+                    </select>
+                </div>
 
-            <div class="contenedor-input">
-                <select id="genre" name="genre">
-                    <option disabled selected>Genero de la película:</option>
-                    <% allGenres.forEach(genre => { %>
-                        <option value="<%= genre.id %>"><%= genre.name %> </option>
-                    <% }) %>
-                </select>
-            </div>
+                <!-- <div class="contenedor-input" > -->
+                    <select name="actors" id="actorsSelect" multiple="multiple">
+                        <% allActors.forEach(actor => { %>
+                            <option  value="<%= actor.id %>"><%= actor.name %> <%= actor.surname %></option>
+                        <% }) %>
+                    </select>
+                
 
-            <div class="contenedor-input">
-                <input type="number" name="duration" id="duration" placeholder="Duración de la película" class="campos-texto" value="">
-            </div>
+                <div class="contenedor-input">
+                    <select id="genre" name="genre">
+                        <option disabled selected>Genero de la película:</option>
+                        <% allGenres.forEach(genre => { %>
+                            <option value="<%= genre.id %>"><%= genre.name %> </option>
+                        <% }) %>
+                    </select>
+                </div>
 
-            <div class="contenedor-input">
-                <select id="category" name="category">
-                    <option disabled selected>Categoría de la película:</option>
-                    <% allCategories.forEach(category => { %>
-                        <option value="<%= category.id %>"><%= category.name %> </option>
-                    <% }) %>
-                </select>
-            </div>
+                <div class="contenedor-input">
+                    <input type="number" name="duration" id="duration" placeholder="Duración de la película" class="campos-texto" value="">
+                </div>
 
-            <div class="contenedor-input">
-                <input type="number" name="price" id="price" placeholder="Precio de la película" class="campos-texto" value="">
-            </div>
+                <div class="contenedor-input">
+                    <select id="category" name="category">
+                        <option disabled selected>Categoría de la película:</option>
+                        <% allCategories.forEach(category => { %>
+                            <option value="<%= category.id %>"><%= category.name %> </option>
+                        <% }) %>
+                    </select>
+                </div>
 
-            <div>Poster de la película</div>
-            <div class="contenedor-input">
-                <input type="file" name="poster" id="poster" placeholder="Póster de la película" class="campos-texto" value="">
-            </div>
+                <div class="contenedor-input">
+                    <input type="number" name="price" id="price" placeholder="Precio de la película" class="campos-texto" value="">
+                </div>
 
-            <div>Imagen de fondo del detalle</div>
-            <div class="contenedor-input">
-                <input type="file" name="background" id="background" placeholder="Imagen de fondo" class="campos-texto" value="">
-            </div>
+                <div>Poster de la película</div>
+                <div class="contenedor-input">
+                    <input type="file" name="poster" id="poster" placeholder="Póster de la película" class="campos-texto" value="">
+                </div>
 
-            <div class="contenedor-input">
-                <input type="url" name="trailer" id="trailer" placeholder="URL del trailer" class="campos-texto" value="">
-            </div>
+                <div>Imagen de fondo del detalle</div>
+                <div class="contenedor-input">
+                    <input type="file" name="background" id="background" placeholder="Imagen de fondo" class="campos-texto" value="">
+                </div>
 
-            <div class="contenedor-button">
-                <button type="submit" class="login-button"><strong>Guardar Película</strong></button>
-            </div>
+                <div class="contenedor-input">
+                    <input type="url" name="trailer" id="trailer" placeholder="URL del trailer" class="campos-texto" value="">
+                </div>
 
-        </form>
-    </div>
-</main>
+                <div class="contenedor-button">
+                    <button type="submit" class="login-button"><strong>Guardar Película</strong></button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+    <script src="/javascripts/product-create-form.js"></script>
+</body>
