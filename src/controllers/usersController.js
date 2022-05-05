@@ -50,6 +50,8 @@ const usersController = {
     registerProcess: async (req, res) => {
         const resultValidation = validationResult(req);
 
+        console.log(validationResult(req));
+        
 		if (resultValidation.errors.length > 0) {
             
 
@@ -88,6 +90,8 @@ const usersController = {
             .catch(error => res.send(error))
         }
 
+        if (resultValidation.errors.length = 0) {
+
         await User.create({
             name: req.body.name,
             surname: req.body.surname,
@@ -99,7 +103,8 @@ const usersController = {
         })
 
         return res.render('login');
-    
+        
+        }
     
     },
     

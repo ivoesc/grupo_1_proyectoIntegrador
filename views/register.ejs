@@ -112,7 +112,7 @@
                 <% } %>
 
                 <div class="contenedor-input">
-                    <input type="password" name="password" id="password" placeholder="Crear Contraseña (min. 6 caracteres)" class="campos-texto">
+                    <input type="password" name="password" id="password" placeholder="Crear Contraseña (min. 8 caracteres)" class="campos-texto">
                 </div>
                 <% if (locals.errors && errors.password) { %>
                     <div class="text-danger">
@@ -142,7 +142,7 @@
                 <% } %>
 
                 <div class="contenedor-button">
-                    <button type="submit" class="login-button"><strong>Registrarse</strong></button>
+                    <button id="profile_pic" type="submit" class="login-button"><strong>Registrarse</strong></button>
                 </div>
 
             </form>
