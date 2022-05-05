@@ -49,102 +49,103 @@
         </div>
     </header> -->
 
-<main>
-        
-    <a href="/" class="login-logo"> <img src="\images\logos\BIGSCREENpng2.svg"> </a>
-    
-    <div class="main-login-div">
-    
-        <!--<img src="\images\BIGSCREENpng.svg" alt="BigScreen" class="login-logo">-->
-
-        <div class="login-text-container"> <p>REGISTRARSE</p> </div>
-        
-        <form action="/users/register" method="POST" enctype="multipart/form-data">
+    <main>
             
-            <div class="contenedor-input">
-                <input type="text" name="name" id="name" placeholder="Nombre" class="campos-texto" value="<%= locals.oldData ? oldData.name : null %>">
-            </div>
-            <% if (locals.errors && errors.name) { %>
-                <div class="text-danger">
-                    <%= errors.name.msg %>
-                </div>
-             <% } %>
+        <a href="/" class="login-logo"> <img src="\images\logos\BIGSCREENpng2.svg"> </a>
+        
+        <div class="main-login-div">
+        
+            <!--<img src="\images\BIGSCREENpng.svg" alt="BigScreen" class="login-logo">-->
 
-            <div class="contenedor-input">
-                <input type="text" name="surname" id="surname" placeholder="Apellido" class="campos-texto" value="<%= locals.oldData ? oldData.surname : null %>">
-            </div>
-            <% if (locals.errors && errors.surname) { %>
-                <div class="text-danger">
-                    <%= errors.surname.msg %>
-                </div>
-             <% } %>
-
-            <div class="contenedor-input">
-                <input type="email" name="email" id="email" placeholder="E-Mail" class="campos-texto" value="<%= locals.oldData ? oldData.email : null %>">
-            </div>
-            <% if (locals.errors && errors.email) { %>
-                <div class="text-danger">
-                    <%= errors.email.msg %>
-                </div>
-             <% } %>
-
-            <div class="contenedor-input">
-                <input type="number" name="phone" id="phone" placeholder="Télefono" class="campos-texto" value="<%= locals.oldData ? oldData.phone : null %>">
-            </div>
-            <% if (locals.errors && errors.phone) { %>
-                <div class="text-danger">
-                    <%= errors.phone.msg %>
-                </div>
-             <% } %>
-
-            <div class="contenedor-input">
-                <select id="complex" name="complex">
-                    <option disabled selected>Elegí tu complejo de preferencia:</option>
-                    <% allComplex.forEach(complex => { %>
-                        <option value="<%= complex.id %>"><%= complex.name %> </option>
-                    <% }) %>
-                </select>
-            </div>
-            <% if (locals.errors && errors.complex) { %>
-                <div class="text-danger">
-                    <%= errors.complex.msg %>
-                </div>
-             <% } %>
-
-            <div class="contenedor-input">
-                <input type="password" name="password" id="password" placeholder="Crear Contraseña (min. 6 caracteres)" class="campos-texto">
-            </div>
-            <% if (locals.errors && errors.password) { %>
-                <div class="text-danger">
-                    <%= errors.password.msg %>
-                </div>
-             <% } %>
-
-            <div class="contenedor-input">
-                <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmar Contraseña" class="campos-texto">
-            </div>
-            <% if (locals.errors && errors.confirmPassword) { %>
-                <div class="text-danger">
-                    <%= errors.confirmPassword.msg %>
-                </div>
-             <% } %>
-
-            <label for="profile_pic" class="register-label">Imagen de perfil <i class="fas fa-image pic-icon"></i></label>
-            <div class="contenedor-input-hidden">
-                <input type="file" name="profile_pic" id="profile_pic" class="campos-texto-hidden" value="">
+            <div class="login-text-container"> <p>REGISTRARSE</p> </div>
+            
+            <form action="/users/register" method="POST" enctype="multipart/form-data" id="register-form">
                 
-            </div>
-
-            <% if (locals.errors && errors.profilePic) { %>
-                <div class="text-danger">
-                    <%= errors.profilePic.msg %>
+                <div class="contenedor-input">
+                    <input type="text" name="name" id="name" placeholder="Nombre" class="campos-texto" value="<%= locals.oldData ? oldData.name : null %>">
                 </div>
-             <% } %>
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-danger">
+                        <%= errors.name.msg %>
+                    </div>
+                <% } %>
 
-            <div class="contenedor-button">
-                <button type="submit" class="login-button"><strong>Registrarse</strong></button>
-            </div>
+                <div class="contenedor-input">
+                    <input type="text" name="surname" id="surname" placeholder="Apellido" class="campos-texto" value="<%= locals.oldData ? oldData.surname : null %>">
+                </div>
+                <% if (locals.errors && errors.surname) { %>
+                    <div class="text-danger">
+                        <%= errors.surname.msg %>
+                    </div>
+                <% } %>
 
-        </form>
-    </div>
-</main>
+                <div class="contenedor-input">
+                    <input type="email" name="email" id="email" placeholder="E-Mail" class="campos-texto" value="<%= locals.oldData ? oldData.email : null %>">
+                </div>
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
+
+                <div class="contenedor-input">
+                    <input type="number" name="phone" id="phone" placeholder="Télefono" class="campos-texto" value="<%= locals.oldData ? oldData.phone : null %>">
+                </div>
+                <% if (locals.errors && errors.phone) { %>
+                    <div class="text-danger">
+                        <%= errors.phone.msg %>
+                    </div>
+                <% } %>
+
+                <div class="contenedor-input">
+                    <select id="complex" name="complex">
+                        <option disabled selected>Elegí tu complejo de preferencia:</option>
+                        <% allComplex.forEach(complex => { %>
+                            <option value="<%= complex.id %>"><%= complex.name %> </option>
+                        <% }) %>
+                    </select>
+                </div>
+                <% if (locals.errors && errors.complex) { %>
+                    <div class="text-danger">
+                        <%= errors.complex.msg %>
+                    </div>
+                <% } %>
+
+                <div class="contenedor-input">
+                    <input type="password" name="password" id="password" placeholder="Crear Contraseña (min. 6 caracteres)" class="campos-texto">
+                </div>
+                <% if (locals.errors && errors.password) { %>
+                    <div class="text-danger">
+                        <%= errors.password.msg %>
+                    </div>
+                <% } %>
+
+                <div class="contenedor-input">
+                    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmar Contraseña" class="campos-texto">
+                </div>
+                <% if (locals.errors && errors.confirmPassword) { %>
+                    <div class="text-danger">
+                        <%= errors.confirmPassword.msg %>
+                    </div>
+                <% } %>
+
+                <label for="profile_pic" class="register-label">Imagen de perfil <i class="fas fa-image pic-icon"></i></label>
+                <div class="contenedor-input-hidden">
+                    <input type="file" name="profile_pic" id="profile_pic" class="campos-texto-hidden" value="">
+                    
+                </div>
+
+                <% if (locals.errors && errors.profilePic) { %>
+                    <div class="text-danger">
+                        <%= errors.profilePic.msg %>
+                    </div>
+                <% } %>
+
+                <div class="contenedor-button">
+                    <button type="submit" class="login-button"><strong>Registrarse</strong></button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+</body>
