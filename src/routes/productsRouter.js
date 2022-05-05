@@ -6,6 +6,7 @@ const path = require('path');
 const upload = require('../middlewares/productsMulter');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
+const productValidations = require('../middlewares/productValidation');
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 
@@ -18,7 +19,7 @@ router.get('/:id/asientos', productsController.seats);
 
 /* GET create page. */
 router.get('/create', adminMiddleware, productsController.create); 
-router.post('/', upload.fields([{name: 'poster'}, {name: 'background'}]), productsController.store);
+router.post('/', upload.fields([{name: 'poster'}, {name: 'background'}]), productValidations, productsController.store);
 
 /* GET edit page. */
 router.get('/detail/:id/edit', adminMiddleware, productsController.edit);

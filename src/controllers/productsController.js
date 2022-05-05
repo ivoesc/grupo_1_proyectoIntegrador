@@ -9,11 +9,14 @@ const Actors = db.Actor;
 const ActorMovie = db.ActorMovie;
 const Director = db.Director;
 const Categories = db.Category
+const Complex = db.Complex;
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+const { validationResult } = require('express-validator');
 
 const productsController = {
 	index: (req, res) => {
@@ -49,7 +52,25 @@ const productsController = {
     },
 
 	store: async (req, res) => {
+		const resultValidation = validationResult(req);
+
+		if (resultValidation.errors.length > 0) {
+            
+		const promGenres = Genres.findAll();
+		const promActors = Actors.findAll();
+		const promDirectors = Director.findAll();
+		const promCategories = Categories.findAll()
 		
+		Promise
+        .all([promGenres, promActors, promDirectors, promCategories])
+        .then(([allGenres, allActors, allDirectors, allCategories]) => {
+            return res.render('product-create-form', {allGenres, allActors, allDirectors, allCategories, errors: resultValidation.mapped(), oldData: req.body})
+		})
+        .catch(error => res.send(error))
+	}
+
+		if (resultValidation.errors.length = 0) {
+
 		const movie = await Movies.create({
 				name: req.body.name,
                 description: req.body.description,
@@ -71,6 +92,7 @@ const productsController = {
 		}
 
 		res.redirect('/')
+		}
 	},
 
 	edit: (req, res) => {

@@ -49,21 +49,15 @@ const usersController = {
 
     registerProcess: async (req, res) => {
         const resultValidation = validationResult(req);
-
-        console.log(validationResult(req));
         
 		if (resultValidation.errors.length > 0) {
             
-
             const allComplex = await Complex.findAll()
             return res.render('register', {
                 allComplex,
 				errors: resultValidation.mapped(),
 				oldData: req.body,
             });
-            
-
-			
 		}
 
         let existingUser = await User.findOne({

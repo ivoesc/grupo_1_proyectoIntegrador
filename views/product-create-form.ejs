@@ -45,10 +45,20 @@
                 <div class="contenedor-input">
                     <input type="text" name="name" id="name" placeholder="Nombre de la película" class="campos-texto" value="">
                 </div>
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-danger">
+                        <%= errors.name.msg %>
+                    </div>
+                <% } %>
 
                 <div class="contenedor-textarea">
                     <textarea type="text" name="description" id="description" placeholder="Sinopsis de la película" class="campos-texto" value=""></textarea>
                 </div>
+                <% if (locals.errors && errors.description) { %>
+                    <div class="text-danger">
+                        <%= errors.description.msg %>
+                    </div>
+                <% } %>
 
                 <div class="contenedor-input">
                     <select id="director" name="director">
@@ -58,6 +68,11 @@
                         <% }) %>
                     </select>
                 </div>
+                <% if (locals.errors && errors.director) { %>
+                    <div class="text-danger">
+                        <%= errors.director.msg %>
+                    </div>
+                <% } %>
 
                 <!-- <div class="contenedor-input" > -->
                     <select name="actors" id="actorsSelect" multiple="multiple">
@@ -65,7 +80,11 @@
                             <option  value="<%= actor.id %>"><%= actor.name %> <%= actor.surname %></option>
                         <% }) %>
                     </select>
-                
+                    <% if (locals.errors && errors.actors) { %>
+                        <div class="text-danger">
+                            <%= errors.actors.msg %>
+                        </div>
+                    <% } %>
 
                 <div class="contenedor-input">
                     <select id="genre" name="genre">
@@ -75,10 +94,20 @@
                         <% }) %>
                     </select>
                 </div>
+                <% if (locals.errors && errors.genre) { %>
+                    <div class="text-danger">
+                        <%= errors.genre.msg %>
+                    </div>
+                <% } %>
 
                 <div class="contenedor-input">
                     <input type="number" name="duration" id="duration" placeholder="Duración de la película" class="campos-texto" value="">
                 </div>
+                <% if (locals.errors && errors.duration) { %>
+                    <div class="text-danger">
+                        <%= errors.duration.msg %>
+                    </div>
+                <% } %>
 
                 <div class="contenedor-input">
                     <select id="category" name="category">
@@ -88,24 +117,49 @@
                         <% }) %>
                     </select>
                 </div>
+                <% if (locals.errors && errors.category) { %>
+                    <div class="text-danger">
+                        <%= errors.category.msg %>
+                    </div>
+                <% } %>
 
                 <div class="contenedor-input">
                     <input type="number" name="price" id="price" placeholder="Precio de la película" class="campos-texto" value="">
                 </div>
+                <% if (locals.errors && errors.price) { %>
+                    <div class="text-danger">
+                        <%= errors.price.msg %>
+                    </div>
+                <% } %>
 
                 <div>Poster de la película</div>
                 <div class="contenedor-input">
                     <input type="file" name="poster" id="poster" placeholder="Póster de la película" class="campos-texto" value="">
                 </div>
+                <% if (locals.errors && errors.poster) { %>
+                    <div class="text-danger">
+                        <%= errors.poster.msg %>
+                    </div>
+                <% } %>
 
                 <div>Imagen de fondo del detalle</div>
                 <div class="contenedor-input">
                     <input type="file" name="background" id="background" placeholder="Imagen de fondo" class="campos-texto" value="">
                 </div>
+                <% if (locals.errors && errors.background) { %>
+                    <div class="text-danger">
+                        <%= errors.background.msg %>
+                    </div>
+                <% } %>
 
                 <div class="contenedor-input">
                     <input type="url" name="trailer" id="trailer" placeholder="URL del trailer" class="campos-texto" value="">
                 </div>
+                <% if (locals.errors && errors.trailer) { %>
+                    <div class="text-danger">
+                        <%= errors.trailer.msg %>
+                    </div>
+                <% } %>
 
                 <div class="contenedor-button">
                     <button type="submit" class="login-button"><strong>Guardar Película</strong></button>
