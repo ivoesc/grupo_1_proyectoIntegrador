@@ -40,10 +40,10 @@
 
             <div class="login-text-container"> <p>AÑADIR PELÍCULA</p> </div>
             
-            <form action="/movies" method="POST" enctype="multipart/form-data">
+            <form action="/movies/create" method="POST" enctype="multipart/form-data">
 
                 <div class="contenedor-input">
-                    <input type="text" name="name" id="name" placeholder="Nombre de la película" class="campos-texto" value="">
+                    <input type="text" name="name" id="name" placeholder="Nombre de la película" class="campos-texto" value="<%= locals.oldData ? oldData.name : null %>">
                 </div>
                 <% if (locals.errors && errors.name) { %>
                     <div class="text-danger">
@@ -52,7 +52,7 @@
                 <% } %>
 
                 <div class="contenedor-textarea">
-                    <textarea type="text" name="description" id="description" placeholder="Sinopsis de la película" class="campos-texto" value=""></textarea>
+                    <textarea type="text" name="description" id="description" placeholder="Sinopsis de la película" class="campos-texto" value="<%= locals.oldData ? oldData.description : null %>"></textarea>
                 </div>
                 <% if (locals.errors && errors.description) { %>
                     <div class="text-danger">
@@ -61,7 +61,7 @@
                 <% } %>
 
                 <div class="contenedor-input">
-                    <select id="director" name="director">
+                    <select id="director" name="director" value="<%= locals.oldData ? oldData.director : null %>">
                         <option disabled selected>Director de la película:</option>
                         <% allDirectors.forEach(director => { %>
                             <option value="<%= director.id %>"><%= director.name %> <%= director.surname %></option>
@@ -75,19 +75,19 @@
                 <% } %>
 
                 <!-- <div class="contenedor-input" > -->
-                    <select name="actors" id="actorsSelect" multiple="multiple">
+                    <select class="actors-select" name="actors" id="actorsSelect" multiple="multiple" value="">
                         <% allActors.forEach(actor => { %>
                             <option  value="<%= actor.id %>"><%= actor.name %> <%= actor.surname %></option>
                         <% }) %>
                     </select>
                     <% if (locals.errors && errors.actors) { %>
-                        <div class="text-danger">
+                        <div class="text-danger-actors">
                             <%= errors.actors.msg %>
                         </div>
                     <% } %>
 
                 <div class="contenedor-input">
-                    <select id="genre" name="genre">
+                    <select id="genre" name="genre" value="<%= locals.oldData ? oldData.genre : null %>">
                         <option disabled selected>Genero de la película:</option>
                         <% allGenres.forEach(genre => { %>
                             <option value="<%= genre.id %>"><%= genre.name %> </option>
@@ -101,7 +101,7 @@
                 <% } %>
 
                 <div class="contenedor-input">
-                    <input type="number" name="duration" id="duration" placeholder="Duración de la película" class="campos-texto" value="">
+                    <input type="number" name="duration" id="duration" placeholder="Duración de la película" class="campos-texto" value="<%= locals.oldData ? oldData.duration : null %>">
                 </div>
                 <% if (locals.errors && errors.duration) { %>
                     <div class="text-danger">
@@ -110,7 +110,7 @@
                 <% } %>
 
                 <div class="contenedor-input">
-                    <select id="category" name="category">
+                    <select id="category" name="category" value="<%= locals.oldData ? oldData.category : null %>">
                         <option disabled selected>Categoría de la película:</option>
                         <% allCategories.forEach(category => { %>
                             <option value="<%= category.id %>"><%= category.name %> </option>
@@ -124,7 +124,7 @@
                 <% } %>
 
                 <div class="contenedor-input">
-                    <input type="number" name="price" id="price" placeholder="Precio de la película" class="campos-texto" value="">
+                    <input type="number" name="price" id="price" placeholder="Precio de la película" class="campos-texto" value="<%= locals.oldData ? oldData.price : null %>">
                 </div>
                 <% if (locals.errors && errors.price) { %>
                     <div class="text-danger">
@@ -153,7 +153,7 @@
                 <% } %>
 
                 <div class="contenedor-input">
-                    <input type="url" name="trailer" id="trailer" placeholder="URL del trailer" class="campos-texto" value="">
+                    <input type="url" name="trailer" id="trailer" placeholder="URL del trailer" class="campos-texto" value="<%= locals.oldData ? oldData.trailer : null %>">
                 </div>
                 <% if (locals.errors && errors.trailer) { %>
                     <div class="text-danger">

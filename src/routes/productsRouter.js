@@ -19,7 +19,7 @@ router.get('/:id/asientos', productsController.seats);
 
 /* GET create page. */
 router.get('/create', adminMiddleware, productsController.create); 
-router.post('/', upload.fields([{name: 'poster'}, {name: 'background'}]), productValidations, productsController.store);
+router.post('/create', upload.fields([{name: 'poster'}, {name: 'background'}]), productValidations, productsController.store);
 
 /* GET edit page. */
 router.get('/detail/:id/edit', adminMiddleware, productsController.edit);

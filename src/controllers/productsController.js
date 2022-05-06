@@ -36,10 +36,12 @@ const productsController = {
 	},
 
 	create: async (req, res) => {
-        const promGenres = Genres.findAll();
-		const promActors = Actors.findAll();
-		const promDirectors = Director.findAll();
-		const promCategories = Categories.findAll()
+        const resultValidation = validationResult(req);
+		
+		const promGenres = await Genres.findAll();
+		const promActors = await Actors.findAll();
+		const promDirectors = await Director.findAll();
+		const promCategories = await Categories.findAll()
 		
 		Promise
         .all([promGenres, promActors, promDirectors, promCategories])
@@ -64,12 +66,21 @@ const productsController = {
 		Promise
         .all([promGenres, promActors, promDirectors, promCategories])
         .then(([allGenres, allActors, allDirectors, allCategories]) => {
-            return res.render('product-create-form', {allGenres, allActors, allDirectors, allCategories, errors: resultValidation.mapped(), oldData: req.body})
+            return res.render('product-create-form', {
+				allGenres,
+				allActors, 
+				allDirectors, 
+				allCategories, 
+				errors: resultValidation.mapped(), 
+				oldData: req.body})
 		})
         .catch(error => res.send(error))
-	}
 
-		if (resultValidation.errors.length = 0) {
+		console.log(req.files);
+		console.log(resultValidation.mapped());
+	}
+	
+		if (resultValidation.errors.length == 0) {
 
 		const movie = await Movies.create({
 				name: req.body.name,
