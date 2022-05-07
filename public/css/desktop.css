@@ -271,7 +271,7 @@
   }
 
   .asiento.seleccionado {
-    background-color:rgb(82, 248, 41);
+    background-color:green;
   }
 
   .asiento.ocupado {

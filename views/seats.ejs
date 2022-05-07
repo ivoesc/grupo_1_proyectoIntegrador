@@ -87,18 +87,14 @@
             <small>Ocupado</small>
           </li>
         </ul>
-        <div class="contenedor">
+        <div class="contenedor" id="seats-box">
           <div class="pantalla"></div>
-          <% for( let i = 0; i <= 5; i++) { %>
-          <div class="fila">
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
-            <div class="asiento"></div>
+
+          <% for( let i = 1; i <= 6; i++) { %>
+          <div class="fila" id="f<%=i%>" name="f<%=i%>" value="f<%=i%>">
+            <% for( let a = 1; a <= 8; a++ ) { %>
+              <div class="asiento" id="a<%=i%><%=a%>" name="a<%=i%><%=a%>" value="a<%=i%><%=a%>"></div>
+            <% } %> 
           </div>
           <% } %>
         </div>
@@ -111,5 +107,6 @@
       <%- include ./partials/footerPartial.ejs %>
   </footer>
 
+  <script type="text/javascript" src="/javascripts/seats.js"></script>
 </body>
 </html>

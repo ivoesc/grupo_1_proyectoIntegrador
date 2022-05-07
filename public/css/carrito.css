@@ -3,7 +3,7 @@
   }
   
   /*@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");*/
-  
+    
   body{
     box-sizing: border-box;
     margin: 0;
@@ -63,6 +63,17 @@
     padding: 30px;
   }
   
+  .selected {
+    background-color: green;
+    height: 26px;
+    width: 32px;
+    margin: 3px;
+    font-size: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: 0.1s;
+  }
+
   .asiento {
     background-color: #444451;
     height: 26px;
@@ -75,28 +86,32 @@
   }
   
   .asiento.seleccionado {
-    background-color:rgb(82, 248, 41);
+    background-color:green;
   }
   
   .asiento.ocupado {
     background-color: red;
   }
   
-  .asiento:nth-of-type(2) {
+  .asiento:nth-of-type(2),
+  .selected:nth-of-type(2) {
     margin-right: 18px;
   }
   
-  .asiento:nth-last-of-type(2) {
+  .asiento:nth-last-of-type(2),
+  .selected:nth-last-of-type(2) {
     margin-left: 18px;
   }
   
-  .asiento:not(.sold):hover {
+  .asiento:not(.sold):hover,
+  .selected:not(.sold):hover {
     cursor: pointer;
-    transform: scale(0.5);
+    /*transform: scale(0.5);*/
     background-color: #8f8fa1;
   }
   
-  .showcase .asiento:not(.sold):hover {
+  .showcase .asiento:not(.sold):hover,
+  .showcase .selected:not(.sold):hover {
     cursor: default;
     transform: scale(0.5);
   }
