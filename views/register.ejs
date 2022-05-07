@@ -21,6 +21,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     
     <title>Registrarse</title>
+
+    
 </head>
 
 <body>
@@ -61,7 +63,7 @@
             
             <form action="/users/register" method="POST" enctype="multipart/form-data" id="register-form">
                 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="name-box">
                     <input type="text" name="name" id="name" placeholder="Nombre" class="campos-texto" value="<%= locals.oldData ? oldData.name : null %>">
                 </div>
                 <% if (locals.errors && errors.name) { %>
@@ -70,7 +72,7 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="surname-box">
                     <input type="text" name="surname" id="surname" placeholder="Apellido" class="campos-texto" value="<%= locals.oldData ? oldData.surname : null %>">
                 </div>
                 <% if (locals.errors && errors.surname) { %>
@@ -79,7 +81,7 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="email-box">
                     <input type="email" name="email" id="email" placeholder="E-Mail" class="campos-texto" value="<%= locals.oldData ? oldData.email : null %>">
                 </div>
                 <% if (locals.errors && errors.email) { %>
@@ -88,7 +90,7 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="phone-box">
                     <input type="number" name="phone" id="phone" placeholder="Télefono" class="campos-texto" value="<%= locals.oldData ? oldData.phone : null %>">
                 </div>
                 <% if (locals.errors && errors.phone) { %>
@@ -111,7 +113,7 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="password-box">
                     <input type="password" name="password" id="password" placeholder="Crear Contraseña (min. 8 caracteres)" class="campos-texto">
                 </div>
                 <% if (locals.errors && errors.password) { %>
@@ -120,7 +122,7 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="confirmpassword-box">
                     <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirmar Contraseña" class="campos-texto">
                 </div>
                 <% if (locals.errors && errors.confirmPassword) { %>
@@ -129,10 +131,9 @@
                     </div>
                 <% } %>
 
-                <label for="profile_pic" class="register-label">Imagen de perfil <i class="fas fa-image pic-icon"></i></label>
+                <label for="profile_pic" class="register-label" id="profilepic-box"><p>Imágen de perfil</p><i class="fas fa-image pic-icon" id="pic-icon"></i></label>
                 <div class="contenedor-input-hidden">
-                    <input type="file" name="profile_pic" id="profile_pic" class="campos-texto-hidden" value="">
-                    
+                    <input type="file" name="profile_pic" id="profile_pic" class="campos-texto-hidden" value="">               
                 </div>
 
                 <% if (locals.errors && errors.profilePic) { %>
@@ -142,10 +143,12 @@
                 <% } %>
 
                 <div class="contenedor-button">
-                    <button id="profile_pic" type="submit" class="login-button"><strong>Registrarse</strong></button>
+                    <button type="submit" class="login-button"><strong>Registrarse</strong></button>
                 </div>
 
             </form>
         </div>
     </main>
+    <script type="text/javascript" src="/javascripts/register.js"></script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 </body>

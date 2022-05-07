@@ -84,19 +84,19 @@ const usersController = {
             .catch(error => res.send(error))
         }
 
-        if (resultValidation.errors.length = 0) {
+        if (resultValidation.errors.length == 0) {
 
-        await User.create({
-            name: req.body.name,
-            surname: req.body.surname,
-            email: req.body.email,
-            phone: Number(req.body.phone),
-            complex_id: req.body.complex,
-            password: bcryptjs.hashSync(req.body.password, 10),
-            profile_pic: req.file.filename
-        })
+            await User.create({
+                name: req.body.name,
+                surname: req.body.surname,
+                email: req.body.email,
+                phone: Number(req.body.phone),
+                complex_id: req.body.complex,
+                password: bcryptjs.hashSync(req.body.password, 10),
+                profile_pic: req.file.filename
+            })
 
-        return res.render('login');
+            return res.render('login');
         
         }
     

@@ -59,7 +59,7 @@ main {
         justify-content: left;
         background: white;
         border-radius: 5px;
-        border: 2px solid white;
+        border: 1px solid white;
         padding: 8px;
         height: 40px;
         width: 100%;
@@ -68,7 +68,7 @@ main {
     }
 
         .contenedor-input:hover {
-            border: 2px solid rgb(134, 134, 134);
+            border: 1px solid rgb(134, 134, 134);
         }
 
     .contenedor-textarea {
@@ -76,7 +76,7 @@ main {
         justify-content: left;
         background: white;
         border-radius: 10px;
-        border: 2px solid white;
+        border: 1px solid white;
         padding: 8px;
         height: 100px;
         width: 100%;
@@ -85,7 +85,7 @@ main {
     }
 
     .contenedor-textarea:hover {
-        border: 2px solid rgb(134, 134, 134);
+        border: 1px solid rgb(134, 134, 134);
     }
         
         .campos-texto {
@@ -234,6 +234,14 @@ select option {
     font-size: 14px;
 }
 
+.text-danger-actors {
+    color: red;
+    text-align: left;
+    margin: 5px 0px 15px 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
 .register-label {
     text-align: left;
     cursor: pointer;
@@ -246,6 +254,7 @@ label{
     font-size: 14px;
     align-items: center;
     font-family: "Montserrat",sans-serif;
+    border: 1px solid white;
     background-color: white;
     border-radius: 5px;
     display: flex;
@@ -273,4 +282,16 @@ label{
 
 .pic-icon {
     color: #686868
+}
+
+/*     VALIDACIONES     */
+
+.input-invalid {
+    border: 1px solid rgb(228, 65, 65);
+    background-color: #fcdada;
+}
+
+.input-valid {
+    border: 1px solid rgb(80, 204, 80);
+    background-color: #fafff9;
 }
