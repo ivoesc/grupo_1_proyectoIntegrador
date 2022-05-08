@@ -75,7 +75,7 @@ main {
         display: flex;
         justify-content: left;
         background: white;
-        border-radius: 10px;
+        border-radius: 5px;
         border: 1px solid white;
         padding: 8px;
         height: 100px;

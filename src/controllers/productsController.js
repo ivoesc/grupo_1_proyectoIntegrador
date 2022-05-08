@@ -144,11 +144,19 @@ const productsController = {
 	},
 
 	delete: (req, res) => {
+		ActorMovie.destroy({
+			where: {
+				movie_id: req.params.id,
+			}
+		})
+		
 		Movies.destroy({
 			where: {
 				id: req.params.id
 			}
 		})
+
+
 
 		res.redirect('/')
 	}
