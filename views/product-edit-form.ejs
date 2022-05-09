@@ -17,115 +17,176 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     
     <title>Añadir película</title>
 </head>
 
 <body>
 
-    <header>
-        <%- include ./partials/headerPartial.ejs %>
-    </header>
+        <header>
+            <%- include ./partials/headerPartial.ejs %>
+        </header>
 
-<main>
-    
-    <div class="main-form-div">
-    
-        <!--<img src="\images\BIGSCREENpng.svg" alt="BigScreen" class="login-logo">-->
-
-        <div class="login-text-container"> <p>EDITAR PELÍCULA: <br> <%= product.name %>  </p> </div>
+    <main>
         
-        <form action="/movies/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="main-form-div">
+        
+            <!--<img src="\images\BIGSCREENpng.svg" alt="BigScreen" class="login-logo">-->
 
-            <div class="contenedor-input">
-                <input type="text" name="name" id="name" placeholder="Nombre de la película" class="campos-texto" value="<%= product.name %>">
-            </div>
+            <div class="login-text-container"> <p>EDITAR PELÍCULA: <br> <%= product.name %>  </p> </div>
+            
+            <form action="/movies/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
-            <div class="contenedor-textarea">
-                <textarea type="text" name="description" id="description" placeholder="Sinopsis de la película" class="campos-texto"><%= product.description %></textarea>
-            </div>
+                <div class="contenedor-input">
+                    <input type="text" name="name" id="name" placeholder="Nombre de la película" class="campos-texto" value="<%= product.name %>">
+                </div>
+                <% if (locals.errors && errors.name) { %>
+                    <div class="text-danger">
+                        <%= errors.name.msg %>
+                    </div>
+                <% } %>
 
-            <div class="contenedor-input">
-                <select id="director" name="director">
-                    <option disabled>Director de la película:</option>
-                    <% for( let i = 0; i < director.length; i++ ) { %>
-                        <% if (director[i].id == product.director_id) { %>
-                            <option value="<%= director[i].id %>" selected>
-                                <%= director[i].name %> <%= director[i].surname %> 
-                            </option>
-                        <% } else { %>
-                            <option value="<%= director[i].id %>">
-                                <%= director[i].name %> <%= director[i].surname %> 
-                            </option>
+                <div class="contenedor-textarea">
+                    <textarea type="text" name="description" id="description" placeholder="Sinopsis de la película" class="campos-texto"><%= product.description %></textarea>
+                </div>
+                <% if (locals.errors && errors.description) { %>
+                    <div class="text-danger">
+                        <%= errors.description.msg %>
+                    </div>
+                <% } %>
+
+                <div class="contenedor-input">
+                    <select id="director" name="director">
+                        <option disabled>Director de la película:</option>
+                        <% for( let i = 0; i < director.length; i++ ) { %>
+                            <% if (director[i].id == product.director_id) { %>
+                                <option value="<%= director[i].id %>" selected>
+                                    <%= director[i].name %> <%= director[i].surname %> 
+                                </option>
+                            <% } else { %>
+                                <option value="<%= director[i].id %>">
+                                    <%= director[i].name %> <%= director[i].surname %> 
+                                </option>
+                            <% } %>
                         <% } %>
-                    <% } %>
+                    </select>
+                </div>
+
+                <select class="actors-select" name="actors" id="actorsSelect" multiple="multiple" value="">
+                    <% allActors.forEach(actor => { %>
+                        <option  value="<%= actor.id %>"><%= actor.name %> <%= actor.surname %></option>
+                    <% }) %>
                 </select>
-            </div>
+                <% if (locals.errors && errors.actors) { %>
+                    <div class="text-danger-actors">
+                        <%= errors.actors.msg %>
+                    </div>
+                <% } %>
 
-            <!-- <div class="contenedor-input">
-                <input type="text" name="actors" id="actors" placeholder="Actores de la película" class="campos-texto" value="">
-            </div> -->
+                <!-- <div class="contenedor-input">
+                    <input type="text" name="actors" id="actors" placeholder="Actores de la película" class="campos-texto" value="">
+                </div> -->
 
-            <div class="contenedor-input">
-                <select id="genre" name="genre">
-                    <option disabled>Genero de la película:</option>
-                    <% for( let i = 0; i < genre.length; i++ ) { %>
-                        <% if (genre[i].id == product.genre_id) { %>
-                            <option value="<%= genre[i].id %>" selected>
-                                <%= genre[i].name %> 
-                            </option>
-                        <% } else { %>
-                            <option value="<%= genre[i].id %>">
-                                <%= genre[i].name %> 
-                            </option>
+                <div class="contenedor-input">
+                    <select id="genre" name="genre">
+                        <option disabled>Genero de la película:</option>
+                        <% for( let i = 0; i < genre.length; i++ ) { %>
+                            <% if (genre[i].id == product.genre_id) { %>
+                                <option value="<%= genre[i].id %>" selected>
+                                    <%= genre[i].name %> 
+                                </option>
+                            <% } else { %>
+                                <option value="<%= genre[i].id %>">
+                                    <%= genre[i].name %> 
+                                </option>
+                            <% } %>
                         <% } %>
-                    <% } %>
-                </select>
-            </div>
+                    </select>
+                </div>
+                <% if (locals.errors && errors.genre) { %>
+                    <div class="text-danger">
+                        <%= errors.genre.msg %>
+                    </div>
+                <% } %>
 
-            <div class="contenedor-input">
-                <input type="number" name="duration" id="duration" placeholder="Duración de la película" class="campos-texto" value="<%= product.duration %>">
-            </div>
+                <div class="contenedor-input">
+                    <input type="number" name="duration" id="duration" placeholder="Duración de la película" class="campos-texto" value="<%= product.duration %>">
+                </div>
+                <% if (locals.errors && errors.duration) { %>
+                    <div class="text-danger">
+                        <%= errors.duration.msg %>
+                    </div>
+                <% } %>
 
-            <div class="contenedor-input">
-                <select id="category" name="category">
-                    <option disabled selected>Categoría de la película:</option>
-                    <% for( let i = 0; i < category.length; i++ ) { %>
-                        <% if (category[i].id == product.category_id) { %>
-                            <option value="<%= category[i].id %>" selected>
-                                <%= category[i].name %> 
-                            </option>
-                        <% } else { %>
-                            <option value="<%= category[i].id %>">
-                                <%= category[i].name %> 
-                            </option>
+                <div class="contenedor-input">
+                    <select id="category" name="category">
+                        <option disabled selected>Categoría de la película:</option>
+                        <% for( let i = 0; i < category.length; i++ ) { %>
+                            <% if (category[i].id == product.category_id) { %>
+                                <option value="<%= category[i].id %>" selected>
+                                    <%= category[i].name %> 
+                                </option>
+                            <% } else { %>
+                                <option value="<%= category[i].id %>">
+                                    <%= category[i].name %> 
+                                </option>
+                            <% } %>
                         <% } %>
-                    <% } %>
-                </select>
-            </div>
+                    </select>
+                </div>
+                <% if (locals.errors && errors.category) { %>
+                    <div class="text-danger">
+                        <%= errors.category.msg %>
+                    </div>
+                <% } %>
 
-            <div class="contenedor-input">
-                <input type="number" name="price" id="price" placeholder="Precio de la película" class="campos-texto" value="<%= product.price %>">
-            </div>
+                <div class="contenedor-input">
+                    <input type="number" name="price" id="price" placeholder="Precio de la película" class="campos-texto" value="<%= product.price %>">
+                </div>
+                <% if (locals.errors && errors.price) { %>
+                    <div class="text-danger">
+                        <%= errors.price.msg %>
+                    </div>
+                <% } %>
 
-            <div>Poster de la película</div>
-            <div class="contenedor-input">
-                <input type="file" name="poster" id="poster" placeholder="Póster de la película" class="campos-texto" value="<%= product.image %>">
-            </div>
+                <div>Poster de la película</div>
+                <div class="contenedor-input">
+                    <input type="file" name="poster" id="poster" placeholder="Póster de la película" class="campos-texto" value="<%= product.image %>">
+                </div>
+                <% if (locals.errors && errors.poster) { %>
+                    <div class="text-danger">
+                        <%= errors.poster.msg %>
+                    </div>
+                <% } %>
 
-            <div>Imagen de fondo del detalle</div>
-            <div class="contenedor-input">
-                <input type="file" name="background" id="background" placeholder="Imagen de fondo" class="campos-texto" value="">
-            </div>
+                <div>Imagen de fondo del detalle</div>
+                <div class="contenedor-input">
+                    <input type="file" name="background" id="background" placeholder="Imagen de fondo" class="campos-texto" value="">
+                </div>
+                <% if (locals.errors && errors.background) { %>
+                    <div class="text-danger">
+                        <%= errors.background.msg %>
+                    </div>
+                <% } %>
 
-            <div class="contenedor-input">
-                <input type="url" name="trailer" id="trailer" placeholder="URL del trailer" class="campos-texto" value="<%= product.trailer %>">
-            </div>
+                <div class="contenedor-input">
+                    <input type="url" name="trailer" id="trailer" placeholder="URL del trailer" class="campos-texto" value="<%= product.trailer %>">
+                </div>
+                <% if (locals.errors && errors.trailer) { %>
+                    <div class="text-danger">
+                        <%= errors.trailer.msg %>
+                    </div>
+                <% } %>
 
-            <div class="contenedor-button">
-                <button type="submit" class="login-button"><strong>Guardar Película</strong></button>
-            </div>
+                <div class="contenedor-button">
+                    <button type="submit" class="login-button"><strong>Guardar Película</strong></button>
+                </div>
 
-        </form>
-    </div>
-</main>
+            </form>
+        </div>
+    </main>
+    <script src="/javascripts/product-create-form.js"></script>
+</body>

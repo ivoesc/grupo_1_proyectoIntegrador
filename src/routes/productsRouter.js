@@ -23,7 +23,7 @@ router.post('/create', upload.fields([{name: 'poster'}, {name: 'background'}]), 
 
 /* GET edit page. */
 router.get('/detail/:id/edit', adminMiddleware, productsController.edit);
-router.put('/:id', upload.fields([{name: 'poster'}, {name: 'background'}]), productsController.update);
+router.put('/:id', upload.fields([{name: 'poster'}, {name: 'background'}]), productValidations, productsController.update);
 
 router.delete('/:id', productsController.delete);
 

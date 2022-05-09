@@ -33,7 +33,7 @@ async function userLoggedMiddleware(req, res, next) {
 		res.locals.userLogged = req.session.userLogged;
 	}
 
-	let adminUsers = ['manuelyeregui@gmail.com', 'ivoescoli@gmail.com', 'juanfranxeneize89@gmail.com'];
+	let adminUsers = ['manuelyeregui@gmail.com', 'ivoescoli@gmail.com', 'juanfranpais02@gmail.com'];
 
 	if (req.session.userLogged && adminUsers.includes(req.session.userLogged.email)) {
 		res.locals.isAdmin = true;

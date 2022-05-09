@@ -106,41 +106,77 @@ const productsController = {
 		}
 	},
 
-	edit: (req, res) => {
-		const promMovies = Movies.findByPk(req.params.id, {include: ['director', 'genre', 'category', {association: 'actors'}]})
-
-		const promGenres = Genres.findAll();
-		const promDirectors = Director.findAll();
-		const promCategories = Categories.findAll();
-
-		Promise
-			.all([promMovies, promGenres, promDirectors, promCategories])
-			.then(function([product, genre, director, category]) {
-				res.render('product-edit-form', {product, genre, director, category})
-			})
-
-	},
+	edit: async (req, res) => {
+			const promMovies = Movies.findByPk(req.params.id, {include: ['director', 'genre', 'category', {association: 'actors'}]})
+	
+			const promGenres = Genres.findAll();
+			const promActors = Actors.findAll();
+			const promDirectors = Director.findAll();
+			const promCategories = Categories.findAll();
+	
+			Promise
+				.all([promMovies, promGenres, promActors, promDirectors, promCategories])
+				.then(function([product, genre, allActors, director, category]) {
+					res.render('product-edit-form', {product, genre, allActors, director, category})
+				})
+	
+		},
 
 	update: async (req, res) => {
+		const resultValidation = validationResult(req);
+		const promMovies = Movies.findByPk(req.params.id, {include: ['director', 'genre', 'category', {association: 'actors'}]})
+	
+		if (resultValidation.errors.length > 0) {
+            
+		const promGenres = Genres.findAll();
+		const promActors = Actors.findAll();
+		const promDirectors = Director.findAll();
+		const promCategories = Categories.findAll()
 		
-		await Movies.update({
-			name: req.body.name,
-			description: req.body.description,
-			director_id: req.body.director,
-			genre_id: req.body.genre,
-			duration: req.body.duration,
-			category_id: req.body.category,
-			price: req.body.price,
-			trailer: req.body.trailer,
-			poster: req.files.poster[0].filename,
-			background: req.files.background[0].filename
-	}, {
-		where: {
-			id: req.params.id
+		Promise
+        .all([promMovies, promGenres, promActors, promDirectors, promCategories])
+        .then(([product, genre, allActors, director, category]) => {
+            return res.render('product-edit-form', {
+				product,
+				genre,
+				allActors, 
+				director, 
+				category, 
+				errors: resultValidation.mapped(), 
+				oldData: req.body})
+		})
+        .catch(error => res.send(error))
+		
+	}
+
+	if (resultValidation.errors.length == 0) {
+
+		const movie = await Movies.update({
+				name: req.body.name,
+                description: req.body.description,
+                director_id: req.body.director,
+                genre_id: req.body.genre,
+                duration: req.body.duration,
+                category_id: req.body.category,
+				price: req.body.price,
+                trailer: req.body.trailer,
+                poster: req.files.poster[0].filename,
+                background: req.files.background[0].filename
+		}, { where: {
+				id: req.params.id
+		}})
+
+		for(let actor_id of req.body.actors) {
+			await ActorMovie.update({
+				actor_id,
+				movie_id: movie.id
+			}, { where: {
+				id: req.params.id
+		}})
 		}
-	}) 
 
 		res.redirect('/movies/detail/' + req.params.id)
+		}
 	},
 
 	delete: (req, res) => {
