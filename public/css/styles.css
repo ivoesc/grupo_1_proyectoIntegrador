@@ -28,7 +28,7 @@ body {
         }
 
         .search-box:hover {
-            background: #ffffff;;
+            background: #ffffff;
         }
 
         .search-box:hover > .search-btn {
@@ -37,6 +37,33 @@ body {
 
         .search-box:hover > .logo-header-container {
             background-color: #fff;
+        }
+
+        .search-box:hover > .search-txt{
+            width: 240px;
+            padding: 0 6px;
+            color: #171717;
+        }
+
+        .search-txt:focus {
+            width: 240px;
+            padding: 0 6px;
+        }
+
+        .bgcblack {
+            background-color: #171717;
+        }
+
+        .bgcwhite {
+            background-color: #ffffff;
+        }
+
+        .btnblack {
+            color: #171717;
+        }
+
+        .btnwhite {
+            color: #ffffff;
         }
 
         .search-btn {
@@ -48,11 +75,7 @@ body {
             justify-content: center;
             align-items: center;
             text-decoration: none;
-        }
-        
-        .search-box:hover > .search-txt{
-            width: 240px;
-            padding: 0 6px;
+            transition: all 0.1s;
         }
 
         .search-txt {
