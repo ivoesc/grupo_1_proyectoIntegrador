@@ -7,6 +7,7 @@ const upload = require('../middlewares/productsMulter');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
 const productValidations = require('../middlewares/productValidation');
+const authMiddleware = require('../middlewares/authMiddleware.js');
 
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 
@@ -15,7 +16,7 @@ router.get('/', productsController.index);
 router.get('/detail/:id', productsController.detail);
 
 /* GET cart page. */
-router.get('/:id/asientos', productsController.seats);
+router.get('/:id/asientos', authMiddleware, productsController.seats);
 
 /* GET create page. */
 router.get('/create', adminMiddleware, productsController.create); 
