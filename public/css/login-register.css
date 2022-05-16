@@ -242,7 +242,7 @@ select option {
     font-size: 14px;
 }
 
-.register-label {
+.image-label {
     text-align: left;
     cursor: pointer;
 }
@@ -261,6 +261,7 @@ label{
     padding: 10px;
     justify-content: space-between;
     margin-bottom: 20px;
+    transition: 0.5s;
 }
 
 .image-icon {

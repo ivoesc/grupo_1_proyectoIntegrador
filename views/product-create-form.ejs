@@ -14,6 +14,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
@@ -40,9 +42,9 @@
 
             <div class="login-text-container"> <p>AÑADIR PELÍCULA</p> </div>
             
-            <form action="/movies/create" method="POST" enctype="multipart/form-data">
+            <form action="/movies/create" method="POST" id="product-create-form" enctype="multipart/form-data">
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="name-box">
                     <input type="text" name="name" id="name" placeholder="Nombre de la película" class="campos-texto" value="<%= locals.oldData ? oldData.name : null %>">
                 </div>
                 <% if (locals.errors && errors.name) { %>
@@ -51,7 +53,7 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-textarea">
+                <div class="contenedor-textarea" id="description-box">
                     <textarea type="text" name="description" id="description" placeholder="Sinopsis de la película" class="campos-texto" value="<%= locals.oldData ? oldData.description : null %>"></textarea>
                 </div>
                 <% if (locals.errors && errors.description) { %>
@@ -60,7 +62,7 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="director-box">
                     <select id="director" name="director" value="<%= locals.oldData ? oldData.director : null %>">
                         <option disabled selected>Director de la película:</option>
                         <% allDirectors.forEach(director => { %>
@@ -86,9 +88,9 @@
                         </div>
                     <% } %>
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="genre-box">
                     <select id="genre" name="genre" value="<%= locals.oldData ? oldData.genre : null %>">
-                        <option disabled selected>Genero de la película:</option>
+                        <option disabled selected>Género de la película:</option>
                         <% allGenres.forEach(genre => { %>
                             <option value="<%= genre.id %>"><%= genre.name %> </option>
                         <% }) %>
@@ -100,7 +102,7 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="duration-box">
                     <input type="number" name="duration" id="duration" placeholder="Duración de la película" class="campos-texto" value="<%= locals.oldData ? oldData.duration : null %>">
                 </div>
                 <% if (locals.errors && errors.duration) { %>
@@ -109,7 +111,7 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="category-box">
                     <select id="category" name="category" value="<%= locals.oldData ? oldData.category : null %>">
                         <option disabled selected>Categoría de la película:</option>
                         <% allCategories.forEach(category => { %>
@@ -123,7 +125,7 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="price-box">
                     <input type="number" name="price" id="price" placeholder="Precio de la película" class="campos-texto" value="<%= locals.oldData ? oldData.price : null %>">
                 </div>
                 <% if (locals.errors && errors.price) { %>
@@ -131,10 +133,10 @@
                         <%= errors.price.msg %>
                     </div>
                 <% } %>
-
-                <div>Poster de la película</div>
-                <div class="contenedor-input">
-                    <input type="file" name="poster" id="poster" placeholder="Póster de la película" class="campos-texto" value="">
+                
+                <label for="poster" class="image-label" id="poster-box"><p>Poster</p><i class="fas fa-image pic-icon" id="posterIcon"></i></label>
+                <div class="contenedor-input-hidden">
+                    <input type="file" name="poster" id="poster" class="campos-texto-hidden" value="">               
                 </div>
                 <% if (locals.errors && errors.poster) { %>
                     <div class="text-danger">
@@ -142,9 +144,9 @@
                     </div>
                 <% } %>
 
-                <div>Imagen de fondo del detalle</div>
-                <div class="contenedor-input">
-                    <input type="file" name="background" id="background" placeholder="Imagen de fondo" class="campos-texto" value="">
+                <label for="background" class="image-label" id="background-box"><p>Imagen de fondo del detalle</p><i class="fas fa-image pic-icon" id="backgroundIcon"></i></label>
+                <div class="contenedor-input-hidden">
+                    <input type="file" name="background" id="background" class="campos-texto-hidden" value="">               
                 </div>
                 <% if (locals.errors && errors.background) { %>
                     <div class="text-danger">
@@ -152,7 +154,7 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="trailer-box">
                     <input type="url" name="trailer" id="trailer" placeholder="URL del trailer" class="campos-texto" value="<%= locals.oldData ? oldData.trailer : null %>">
                 </div>
                 <% if (locals.errors && errors.trailer) { %>
@@ -169,4 +171,5 @@
         </div>
     </main>
     <script src="/javascripts/product-create-form.js"></script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 </body>
