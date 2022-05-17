@@ -59,9 +59,9 @@
 
             <div class="login-text-container"> <p>INICIAR SESIÓN</p> </div>
             
-            <form action="/users/login" method="POST">
+            <form action="/users/login" method="POST" id="login-form">
 
-                <div class="contenedor-input">
+                <div class="contenedor-input" id="email-box">
                     <input type="email" name="email" id="email" placeholder="E-Mail" class="campos-texto" value="<%= locals.oldData ? oldData.email : null %>">
                 </div>
                  <% if (locals.errors && errors.email) { %>
@@ -98,5 +98,7 @@
 
     </main>
 
+    <script type="text/javascript" src="/javascripts/login.js"></script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
 </body>
 </html>
