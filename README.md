@@ -28,3 +28,4 @@ https://trello.com/b/x4EhgDq7/sprint-4
 https://trello.com/b/vjn2RZLK/sprint-5
 https://trello.com/b/JJlTJQXU/sprint-6
 https://trello.com/b/UE5LnCiv/sprint-7
+https://trello.com/b/1Z6cS67W/sprint-8
