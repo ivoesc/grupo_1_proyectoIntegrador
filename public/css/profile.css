@@ -3,6 +3,8 @@ main {
     margin: 60px auto;
     position: relative;
     z-index: 10;
+    margin-top: 190px;
+    margin-bottom: 190px;
 }
 
 .profile-pic-container {
@@ -82,6 +84,7 @@ main {
 
 .main-container {
     display: flex;
+    justify-content: center;
 }
 
 .user-edit-form {
