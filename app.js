@@ -36,10 +36,12 @@ app.use(methodOverride('_method'));
 const mainRouter = require('./src/routes/mainRouter');
 const usersRouter = require('./src/routes/usersRouter');
 const productsRouter = require('./src/routes/productsRouter');
+const productsApiRouter = require('./src/routes/api/productsApiRouter');
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
 app.use('/movies', productsRouter);
+app.use('/api', productsApiRouter);
 
 
 // catch 404 and forward to error handler
