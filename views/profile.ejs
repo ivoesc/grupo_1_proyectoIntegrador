@@ -52,14 +52,14 @@
                     </div>
                     <div class="user-box">
                             <p class="user-title">COMPLEJO</p>
-                                <select id="complex" name="complex">
+                                <select id="complex" name="complex" class="campos-texto-edit">
                                     <% for( let i = 0; i < allComplex.length; i++ ) { %>
                                         <% if (allComplex[i].id == user.complex_id) { %>
-                                            <option value="<%= allComplex[i].id %>" selected>
+                                            <option value="<%= allComplex[i].id %>" selected class="complex-option">
                                                 <%= allComplex[i].name %> 
                                             </option>
                                         <% } else { %>
-                                            <option value="<%= allComplex[i].id %>">
+                                            <option value="<%= allComplex[i].id %>" class="complex-option">
                                                 <%= allComplex[i].name %> 
                                             </option>
                                         <% } %>
@@ -74,8 +74,8 @@
                     <div class="logout-btn-container">
                         <a href="/users/logout" class="login-btn"><strong>Cerrar Sesión</strong></a>
                     </div>
-                    <form action="/users/update" class="edit-btn-container">
-                        <button type="submit" class="login-btn"><strong>Guardar Cambios</strong></button>
+                    <form action="/users/update">
+                        <button type="submit" class="edit-btn-container"><strong>Guardar Cambios</strong></button>
                     </form>
                 </div>
 

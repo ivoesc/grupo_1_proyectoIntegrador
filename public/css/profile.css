@@ -35,12 +35,13 @@ main {
 .user-title {
     color: #efefef;
     font-weight: bold;
+    width: 50%;
 }
 
 .user-box {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 75%;
 }
 
 .logout-btn-container {
@@ -69,6 +70,8 @@ main {
     color: white;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
 }
 
 .logout-link {
@@ -89,7 +92,6 @@ main {
 }
 
 .campos-texto-edit {
-    border: none;
     background: none;
     outline: none;
     width: 100%;
@@ -98,6 +100,9 @@ main {
     color: white;
     font-size: 16px;
     margin: 5px;
+    border-radius: 8px;
+    padding-left: 15px;
+    border-color: white;
 }
 
 .btn-container {
@@ -107,7 +112,6 @@ main {
 .edit-btn-container {
     display: flex;
     justify-content: left;
-    background: #a72a2a;
     border-radius: 5px;
     padding: 10px;
     height: 40px;
@@ -116,8 +120,17 @@ main {
     cursor: pointer;
     align-items: center;
     margin: 30px auto;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+    color: white;
+    background-color: #767575;
+    border: none;
 }
 
     .edit-btn-container:hover {
-        background-color: #641a1a;
+        background-color: rgb(80, 79, 79);
     }
+
+.complex-option {
+    color: black;
+}
