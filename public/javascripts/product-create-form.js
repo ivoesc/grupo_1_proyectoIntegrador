@@ -8,7 +8,15 @@ $(document).ready(function() {
         });  
 });
 
-window.addEventListener('load', () => {
+$(document).ready(function() {
+    $("#director").select2({
+            maximumSelectionLength: 1,
+            placeholder: 'Director de la película:',
+            allowClear: true
+    });  
+});
+
+window.addEventListener('load', () => {  
 
         let form = document.getElementById('product-create-form');
     

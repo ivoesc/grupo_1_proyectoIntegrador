@@ -71,6 +71,10 @@ main {
             border: 1px solid rgb(134, 134, 134);
         }
 
+    .select2 {
+        padding: 8px 0px 8px 0px;
+    }
+
     .contenedor-textarea {
         display: flex;
         justify-content: left;
@@ -237,7 +241,15 @@ select option {
 .text-danger-actors {
     color: red;
     text-align: left;
-    margin: 5px 0px 15px 5px;
+    margin: -7px 0px 15px 5px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+}
+
+.text-danger-director {
+    color: red;
+    text-align: left;
+    margin: -7px 0px 15px 5px;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
 }

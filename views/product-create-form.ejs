@@ -62,16 +62,16 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-input" id="director-box">
-                    <select id="director" name="director" value="<%= locals.oldData ? oldData.director : null %>">
-                        <option disabled selected>Director de la película:</option>
+                <!-- <div class="contenedor-input" id="director-box"> -->
+                    <select class="director-select" id="director" name="director" multiple="multiple" value="<%= locals.oldData ? oldData.director : null %>">
+                        <!-- <option disabled selected>Director de la película:</option> -->
                         <% allDirectors.forEach(director => { %>
                             <option value="<%= director.id %>"><%= director.name %> <%= director.surname %></option>
                         <% }) %>
                     </select>
-                </div>
+                <!-- </div> -->
                 <% if (locals.errors && errors.director) { %>
-                    <div class="text-danger">
+                    <div class="text-danger-director">
                         <%= errors.director.msg %>
                     </div>
                 <% } %>
