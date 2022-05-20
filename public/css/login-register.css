@@ -297,6 +297,13 @@ label{
     color: #686868
 }
 
+.fa-eye-slash, .fa-eye {
+    color: #686868;
+    font-size: 15px;
+    margin: auto;
+    cursor: pointer;
+}
+
 /*     VALIDACIONES     */
 
 .input-invalid {

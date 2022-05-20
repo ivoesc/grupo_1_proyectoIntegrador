@@ -24,4 +24,14 @@ window.addEventListener('load', () => {
         }
             
     })
+
+    let eye = document.getElementById('eye')
+    let password = document.getElementById('password')
+
+    eye.addEventListener('click', function changeEye(){
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type)
+        eye.classList.toggle('fa-eye-slash')
+        eye.classList.toggle('fa-eye')
+    })
 })
