@@ -2,25 +2,28 @@ main {
     max-width: 950px;
     margin: 60px auto;
     position: relative;
-    z-index: 10;
-    margin-top: 190px;
-    margin-bottom: 190px;
+    margin-top: 75px;
 }
 
 .profile-pic-container {
-    width: 30%;
-    border: 2px solid #efefef;
-    border-radius: 2px
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .profile-pic-img {
-    width: 100%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid #efefef;
+    border-radius: 5px;
+
+    /*width: 330px;
+    height: 330px;*/
 }
 
 .user-info-container {
-    margin-left: 10px;
-    width: 180%;
+    /*margin-left: 10px;*/
     display: flex;
     flex-direction: column;
 }
@@ -37,13 +40,15 @@ main {
 .user-title {
     color: #efefef;
     font-weight: bold;
-    width: 50%;
+    width: 30%;
 }
 
 .user-box {
     display: flex;
     justify-content: space-between;
-    width: 75%;
+    flex-direction: column;
+
+    /*flex-direction: row;*/
 }
 
 .logout-btn-container {
@@ -85,6 +90,12 @@ main {
 .main-container {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+
+    /*width: 400px;*/
+
 }
 
 .user-edit-form {
@@ -97,19 +108,27 @@ main {
 .campos-texto-edit {
     background: none;
     outline: none;
-    width: 100%;
+    /*width: 70%;*/
     font-family: 'Roboto', sans-serif;
     resize: none;
     color: white;
     font-size: 16px;
-    margin: 5px;
+    /*margin: 5px;*/
     border-radius: 8px;
     padding-left: 15px;
     border-color: white;
+    height: 40px;
 }
 
 .btn-container {
     display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: auto;
+    flex-direction: column-reverse;
+
+    /*width: 400px;
+    flex-direction: row;*/
 }
 
 .edit-btn-container {

@@ -346,6 +346,12 @@
       color: rgb(65, 6, 121);
   }
 
+/*          PROFILE           */
+
+.btn-container {
+    flex-direction: row;
+}
+
 /*          FOOTER           */
 
     .main-footer-container {
