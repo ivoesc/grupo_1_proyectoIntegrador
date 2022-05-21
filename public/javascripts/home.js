@@ -54,7 +54,7 @@ window.addEventListener('load', () => {
     let moviesApi = fetch('http://localhost:3000/api/movies/list')
         .then(r => r.json())
         .then(movies => {
-            movies.forEach(m => {
+            movies.movies.forEach(m => {
                 moviesArray.push(m)
             })
         })
