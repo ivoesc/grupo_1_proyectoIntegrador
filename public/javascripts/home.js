@@ -48,6 +48,15 @@ window.addEventListener('load', () => {
     })
 
 
+    const burgerLogo = document.querySelector('.burger-menu')
+    const mobileNav = document.querySelector('.mobile-nav')
+    const mobileNavItem = document.querySelectorAll('.mobile-nav-item')
+    const mobileNavText = document.querySelectorAll('.mobile-nav-text')
+
+    burgerLogo.addEventListener('click', () => {
+        mobileNav.classList.toggle('mobile-nav-active')
+    })
+
 
     let moviesArray = []
 

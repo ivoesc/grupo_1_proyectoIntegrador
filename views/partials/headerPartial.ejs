@@ -15,6 +15,27 @@
                 <i class="fas fa-bars"></i>
             </div>
 
+            <ul class="mobile-nav">
+
+                <% if (locals.userLogged) { %>
+                    <li class="mobile-nav-item">
+                        <a href="/users/profile" class="mobile-nav-text">Perfil</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="/carrito" class="mobile-nav-text">Carrito</a>
+                    </li>
+                <% } else { %>
+                    <li class="mobile-nav-item">
+                        <a href="/users/login" class="mobile-nav-text">Iniciar Sesión</a>
+                    </li>
+                    <li class="mobile-nav-item">
+                        <a href="/users/register" class="mobile-nav-text">Registrarse</a>
+                    </li>
+                <% } %>
+
+
+            </ul>
+
             <a href="/" class="logo-header-container"> <img class="logo-header" src="\images\logos\BIGSCREENpng.svg"> </a>
         </div>
 

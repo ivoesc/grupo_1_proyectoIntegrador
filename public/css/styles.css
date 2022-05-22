@@ -85,6 +85,35 @@ body {
             margin: 0px auto;
         }
 
+        .mobile-nav {
+          position: absolute;  
+          left: 0px;
+          height: 95vh;
+          top: 3.3vh;
+          background-color: #171717;
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+          transform: translate(-100%);
+          transition: transform 0.2s ease-in;
+          padding: 0;
+        }
+
+        .mobile-nav-item {
+            list-style: none;
+            margin: 10px;
+        }
+
+        .mobile-nav-text {
+            text-decoration: none;
+            color: #efefef;
+            font-size: 20px;
+        }
+
+        .mobile-nav-active {
+            transform: translate(0%);
+        }
+
         .search-box {
             height: 40px;
             border-radius: 5px;
@@ -190,6 +219,7 @@ header {
 
 .burger-logo {
     display: flex;
+    cursor: pointer;
 }
 
 .lupa-iniciar {
