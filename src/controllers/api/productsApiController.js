@@ -22,6 +22,10 @@ const productsApiController = {
                 let proximamente = 0
                 let reestrenos = 0
                 for (movie of movies) {
+
+                    movie.dataValues.detail = 'http://localhost:3000/api/movies/list/' + movie.id
+
+
                     if (movie.category_id == 1) {
                         estrenos ++ 
                     } else if (movie.category_id == 2) {
@@ -31,13 +35,17 @@ const productsApiController = {
                     }
                 }
 
+                /*movies.forEach(n => {
+                    n.dataValues.detail = 'hola'
+                })*/
+
                 return res.json({
                     count: movies.length,
                     countByCategory: { 
                         estrenos, proximamente, reestrenos
                     },
                     movies,
-                    detail: 'http://localhost:3000/api/movies/list/' + movie.id
+                    
                 })
             })
     },
