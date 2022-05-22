@@ -24,7 +24,9 @@ const productsApiController = {
                 for (movie of movies) {
 
                     movie.dataValues.detail = 'http://localhost:3000/api/movies/list/' + movie.id
-
+                    delete movie.dataValues.director_id
+                    delete movie.dataValues.genre_id
+                    delete movie.dataValues.category_id
 
                     if (movie.category_id == 1) {
                         estrenos ++ 
@@ -56,6 +58,11 @@ const productsApiController = {
         let category = await Categories.findAll()
         Movies.findByPk(req.params.id, {include: ['director', 'genre', 'category']})
             .then(movie => {
+
+                delete movie.dataValues.director_id
+                delete movie.dataValues.genre_id
+                delete movie.dataValues.category_id
+
 
                 return res.json({
                     movie
