@@ -157,19 +157,19 @@ const usersController = {
     }, 
 
     update: async (req, res) => {
-		
+
 		await User.update({
 			name: req.body.name,
 			surname: req.body.surname,
-            email: req.body.email,
             phone: req.body.phone,
             complex_id: req.body.complex
     }, {
 		where: {
-			email: req.body.email
+			email: req.session.userLogged.email
 		}
 	})
-        res.redirect('/users/profile')
+        
+    res.redirect('/users/profile')
     }
 }
 /* const usersController = {
