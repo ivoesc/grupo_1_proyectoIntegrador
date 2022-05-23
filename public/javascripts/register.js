@@ -41,9 +41,19 @@ window.addEventListener('load', () => {
     let email = form.email;
     let emailbox = document.getElementById('email-box')
 
+    mailsArray = []
+    
+    let usersApi = fetch('http://localhost:3000/api/users/list')
+        .then(u => u.json())
+        .then(users => {
+            users.users.forEach(e => {
+                mailsArray.push(e.email)
+        })})
+
+
     email.addEventListener('blur', function checkEmail() {
             
-        if ( validator.isEmail(email.value) ) {
+        if ( validator.isEmail(email.value) && !mailsArray.includes(email.value) ) {
             valid(emailbox)
         } else {
             invalid(emailbox)
