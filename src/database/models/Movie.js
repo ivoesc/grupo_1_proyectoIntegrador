@@ -97,6 +97,11 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "category_id"
         });
 
+        Movie.hasMany(models.Seat, {
+            as: "seat",
+            foreignKey: "movie_id"
+        })
+
     }
 
     return Movie

@@ -62,6 +62,11 @@ module.exports = (sequelize, dataTypes) => {
             foreignKey: "complex_id"
         });
 
+        User.hasMany(models.Seat, {
+            as: "seat",
+            foreignKey: "user_id"
+        })
+
     }
 
     return User

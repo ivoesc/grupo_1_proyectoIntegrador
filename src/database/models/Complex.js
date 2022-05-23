@@ -28,6 +28,11 @@ module.exports = (sequelize, dataTypes) => {
             as: "users",
             foreignKey: "complex_id"
         })
+
+        Complex.hasMany(models.Seat, {
+            as: "seat",
+            foreignKey: "complex_id"
+        })
     }
 
     return Complex
