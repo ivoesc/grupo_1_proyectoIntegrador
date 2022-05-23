@@ -28,9 +28,9 @@ const productsApiController = {
                     delete movie.dataValues.genre_id
                     delete movie.dataValues.category_id
 
-                    if (movie.category_id == 1) {
+                    if (movie.category.id == 1) {
                         estrenos ++ 
-                    } else if (movie.category_id == 2) {
+                    } else if (movie.category.id == 2) {
                         proximamente ++ 
                     } else {
                         reestrenos ++
