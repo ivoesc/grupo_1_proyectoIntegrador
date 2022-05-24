@@ -29,21 +29,46 @@ window.addEventListener('load', () => {
                 s.classList.toggle('asiento')
                 s.classList.toggle('selected')
                 
+                
+
                 if (selectedSeats.includes(s)) {
                     if (selectedSeats.indexOf(s) > -1) {
+                        
+                        //sessionStorage.removeItem('seat' + (selectedSeats.indexOf(s) +2) )
                         selectedSeats.splice(selectedSeats.indexOf(s), 1);
+
+                        sessionStorage.clear();
+                        for (let i = 0; i < selectedSeats.length; i++) {
+                            sessionStorage.setItem('seat' + (i +1), selectedSeats[i].id)
+                        }
                     }
-                } else {
+                } else {                 
                     selectedSeats.push(s)
+                    sessionStorage.clear();
+                    for (let i = 0; i < selectedSeats.length; i++) {
+                        sessionStorage.setItem('seat' + (i +1), selectedSeats[i].id)
+                    }
+                    //sessionStorage.setItem('seat' + (selectedSeats.indexOf(s) +1), s.id)
                 }
               
+                
+
             } else {
                 if (selectedSeats.indexOf(s) > -1) {
+                    //sessionStorage.removeItem('seat' + (selectedSeats.indexOf(s) +1) )
                     selectedSeats.splice(selectedSeats.indexOf(s), 1);
+
+                    sessionStorage.clear();
+                        for (let i = 0; i < selectedSeats.length; i++) {
+                            sessionStorage.setItem('seat' + (i +1), selectedSeats[i].id)
+                        }
+
                     s.classList.toggle('asiento')
                     s.classList.toggle('selected')
                 }
             }
+
+            console.log(sessionStorage)
             
         })
     })

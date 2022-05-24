@@ -33,6 +33,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
 
+        seat_id: {
+            type: dataTypes.STRING(5),
+            allowNull: false
+        },
+
     };
 
     let config = {
