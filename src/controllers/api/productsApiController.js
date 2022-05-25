@@ -63,6 +63,15 @@ const productsApiController = {
                 delete movie.dataValues.genre_id
                 delete movie.dataValues.category_id
 
+                movie.dataValues.poster = {
+                    poster_name: movie.poster,
+                    poster_url: 'http://localhost:3000/images/products/' + movie.poster
+                }
+
+                movie.dataValues.background = {
+                    background_name: movie.background,
+                    background_url: 'http://localhost:3000/images/backgrounds/' + movie.background
+                }
 
                 return res.json({
                     movie

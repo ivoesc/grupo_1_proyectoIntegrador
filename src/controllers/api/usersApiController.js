@@ -35,6 +35,11 @@ const usersApiController = {
                 delete user.dataValues.complex_id
                 delete user.dataValues.password
 
+                user.dataValues.profile_pic = {
+                    profile_pic_name: user.profile_pic,
+                    profile_pic_url: 'http://localhost:3000/images/users/' + user.profile_pic
+                }
+
                 return res.json({
                     user
                 })
