@@ -10,6 +10,7 @@ const ActorMovie = db.ActorMovie;
 const Director = db.Director;
 const Categories = db.Category
 const Complex = db.Complex;
+const Seat = db.Seat;
 
 const productsApiController = {
 
@@ -77,6 +78,10 @@ const productsApiController = {
                     movie
                 })
             })
+    },
+
+    store: (req, res) => {
+        Movies.create(req.body)
     }
 
 }

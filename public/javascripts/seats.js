@@ -75,4 +75,39 @@ window.addEventListener('load', () => {
 
     console.log(selectedSeats);
 
+    const button = document.getElementById('button-compra')
+    const hour = document.getElementById('Horario')
+    const day = document.getElementById('Fecha')
+    const complex = document.getElementById('Complejo')
+    const movieTitle = document.getElementById('movie-title')
+
+
+    button.addEventListener('click', async () => {
+
+        let data = {
+
+            'seats': selectedSeats.map(seat => seat.id),
+            'movie_id': movieTitle.dataset.movie_id,
+            'complex_id': complex.value,
+            'day': day.value,
+            'hour': hour.value,
+            'seats': selectedSeats.map(seat => seat.id) 
+        }
+
+        
+        let settings = {
+            'method': 'POST',
+            'headers': {
+                "content-type": "application/json"
+            },
+            'body': JSON.stringify(data)
+        }
+    
+        await fetch('http://localhost:3000/api/seats', settings)
+            .then(r => r.json())
+            .then(u => window.location = '/')
+        
+        
+    })
+
 })

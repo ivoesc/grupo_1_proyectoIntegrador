@@ -49,7 +49,7 @@
             <div class="trailer-description-container">
 
                 <div class="movie-info">
-                    <h3><%= product.name %> </h3>
+                    <h3 value="<%= product.id %>" id="movie-title"><%= product.name %> </h3>
                     <p> <strong>Director:</strong> <%= product.director.name %> <%= product.director.surname %> <br>
                         <strong>Actores:</strong> <% for( let i = 0; i < product.actors.length; i++ ) { %>
                             <%= product.actors[i].name %>
