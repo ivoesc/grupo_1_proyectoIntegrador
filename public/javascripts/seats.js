@@ -2,13 +2,12 @@ window.addEventListener('load', () => {
 
     const box = document.getElementById('seats-box')
 
-    const f1 = document.getElementById('f1').id
-    const f2 = document.getElementById('f2')
-    const f3 = document.getElementById('f3')
-    const f4 = document.getElementById('f4')
-    const f5 = document.getElementById('f5')
-    const f6 = document.getElementById('f6')
-
+    const button = document.getElementById('button-compra')
+    const hour = document.getElementById('Horario')
+    const day = document.getElementById('Fecha')
+    const complex = document.getElementById('Complejo')
+    const movieTitle = document.getElementById('movie-title') 
+    
     let seats = []
     
     for (let i = 1; i <= 6; i++) {
@@ -19,12 +18,50 @@ window.addEventListener('load', () => {
 
     console.log(seats);
 
-    let selectedSeats = []
+    fetch('http://localhost:3000/api/seats/list')
+        .then(r => r.json())
+        .then(occupiedSeats => {
+
+            for (let s of seats) {
+                [day, hour, complex].forEach(f => {
+                    f.addEventListener('change', () => {
+                        s.classList.remove('occupiedSeat');
+                        s.classList.add('asiento')
+                    })
+                })
+            }
+
+            for (let occupiedSeat of occupiedSeats.seats) {
+
+                for (let seat of seats) {
+
+                    [day, hour, complex].forEach(e => {
+                        e.addEventListener('change', () => {
+                            
+                             if (occupiedSeat.seat_id == seat.id && occupiedSeat.day == day.value && occupiedSeat.hour == hour.value && occupiedSeat.complex.id == complex.value && occupiedSeat.movie.id == movieTitle.dataset.movie_id) {
+                                seat.classList.remove('asiento');
+                                seat.classList.add('occupiedSeat')
+
+                            }
+
+                    })
+                })
+               }
+            }
+        }
+    );
+
     
+
+    let selectedSeats = []
+
     seats.forEach((s) => {
         s.addEventListener('click', function seatSelection() { 
             
-            if (selectedSeats.length < 4) {
+            if (selectedSeats.length < 4 && !s.classList.contains('occupiedSeat') ) {
+
+                
+                
 
                 s.classList.toggle('asiento')
                 s.classList.toggle('selected')
@@ -54,7 +91,7 @@ window.addEventListener('load', () => {
                 
 
             } else {
-                if (selectedSeats.indexOf(s) > -1) {
+                if (selectedSeats.indexOf(s) > -1 && !s.classList.contains('occupiedSeat')) {
                     //sessionStorage.removeItem('seat' + (selectedSeats.indexOf(s) +1) )
                     selectedSeats.splice(selectedSeats.indexOf(s), 1);
 
@@ -75,11 +112,10 @@ window.addEventListener('load', () => {
 
     console.log(selectedSeats);
 
-    const button = document.getElementById('button-compra')
-    const hour = document.getElementById('Horario')
-    const day = document.getElementById('Fecha')
-    const complex = document.getElementById('Complejo')
-    const movieTitle = document.getElementById('movie-title')
+    [day, hour, complex].forEach(e => {
+        e.addEventListener('change', () => {
+            sessionStorage.clear();
+        })})
 
 
     button.addEventListener('click', async () => {
@@ -105,7 +141,7 @@ window.addEventListener('load', () => {
     
         await fetch('http://localhost:3000/api/seats', settings)
             .then(r => r.json())
-            .then(u => window.location = '/')
+            .then(u => console.log(u));
         
         
     })

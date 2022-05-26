@@ -20,6 +20,7 @@ const seatsApiController = {
                     delete seat.dataValues.user_id
                     delete seat.dataValues.complex_id
                     delete seat.dataValues.movie_id
+                    delete seat.user.dataValues.password
 
                 }
 
