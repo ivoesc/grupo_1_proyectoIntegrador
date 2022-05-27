@@ -17,6 +17,7 @@ router.get('/detail/:id', productsController.detail);
 
 /* GET cart page. */
 router.get('/:id/asientos', authMiddleware, productsController.seats);
+router.get('/cart', authMiddleware, productsController.cart);
 
 /* GET create page. */
 router.get('/create', adminMiddleware, productsController.create); 

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/css/carrito.css" />
+        <link rel="stylesheet" href="/css/styles.css"> 
+        <link rel="stylesheet" href="/css/desktop.css">
+        <link rel="stylesheet" href="/css/cart.css">
+
+        <link rel="icon" type="image/png" href="../images/logos/favicon.png">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        
+        <title>Big Screen</title>
+    </head>
+
+    <body>
+        <header>
+        <%- include ./partials/headerPartial.ejs %>
+        </header>
+
+        <main>
+            
+            <h1 class="cart-title">Carrito de compras</h1>
+
+            <div class="table-container">
+                
+                <div class="article-price">
+                    <p>Artículos</p>
+
+                    <p>Precio</p>
+                </div>
+
+                <div class="ticket">
+
+                    <div class="ticket-info">
+                        <p class="ticket-movie-title"><strong>SpiderMan</strong></p>
+                        <p class="ticket-extra-info">a11 15:00hs<br>BigScreen Recoleta</p>
+                    </div>
+
+                    <div class="ticket-price">
+                        <p>$1000</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+        
+        <footer>
+            <%- include ./partials/footerPartial.ejs %>
+        </footer>
+    
+        <script type="text/javascript" src="/javascripts/carrito.js"></script>
+    </body>
+</html>

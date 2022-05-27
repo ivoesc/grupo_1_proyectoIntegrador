@@ -196,6 +196,10 @@ const productsController = {
 
 
 		res.redirect('/')
+	},
+
+	cart: (req, res) => {
+		return res.render("carrito")
 	}
 }
 

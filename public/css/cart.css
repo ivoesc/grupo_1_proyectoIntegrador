@@ -1,0 +1,70 @@
+body {
+    background-color: #171717;
+}
+
+main {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 950px;
+    flex-direction: column;
+}
+
+.cart-title {
+    margin-top: 60px;
+    color: #efefef;
+    text-align: center;
+    width: 100%;
+}
+
+.table-container {
+    display: flex;
+    width: 100%;
+    padding: 0px 8px 0 8px;
+    flex-direction: column;
+}
+
+.article-price {
+    display: flex;
+    width: 100%;
+    color: #efefef;
+    justify-content: space-between;
+}
+
+.ticket {
+    color: #efefef;
+    background-image: linear-gradient(to right top, #e7de93, #e5de98, #e4df9e, #e2dfa3, #e1dfa8);
+    height: 75px;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.ticket-movie-title {
+    font-size: 20px;
+    margin: 0px 0px 2px 0px;
+}
+
+.ticket-extra-info {
+    margin: 2px 0 0 0;
+}
+
+.ticket-price{
+    display: flex;
+    align-items: center;
+}
+
+.ticket-price p {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .cart-title {
+        margin-top: 60px;
+        color: #efefef;
+        text-align: left;
+        width: 100%;
+    }
+}
