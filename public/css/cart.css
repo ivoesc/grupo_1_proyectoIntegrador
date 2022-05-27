@@ -32,14 +32,14 @@ main {
 }
 
 .ticket {
-    color: #efefef;
+    color: #171717;
     background-image: linear-gradient(to right top, #e7de93, #e5de98, #e4df9e, #e2dfa3, #e1dfa8);
     height: 75px;
-    padding: 5px;
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    margin: 5px 0
 }
 
 .ticket-movie-title {
@@ -51,18 +51,46 @@ main {
     margin: 2px 0 0 0;
 }
 
-.ticket-price{
+.ticket-price {
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-left: 2px dashed #171717;
+    width: 85px;
 }
 
 .ticket-price p {
     margin: 0;
 }
 
+.ticket-info {
+    width: 100%;
+    padding: 5px;
+
+}
+
+.total-container {
+    color: #efefef;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-top: 5px;
+    margin-top: 20px;
+    border-top: #efefef solid 2px;
+}
+
+.total-text {
+    margin: 2px 0
+}
+
+.total-price {
+    margin: 2px 0;
+    font-size: 20px
+}
+
 @media (min-width: 768px) {
     .cart-title {
-        margin-top: 60px;
+        margin-top: 70px;
         color: #efefef;
         text-align: left;
         width: 100%;
