@@ -130,31 +130,37 @@ window.addEventListener('load', () => {
 
     button.addEventListener('click', async () => {
 
-        let data = {
+        if (day.value != 'disabled' && complex.value != 'disabled' && hour.value != 'disabled') {
 
-            'seats': selectedSeats.map(seat => seat.id),
-            'movie_id': movieTitle.dataset.movie_id,
-            'complex_id': complex.value,
-            'day': day.value,
-            'hour': hour.value,
-            'seats': selectedSeats.map(seat => seat.id) 
-        }
+            let data = {
 
-        
-        let settings = {
-            'method': 'POST',
-            'headers': {
-                "content-type": "application/json"
-            },
-            'body': JSON.stringify(data)
-        }
+                'seats': selectedSeats.map(seat => seat.id),
+                'movie_id': movieTitle.dataset.movie_id,
+                'complex_id': complex.value,
+                'day': day.value,
+                'hour': hour.value,
+                'seats': selectedSeats.map(seat => seat.id) 
+            }
     
-        await fetch('http://localhost:3000/api/seats', settings)
-            .then(r => r.json())
-            .then(u => console.log(u));
-
-        window.location = '/'
+            
+            let settings = {
+                'method': 'POST',
+                'headers': {
+                    "content-type": "application/json"
+                },
+                'body': JSON.stringify(data)
+            }
         
+            await fetch('http://localhost:3000/api/seats', settings)
+                .then(r => r.json())
+                .then(u => console.log(u));
+    
+            window.location = '/'
+
+        } else {
+            alert('Campos invalidos')
+        }
+
         
     })
 
