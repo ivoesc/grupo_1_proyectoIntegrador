@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
     const day = document.getElementById('Fecha')
     const complex = document.getElementById('Complejo')
     const movieTitle = document.getElementById('movie-title') 
+    const main = document.getElementById('main')
 
     let params = [hour, day, complex]
     
@@ -129,6 +130,12 @@ window.addEventListener('load', () => {
 
 
     button.addEventListener('click', async () => {
+
+        sessionStorage.setItem('day', day.value);
+        sessionStorage.setItem('hour', hour.value);
+        sessionStorage.setItem('complex_id', complex.value);
+        sessionStorage.setItem('movie_id', movieTitle.dataset.movie_id)
+        sessionStorage.setItem('movie_title', main.dataset.movie_title)
 
         if (day.value != 'disabled' && complex.value != 'disabled' && hour.value != 'disabled') {
 

@@ -29,7 +29,7 @@
       <%- include ./partials/headerPartial.ejs %>
     </header>
 
-<main class="detail-main-container">
+<main data-movie_title="<%= product.name %>" class="detail-main-container" id="main">
 
   <div class="asientos-container details-container">
 
@@ -58,10 +58,13 @@
         </select>
 
           <select id="Complejo">
-            <option value='disabled' disabled selected>Seleccioná tu Sala</option>
-            <option value="1">BigScreen Complejo Caballito</option>
-            <option value="2">BigScreen Complejo Recoleta</option>
-            <option value="3">BigScreen Complejo Nordelta</option>   
+            <option value='disabled' disabled selected>Seleccioná tu Complejo</option>
+            <% complex.forEach(c => { %>
+              <option value="<%= c.id %>"><%= c.name %> </option>
+            <% }) %>
+            <!-- <option value="1">Caballito</option>
+            <option value="2">Recoleta</option>
+            <option value="3">Nordelta</option>   -->
           </select>
 
           <select id="Horario">

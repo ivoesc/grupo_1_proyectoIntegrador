@@ -31,8 +31,9 @@ const productsController = {
 
 	seats: async (req, res) => {
 		const product = await Movies.findByPk(req.params.id, {include: ['director', 'genre', {association: 'actors'}]});
-		
-		return res.render('seats', {product});
+		const complex = await Complex.findAll();
+
+		return res.render('seats', {product, complex});
 	},
 
 	create: async (req, res) => {
