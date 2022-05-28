@@ -45,6 +45,7 @@ main {
 .ticket-movie-title {
     font-size: 20px;
     margin: 0px 0px 2px 0px;
+    font-weight: bold;
 }
 
 .ticket-extra-info {

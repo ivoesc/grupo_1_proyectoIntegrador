@@ -78,17 +78,17 @@ window.addEventListener('load', () => {
                         
                         selectedSeats.splice(selectedSeats.indexOf(s), 1);
 
-                        sessionStorage.clear();
-                        for (let i = 0; i < selectedSeats.length; i++) {
-                            sessionStorage.setItem('seat' + (i +1), selectedSeats[i].id)
-                        }
+                        //sessionStorage.clear();
+                        //for (let i = 0; i < selectedSeats.length; i++) {
+                        //    sessionStorage.setItem('seat' + (i +1), selectedSeats[i].id)
+                        //}
                     }
                 } else {                 
                     selectedSeats.push(s)
-                    sessionStorage.clear();
-                    for (let i = 0; i < selectedSeats.length; i++) {
-                        sessionStorage.setItem('seat' + (i +1), selectedSeats[i].id)
-                    }
+                    //sessionStorage.clear();
+                    //for (let i = 0; i < selectedSeats.length; i++) {
+                    //    sessionStorage.setItem('seat' + (i +1), selectedSeats[i].id)
+                    //}
                 }
               
                 
@@ -97,10 +97,10 @@ window.addEventListener('load', () => {
                 
                 selectedSeats.splice(selectedSeats.indexOf(s), 1);
 
-                sessionStorage.clear();
-                    for (let i = 0; i < selectedSeats.length; i++) {
-                        sessionStorage.setItem('seat' + (i +1), selectedSeats[i].id)
-                    }
+                //sessionStorage.clear();
+                //    for (let i = 0; i < selectedSeats.length; i++) {
+                //        sessionStorage.setItem('seat' + (i +1), selectedSeats[i].id)
+                //    }
 
                 s.classList.remove('selected')
                 s.classList.add('asiento')
@@ -141,6 +141,12 @@ window.addEventListener('load', () => {
 
     button.addEventListener('click', async () => {
 
+        sessionStorage.clear()
+        
+        for (let i = 0; i < selectedSeats.length; i++) {
+            sessionStorage.setItem('seat' + (i +1), selectedSeats[i].id)
+        }
+        
         sessionStorage.setItem('day', day.value);
         sessionStorage.setItem('hour', hour.value);
         sessionStorage.setItem('complex_id', complex.value);
