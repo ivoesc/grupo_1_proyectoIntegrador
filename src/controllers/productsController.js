@@ -199,7 +199,7 @@ const productsController = {
 	},
 
 	cart: (req, res) => {
-		return res.render("carrito")
+		return res.render("cart")
 	}
 }
 

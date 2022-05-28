@@ -147,7 +147,7 @@ window.addEventListener('load', () => {
         sessionStorage.setItem('movie_id', movieTitle.dataset.movie_id)
         sessionStorage.setItem('movie_title', main.dataset.movie_title)
 
-        if (day.value != 'disabled' && complex.value != 'disabled' && hour.value != 'disabled') {
+        if (day.value != 'disabled' && complex.value != 'disabled' && hour.value != 'disabled' && selectedSeats.length != 0) {
     
             window.location = '/movies/cart'
 
