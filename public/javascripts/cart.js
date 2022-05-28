@@ -39,8 +39,10 @@ window.addEventListener('load', () => {
     let day = sessionStorage.getItem("day")
     let hour = sessionStorage.getItem("hour")
 
+    let button = document.getElementById("button")
+
     if (selectedSeats.length != 0) {
-        emptyArticles.innerHTML = ''
+        emptyArticles.classList.add("hidden")
         
         selectedSeats.forEach(s => {
             
@@ -83,9 +85,17 @@ window.addEventListener('load', () => {
         totalPrice.innerHTML = '$' + selectedSeats.length * 1000
         totalContainer.appendChild(totalPrice)
 
+        button.classList.add("mp-link")
+
+        let buttonContainer = document.createElement('div')
+        buttonContainer.classList.add("mp-login")
+        buttonContainer.innerHTML = "Pagá con " + "<img " + "src=" + "'https://logotipoz.com/wp-content/uploads/2021/10/version-horizontal-large-logo-mercado-pago.webp'" + "class='mp-icon'" + ">" 
+        button.appendChild(buttonContainer)
+
+
     }
 
-    let button = document.getElementById("button")
+    
 
     button.addEventListener('click', async () => {
         let data = {
@@ -111,5 +121,6 @@ window.addEventListener('load', () => {
             
             window.location = "/"
     })
+
 
 })
