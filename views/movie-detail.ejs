@@ -65,9 +65,15 @@
                     <iframe src="<%= product.trailer %>" frameborder="0" allowfullscreen="allowfullscreen" class="trailer-movie" width="420" height="315"></iframe>
                 </div>
                 
-                <div class="contenedor-button-compra">
-                    <a href="/movies/<%=product.id%>/asientos"><button type="submit" class="login-button"> <strong> Comprá tu entrada </strong> </button></a>
-                </div>
+                <% if (product.category_id != 2) { %>
+
+                    <div class="contenedor-button-compra">
+                        <a href="/movies/<%=product.id%>/asientos"><button type="submit" class="login-button"> <strong> Comprá tu entrada </strong> </button></a>
+                    </div>
+
+                <% } %> 
+
+                
 
             </div>
 

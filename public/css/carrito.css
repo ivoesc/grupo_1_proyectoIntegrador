@@ -35,6 +35,10 @@
     flex-direction: column;
   }
 
+  .hidden {
+    display: none;
+  }
+
   #flex{
     display: flex;
     margin-top: 1px;

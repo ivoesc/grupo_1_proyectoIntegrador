@@ -1,7 +1,5 @@
 window.addEventListener('load', () => {
 
-    const box = document.getElementById('seats-box')
-
     const button = document.getElementById('button-compra')
     const hour = document.getElementById('Horario')
     const day = document.getElementById('Fecha')
@@ -117,7 +115,9 @@ window.addEventListener('load', () => {
         })
     })
 
-    
+    const box = document.getElementById('seats-box')
+    const buttonBox = document.getElementById('button-box')
+    const showcase = document.getElementById('showcase')
 
     params.forEach(e => {
         e.addEventListener('change', () => {
@@ -126,6 +126,16 @@ window.addEventListener('load', () => {
             console.clear()
             console.log(sessionStorage)
             console.log(selectedSeats);
+
+            if (day.value != 'disabled' && complex.value != 'disabled' && hour.value != 'disabled') {
+                box.classList.remove('hidden')
+                buttonBox.classList.remove('hidden')
+                showcase.classList.remove('hidden')
+            } else {
+                box.classList.add('hidden')
+                buttonBox.classList.add('hidden')
+                showcase.classList.add('hidden')
+            }
         })})
 
 

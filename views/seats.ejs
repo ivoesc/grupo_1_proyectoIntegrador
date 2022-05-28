@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/movie-detail.css">
     <link rel="stylesheet" href="/css/carrito.css" />
     <link rel="stylesheet" href="/css/styles.css"> 
     <link rel="stylesheet" href="/css/desktop.css">
-    <link rel="stylesheet" href="/css/movie-detail.css">
 
     <link rel="icon" type="image/png" href="../images/logos/favicon.png">
 
@@ -78,7 +78,7 @@
       </div>
     </form>
 
-        <ul class="showcase">
+        <ul class="showcase hidden" id="showcase">
           <li>
             <div class="asiento"></div>
             <small>Disponible</small>
@@ -92,7 +92,7 @@
             <small>Ocupado</small>
           </li>
         </ul>
-        <div class="contenedor" id="seats-box">
+        <div class="contenedor hidden" id="seats-box">
           <div class="pantalla"></div>
 
           <% for( let i = 1; i <= 6; i++) { %>
@@ -105,7 +105,7 @@
         </div>
 
     <form>
-        <div class="contenedor-button-compra">
+        <div class="contenedor-button-compra hidden" id="button-box">
           <button type="button" class="login-button" id="button-compra"> <strong> Comprar </strong> </button>
         </div>
     </form>

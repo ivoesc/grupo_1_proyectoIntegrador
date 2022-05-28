@@ -349,6 +349,9 @@
       color: rgb(65, 6, 121);
   }
 
+  .hidden {
+    display: none;
+  }
 /*          PROFILE           */
 
 .btn-container {
