@@ -148,31 +148,8 @@ window.addEventListener('load', () => {
         sessionStorage.setItem('movie_title', main.dataset.movie_title)
 
         if (day.value != 'disabled' && complex.value != 'disabled' && hour.value != 'disabled') {
-
-            let data = {
-
-                'seats': selectedSeats.map(seat => seat.id),
-                'movie_id': movieTitle.dataset.movie_id,
-                'complex_id': complex.value,
-                'day': day.value,
-                'hour': hour.value,
-                'seats': selectedSeats.map(seat => seat.id) 
-            }
     
-            
-            let settings = {
-                'method': 'POST',
-                'headers': {
-                    "content-type": "application/json"
-                },
-                'body': JSON.stringify(data)
-            }
-        
-            await fetch('http://localhost:3000/api/seats', settings)
-                .then(r => r.json())
-                .then(u => console.log(u));
-    
-            window.location = '/'
+            window.location = '/movies/cart'
 
         } else {
             alert('Campos invalidos')
