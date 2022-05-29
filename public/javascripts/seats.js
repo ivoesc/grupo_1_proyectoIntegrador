@@ -108,6 +108,18 @@ window.addEventListener('load', () => {
                 
             }
 
+            if (selectedSeats.length != 0) {
+                button.classList.remove('button-disabled')
+                button.classList.add('login-button')
+                buttonBox.classList.remove('button-box-disabled')
+                buttonBox.classList.add('contenedor-button-compra')
+            } else {
+                button.classList.remove('login-button')
+                button.classList.add('button-disabled')
+                buttonBox.classList.remove('contenedor-button-compra')
+                buttonBox.classList.add('button-box-disabled')
+            }
+
             console.clear()
             console.log(sessionStorage)
             console.log(selectedSeats);
@@ -140,26 +152,30 @@ window.addEventListener('load', () => {
         })})
 
 
-    button.addEventListener('click', async () => {
+    buttonBox.addEventListener('click', async () => {
 
-        sessionStorage.clear()
+        if (buttonBox.classList.contains('contenedor-button-compra')) {
+
+            sessionStorage.clear()
         
-        for (let i = 0; i < selectedSeats.length; i++) {
-            sessionStorage.setItem('seat' + (i +1), selectedSeats[i].id)
-        }
+            for (let i = 0; i < selectedSeats.length; i++) {
+                sessionStorage.setItem('seat' + (i +1), selectedSeats[i].id)
+            }
+            
+            sessionStorage.setItem('day', day.value);
+            sessionStorage.setItem('hour', hour.value);
+            sessionStorage.setItem('complex_id', complex.value);
+            sessionStorage.setItem('movie_id', movieTitle.dataset.movie_id)
+            sessionStorage.setItem('movie_title', main.dataset.movie_title)
+
+            if (day.value != 'disabled' && complex.value != 'disabled' && hour.value != 'disabled' && selectedSeats.length != 0) {
         
-        sessionStorage.setItem('day', day.value);
-        sessionStorage.setItem('hour', hour.value);
-        sessionStorage.setItem('complex_id', complex.value);
-        sessionStorage.setItem('movie_id', movieTitle.dataset.movie_id)
-        sessionStorage.setItem('movie_title', main.dataset.movie_title)
+                window.location = '/movies/cart'
 
-        if (day.value != 'disabled' && complex.value != 'disabled' && hour.value != 'disabled' && selectedSeats.length != 0) {
-    
-            window.location = '/movies/cart'
+            } else {
+                alert('Campos invalidos')
+            }
 
-        } else {
-            alert('Campos invalidos')
         }
 
         

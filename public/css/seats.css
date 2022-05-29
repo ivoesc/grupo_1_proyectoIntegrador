@@ -200,7 +200,28 @@
   .hidden {
     display: none;
   }
+
+  .button-box-disabled {
+    display: flex;
+    justify-content: center;
+    background: #6e6e6e;
+    border-radius: 5px;
+    padding: 10px;
+    height: 40px;
+    transition: all 100ms;
+    cursor: default;
+    margin: 20px 60px 20px 60px;
+  }
   
+    .button-disabled {
+      border: none;
+      background: none;
+      outline: none;
+      width: 100%;
+      font-family: 'Montserrat', sans-serif;
+      cursor: default;
+    }  
+
   .showcase li {
     display: flex;
     align-items: center;
