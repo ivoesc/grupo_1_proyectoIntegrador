@@ -236,7 +236,7 @@
   }*/
 
   .occupiedSeat {
-    background-color: red;
+    background-color: rgb(82, 82, 82);
     height: 26px;
     width: 32px;
     margin: 3px;
@@ -281,7 +281,7 @@
   }
 
   .asiento {
-    background-color: #444451;
+    background-color: #9b9b9b;
     height: 26px;
     width: 32px;
     margin: 3px;

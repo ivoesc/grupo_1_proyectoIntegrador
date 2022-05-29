@@ -46,6 +46,9 @@ main {
     font-size: 20px;
     margin: 0px 0px 2px 0px;
     font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 25px;
 }
 
 .ticket-extra-info {
