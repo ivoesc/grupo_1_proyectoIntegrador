@@ -41,6 +41,7 @@ window.addEventListener('load', () => {
                             
                              if (occupiedSeat.seat_id == seat.id && occupiedSeat.day == day.value && occupiedSeat.hour == hour.value && occupiedSeat.complex.id == complex.value && occupiedSeat.movie.id == movieTitle.dataset.movie_id) {
                                 seat.classList.remove('asiento');
+                                seat.classList.remove('selected');
                                 seat.classList.add('occupiedSeat')
 
                             }
