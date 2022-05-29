@@ -10,6 +10,7 @@ const ActorMovie = db.ActorMovie;
 const Director = db.Director;
 const Categories = db.Category
 const Complex = db.Complex;
+const Seat = db.Seat
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -181,6 +182,12 @@ const productsController = {
 	},
 
 	delete: (req, res) => {
+		Seat.destroy({
+			where: {
+				movie_id: req.params.id,
+			}
+		})
+
 		ActorMovie.destroy({
 			where: {
 				movie_id: req.params.id,
