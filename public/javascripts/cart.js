@@ -1,5 +1,9 @@
 window.addEventListener('load', () => {
     
+    const mercadopago = new MercadoPago('PUBLIC_KEY', {
+        locale: 'es-AR'
+      });
+
     let selectedSeats = []
 
         let seat1 = sessionStorage.getItem("seat1")
@@ -39,7 +43,7 @@ window.addEventListener('load', () => {
     let day = sessionStorage.getItem("day")
     let hour = sessionStorage.getItem("hour")
 
-    let button = document.getElementById("button")
+    let button = document.getElementById("checkout-btn")
 
     if (selectedSeats.length != 0) {
         emptyArticles.classList.add("hidden")
@@ -74,6 +78,8 @@ window.addEventListener('load', () => {
         })
 
         totalContainer.classList.add('total-container')
+        
+        button.classList.remove('hidden')
         
         let totalText = document.createElement('p')
         totalText.classList.add('total-text')
@@ -117,10 +123,46 @@ window.addEventListener('load', () => {
         
             await fetch('http://localhost:3000/api/seats', settings)
             .then(r => r.json())
-            .then(u => console.log(u));     
-            
-            window.location = "/"
-    })
+            .then(u => console.log(u));
+    
+    
+        const orderData = {
+            'quantity': selectedSeats.length,
+            'seats': selectedSeats.map(seat => seat),
+            'movie_id': movie_id,
+            'movie_title': movie_title,
+            'complex_id': complex_id,
+            'day': day,
+            'hour': hour,
+            };
 
+            fetch("/create_preference", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(orderData),
+              })
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(preference) {
+                    createCheckoutButton(preference.id);
+                })
+
+            function createCheckoutButton(preferenceId) {
+                // Initialize the checkout
+                mercadopago.checkout({
+                    preference: {
+                        id: preferenceId
+                    },
+                    render: {
+                        container: '#container-checkout',
+                        label: 'Pagar',
+                    }
+                });
+                }
+    
+    })
 
 })

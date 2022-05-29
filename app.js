@@ -5,6 +5,8 @@ const cookie = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride =  require('method-override');
 const session = require('express-session');
+const cors = require("cors");
+const dotenv = require("dotenv")
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
 
 const app = express();
@@ -23,6 +25,8 @@ app.use(session({
   saveUninitialized: false,
 }));
 
+dotenv.config();
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -30,6 +34,8 @@ app.use(cookie());
 app.use(userLoggedMiddleware);
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
+app.use(cors());
+
 
 // ************ Route System require and use() ************
 
@@ -39,6 +45,7 @@ const productsRouter = require('./src/routes/productsRouter');
 const productsApiRouter = require('./src/routes/api/productsApiRouter');
 const usersApiRouter = require('./src/routes/api/usersApiRouter');
 const seatsApiRouter = require('./src/routes/api/seatsApiRouter');
+const checkOutRouter = require('./src/routes/checkOutRouter');
 
 app.use('/', mainRouter);
 app.use('/users', usersRouter);
@@ -46,6 +53,7 @@ app.use('/movies', productsRouter);
 app.use('/api', productsApiRouter);
 app.use('/api', usersApiRouter);
 app.use('/api', seatsApiRouter);
+app.use('/', checkOutRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

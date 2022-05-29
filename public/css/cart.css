@@ -124,6 +124,11 @@ main {
     display: none;
 }
 
+#container-checkout {
+    margin-top: 10px;
+    transition: 2s;
+}
+
 @media (min-width: 768px) {
     .cart-title {
         margin-top: 70px;
