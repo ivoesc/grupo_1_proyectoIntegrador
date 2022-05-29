@@ -27,21 +27,48 @@
   .movie-title {
     text-align: center;
     color: #efefef;
-    margin-bottom: 20px;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .asientos-container {
     flex-direction: column;
   }
 
-  .hidden {
-    display: none;
+  .contenedor-de-opciones {
+    /*margin: 5px 5px;
+    padding: 5px;
+    width: 100%;
+    display: flex;*/
+  }
+
+  .select-box {
+    background: #414141;
+    border-radius: 4px;
+    margin: 2px 5px;
+    padding: 4px;
+    opacity: 0.8;
+  }
+
+  .select-box select {
+    /*appearance: none;*/
+    background-color: transparent;
+    border: none;
+    color: #efefef;
+    height: 30px;
+    width: 200px;
+    font-size: 15px;
+  }
+
+  .select-box option {
+    color: #efefef;
+    background-color: #414141;
+    font-size: 15px;
   }
 
   #flex{
     display: flex;
-    margin-top: 1px;
+    margin-top: 10px;
+    justify-content: center;
   }
   
   .contenedor-de-peliculas {
@@ -64,29 +91,58 @@
   .contenedor {
     perspective: 1000px;
     padding: 30px;
+    width: 340px;
+    margin: 0 auto;
   }
   
   .selected {
     background-color: green;
-    height: 26px;
-    width: 32px;
+    height: 25px;
+    width: 28px;
     margin: 3px;
     font-size: 50px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    transition: 0.1s;
+    cursor: pointer;
+  }
+
+    .selected:hover{
+      background-color: #004d00
+    }
+
+  .occupiedSeat {
+    background-color: red;
+    height: 25px;
+    width: 28px;
+    margin: 3px;
+    font-size: 50px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
     transition: 0.1s;
   }
 
   .asiento {
     background-color: #444451;
-    height: 26px;
-    width: 32px;
+    height: 25px;
+    width: 28px;
     margin: 3px;
     font-size: 50px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
     transition: 0.1s;
+    cursor: pointer;
   }
+
+    .asiento:hover{
+      background-color: #36363f
+    }
   
   .asiento.seleccionado {
     background-color:green;
@@ -108,11 +164,11 @@
     margin-left: 18px;
   }
   
-  .asiento:not(.sold):hover,
+  /*.asiento:not(.sold):hover,
   .selected:not(.sold):hover,
   .occupiedSeat:not(.sold):hover {
     cursor: pointer;
-    /*transform: scale(0.5);*/
+    transform: scale(0.5);
     background-color: #8f8fa1;
   }
   
@@ -121,16 +177,24 @@
   .showcase .occupiedSeat:not(.sold):hover {
     cursor: default;
     transform: scale(0.5);
-  }
-  
+  }*/
+
   .showcase {
-    background: rgb(187, 172, 197);
+    background: rgba(65, 65, 65, 0.4);
     padding: 5px 10px;
     border-radius: 5px;
-    color: black;
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    width: 170px;
+    align-items: start;
+    margin: 20px auto 0px;
+    color: #efefef
+  }
+
+  .hidden {
+    display: none;
   }
   
   .showcase li {
@@ -174,13 +238,3 @@
       color: rgb(65, 6, 121);
   }
 
-  .occupiedSeat {
-    background-color: red;
-    height: 26px;
-    width: 32px;
-    margin: 3px;
-    font-size: 50px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    transition: 0.1s;
-  }

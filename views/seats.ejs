@@ -48,47 +48,53 @@
     <form>
       <div id="flex">
         <div class="contenedor-de-opciones">
-        <select id="Fecha">
-          <option value='disabled' disabled selected>Seleccioná el día</option>
-          <option value="Lunes_01/01">Lunes 01/01</option>
-          <option value="Martes_02/01">Martes 02/01</option>
-          <option value="Miércoles_03/01">Miércoles 03/01</option>
-          <option value="Jueves_04/01">Jueves 04/01</option>
-          <option value="Viernes_05/01">Viernes 05/01</option>   
-        </select>
+          <div class="select-box">
+            <select id="Fecha">
+              <option value='disabled' disabled selected>Seleccioná el día</option>
+              <option value="Lunes_01/01">Lunes 01/01</option>
+              <option value="Martes_02/01">Martes 02/01</option>
+              <option value="Miércoles_03/01">Miércoles 03/01</option>
+              <option value="Jueves_04/01">Jueves 04/01</option>
+              <option value="Viernes_05/01">Viernes 05/01</option>   
+            </select>
+          </div>
 
-          <select id="Complejo">
-            <option value='disabled' disabled selected>Seleccioná tu Complejo</option>
-            <% complex.forEach(c => { %>
-              <option value="<%= c.id %>"><%= c.name %> </option>
-            <% }) %>
-            <!-- <option value="1">Caballito</option>
-            <option value="2">Recoleta</option>
-            <option value="3">Nordelta</option>   -->
-          </select>
+          <div class="select-box">
+            <select id="Complejo">
+              <option value='disabled' disabled selected>Seleccioná tu Complejo</option>
+              <% complex.forEach(c => { %>
+                <option value="<%= c.id %>"><%= c.name %> </option>
+              <% }) %>
+              <!-- <option value="1">Caballito</option>
+              <option value="2">Recoleta</option>
+              <option value="3">Nordelta</option>   -->
+            </select>
+          </div>
 
-          <select id="Horario">
-            <option value='disabled' disabled selected>Seleccioná el horario</option>
-            <option value="15HS">15:00 hs</option>
-            <option value="18HS">18:00 hs</option>
-            <option value="21HS">21:00 hs</option>
-            <option value="00HS">00:00 hs</option>   
-          </select>
+          <div class="select-box">
+            <select id="Horario">
+              <option value='disabled' disabled selected>Seleccioná el horario</option>
+              <option value="15HS">15:00 hs</option>
+              <option value="18HS">18:00 hs</option>
+              <option value="21HS">21:00 hs</option>
+              <option value="00HS">00:00 hs</option>   
+            </select>
+          </div>
         </div>
       </div>
     </form>
 
         <ul class="showcase hidden" id="showcase">
           <li>
-            <div class="asiento"></div>
+            <div class="asiento cursor"></div>
             <small>Disponible</small>
           </li>
           <li>
-            <div class="asiento seleccionado"></div>
+            <div class="asiento cursor seleccionado"></div>
             <small>Seleccionado</small>
           </li>
           <li>
-            <div class="asiento ocupado"></div>
+            <div class="asiento cursor ocupado"></div>
             <small>Ocupado</small>
           </li>
         </ul>

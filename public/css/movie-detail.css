@@ -40,12 +40,16 @@
     display: flex;
     justify-content: center;
     background: #e3e3e3;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 10px;
     height: 40px;
     transition: all 100ms;
     cursor: pointer;
     margin: 20px 60px 20px 60px;
+}
+
+.comprar-link {
+    width: 100%;
 }
 
 .contenedor-button-compra:hover {
