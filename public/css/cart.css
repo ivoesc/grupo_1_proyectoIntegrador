@@ -94,25 +94,20 @@ main {
 
 .mp-link {
     text-decoration: none;
+    cursor: pointer;
 }
 
 .mp-login {
-    background-color: white;
-    margin: auto;
     height: 35px;
     width: 210px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 4px;
     padding: 8px;
     color: #555555;
-    box-shadow: 0px 5px 10px rgb(137 137 137);
     font-family: 'Montserrat', sans-serif;
-    border: 1px solid #068dd0;
     font-size: 16px;
     margin: 10px 0px 10px 0px;
-    color: #009fe2;
     font-weight: bolder;
 }
 
@@ -127,6 +122,11 @@ main {
 #container-checkout {
     margin-top: 10px;
     transition: 2s;
+}
+
+.mercadopago-button {
+    color: black;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
