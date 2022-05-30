@@ -168,10 +168,19 @@ const productsController = {
 				id: req.params.id
 		}})
 
+		console.log(req.body);
+		console.log(req.params.id);
+
+		ActorMovie.destroy({where: {
+			movie_id: req.params.id
+		}})
+
 		for(let actor_id of req.body.actors) {
-			await ActorMovie.update({
+			console.log(actor_id);
+			console.log(movie.id);
+			await ActorMovie.create({
 				actor_id,
-				movie_id: movie.id
+				movie_id: req.params.id
 			}, { where: {
 				id: req.params.id
 		}})
