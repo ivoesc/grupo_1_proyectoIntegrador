@@ -60,9 +60,9 @@
                     </div>
                 <% } %>
 
-                <div class="contenedor-input" id="director-box">
+                <!--<div class="contenedor-input" id="director-box">-->
                     <select id="director" name="director">
-                        <option disabled>Director de la película:</option>
+                        <!--<option disabled>Director de la película:</option>-->
                         <% for( let i = 0; i < director.length; i++ ) { %>
                             <% if (director[i].id == product.director_id) { %>
                                 <option value="<%= director[i].id %>" selected>
@@ -75,7 +75,12 @@
                             <% } %>
                         <% } %>
                     </select>
-                </div>
+                <!--</div>-->
+                <% if (locals.errors && errors.director) { %>
+                    <div class="text-danger-director">
+                        <%= errors.director.msg %>
+                    </div>
+                <% } %>
 
                 <select class="actors-select" name="actors" id="actorsSelect" multiple="multiple" value="">
                     <% allActors.forEach(actor => { %>

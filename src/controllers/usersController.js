@@ -168,6 +168,22 @@ const usersController = {
 			email: req.session.userLogged.email
 		}
 	})
+
+    await Complex.findByPk(req.body.complex)
+        .then(c => {
+            req.session.userLogged = {
+                name: req.body.name,
+                surname: req.body.surname,
+                email: req.session.userLogged.email,
+                phone: req.body.phone,
+                complex_id: c.id,
+                profile_pic: req.session.userLogged.profile_pic
+            };
+        })
+
+    
+
+    console.log(req.session.userLogged);
         
     res.redirect('/users/profile')
     }

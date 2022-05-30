@@ -13,9 +13,9 @@ const storage = multer.diskStorage({
 
     filename: function (req, file, cb) {
           if (req.files[file.fieldname] == req.files.poster ) {
-               cb(null, 'poster' + '-' + req.body.name.split(' ').join('') + path.extname(file.originalname))
+               cb(null, 'poster' + '-' + req.body.name.split(' ').join('').split(':').join('') + path.extname(file.originalname))
           } else {
-               cb(null, 'background' + '-' + req.body.name.split(' ').join('') + path.extname(file.originalname))
+               cb(null, 'background' + '-' + req.body.name.split(' ').join('').split(':').join('') + path.extname(file.originalname))
           }
     },
 })
