@@ -1,0 +1,45 @@
+body {
+    background-color: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    /*background-image: url('https://indiehoy.com/wp-content/uploads/2018/07/back-to-the-future.jpg');*/
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.err {
+    font-family: 'Roboto Mono', monospace;
+    color: #efefef;
+    font-size: 180px;
+    font-weight: bold;
+}
+
+.msg {
+    font-family: 'Roboto Mono', monospace;;
+    color: #efefef;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    bottom: 34px;
+    letter-spacing: 5px;
+}
+
+.darthvader {
+    width: 240px;
+    position: relative;
+    top: 74px;
+    left: 10px;
+}
+
+.logo {
+    width: 100px;
+}
+
+    .logo:hover {
+        filter: contrast(100);
+        cursor: pointer;
+    }
