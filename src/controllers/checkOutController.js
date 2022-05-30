@@ -14,8 +14,8 @@ const checkOutController = {
         let preference = {
             items: [
                 {
-                    title: "hola",
-                    unit_price: 1000,
+                    title: "Entrada cine",
+                    unit_price: 10,
                     quantity: req.body.quantity,
                 }
             ],

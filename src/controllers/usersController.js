@@ -84,7 +84,7 @@ const usersController = {
             .catch(error => res.send(error))
         }
 
-        if (resultValidation.errors.length == 0) {
+        if (resultValidation.errors.length == 0 && existingUser == null) {
 
             await User.create({
                 name: req.body.name,
