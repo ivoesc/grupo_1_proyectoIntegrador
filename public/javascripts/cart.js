@@ -1,10 +1,6 @@
 window.addEventListener('load', () => {
     
-<<<<<<< HEAD
-    const mercadopago = new MercadoPago('TEST-9b2ea596-7cd7-4812-9e5a-266936740c71', {
-=======
-    const mercadopago = new MercadoPago('TEST-66a890d7-f64c-4cc1-9a6d-ccfc94e4bcbf', {
->>>>>>> 849d63169bb65749f9f4fb92f0600dfc0be1c814
+    const mercadopago = new MercadoPago('PUBLIC_KEY', {
         locale: 'es-AR'
       });
 
