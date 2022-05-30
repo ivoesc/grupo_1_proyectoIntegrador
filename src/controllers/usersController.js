@@ -117,6 +117,7 @@ const usersController = {
             if(passwordConfirmation) {
                 //delete userToLogin.password;
                 req.session.userLogged = {
+                    id: userToLogin.id,
                     name: userToLogin.name,
                     surname: userToLogin.surname,
                     email: userToLogin.email,
@@ -169,9 +170,17 @@ const usersController = {
 		}
 	})
 
+    let userToLogin = await User.findOne({
+        where: {
+            email: req.session.userLogged.email
+        },
+        include: ['complex']
+    })
+
     await Complex.findByPk(req.body.complex)
         .then(c => {
             req.session.userLogged = {
+                id: userToLogin.id,
                 name: req.body.name,
                 surname: req.body.surname,
                 email: req.session.userLogged.email,
@@ -179,6 +188,8 @@ const usersController = {
                 complex_id: c.id,
                 profile_pic: req.session.userLogged.profile_pic
             };
+
+            console.log(req.session.userLogged);
         })
 
     
